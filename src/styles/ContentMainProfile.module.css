@@ -1,0 +1,103 @@
+.contentMainProfile{
+    display: flex;
+}
+
+.imgBackground{
+    width: 85vw;
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #AE81FE;
+    border-radius: 0 0 12px 12px;
+}
+
+.imgBackground img{
+    height: 15vh;
+    width: 8vw;
+}
+
+.imgProfileUser{
+    height: 15vh;
+    width: 79vw;
+    margin-left: 6vw;
+    margin-top: -8vh;
+}
+
+.bar{
+    margin-top: 17vh;
+    width: 85vw;
+    border: 1px solid #6f41be;
+}
+
+.imgProfileUser img{
+    height: 19vh;
+    width: 10vw;
+    border-radius: 999999px;
+}
+
+.imgProfileUser h3{
+    color: #fff;
+    font-family: 'poppins', sans-serif;
+    font-size: 200%;
+}
+
+.imgProfileUser p {
+    color: #fff;
+}
+
+.spacingbar{
+    margin-top: -4vh;
+}
+
+.descriptionProfile{
+    margin: 1vh 5vw;
+    width: 75vw;
+    background-color: #5931a0;
+    padding: 1vh;
+    word-wrap: break-word;
+    color: #fff;
+    font-family: 'poppins', sans-serif;
+    border-radius: 12px;
+}
+
+.descriptionProfile h3 a{
+    color: #fff;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.descriptionProfile h3 a:hover{
+    color: #AE81FE;
+}
+
+.optionsBar{
+    height: 7vh;
+    width: 75vw;
+    margin-top: 8vh;
+    margin-left: 5vw;
+    display: flex;
+    align-content: center;
+    justify-content: space-around;
+}
+
+.optionsBar h4{
+    font-size: 150%;
+    color: #fff;
+}
+
+.optionsBar .contentOption{
+    margin-top: -5vh;
+    height: 8vh;
+    width: 10vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.optionsBar .contentOption:hover{
+    background-color: #460BA1;
+}

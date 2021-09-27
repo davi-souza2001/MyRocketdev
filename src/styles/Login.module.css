@@ -1,0 +1,218 @@
+@keyframes change{
+    from{
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.content{
+    display: flex;
+}
+
+.imgwelcome{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 60vw;
+    background-color: #460BA1;
+    font-family: 'roboto', sans-serif;
+}
+
+.imgAstro{
+    margin-top: -10vh;
+    animation-name: change;
+    animation-duration: 0.5s;
+}
+
+.imgwelcome img{
+    width: 20vw;
+    height: 40vh;
+    animation-name: change;
+    animation-duration: 0.5s;
+}
+
+.mensagelogin{
+    margin-top: 5vh;
+    font-size: 1.6vw;
+    animation-name: change;
+    animation-duration: 1s;
+}
+
+.mensagelogin h1{
+    color: #fff;
+}
+
+.mensagelogin h3{
+    color: rgb(197, 197, 197);
+}
+
+.mensagemore{
+    width: 60vw;
+    height: 20vh;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    flex-direction: column;
+    animation-name: change;
+    animation-duration: 1s;
+}
+
+.morecontent{
+    height: 5vh;
+    width: 12vw;
+    border-radius: 15px;
+    display: flex;  
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.morecontent h4{
+    color:#460BA1;
+}
+
+.morecontent:hover{
+    background-color: #2a0944;
+}
+
+.mensagemore h1{
+    color: #fff;
+}
+
+.mensagemore h3{
+    color: rgb(207, 207, 207);
+    padding: 2vw 2vw;
+}
+
+.learmore{
+    margin-top: 15vh;
+    height: 5vh;
+    width: 60vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: bold;
+}
+
+.loginwelcome{
+    height:100vh;
+    width: 40vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'poppins', sans-serif;
+}
+
+.loginwelcome h2{
+    color: #fff;
+    font-size: 5vh;
+    animation-name: change;
+    animation-duration: 0.8s;
+}
+
+.loginwelcome form{
+    width: 40vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.loginwelcome form input{
+    width: 30vw;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    font-size: 90%;
+}
+
+.loginwelcome form input:focus::placeholder{
+    color: #fff;
+}
+
+.loginwelcome form .login{
+    transition: 0.2s;
+    font-family: 'poppins', sans-serif;
+}
+
+.loginwelcome form .login:hover{
+    background-color: #460BA1;
+}
+
+.email{
+    margin-top: 15vh;
+    margin-bottom: 2vh;
+    height: 5vh;
+    border: 1px solid #dbdbdb;
+    animation-name: change;
+    animation-duration: 1s;
+}
+
+.password{
+    margin-bottom: 8vh;
+    height: 5vh;
+    border: 1px solid #dbdbdb;
+    animation-name: change;
+    animation-duration: 1.2s;
+}
+
+.login{
+    height: 6vh;
+    margin-bottom: 1vh;
+    color: #fff;
+    background-color: #2a0944;
+    cursor: pointer;
+    animation-name: change;
+    animation-duration: 1.4s;
+}
+
+.p{
+    color: #fff;
+}
+
+.logingoogle button{
+    height: 5vh;
+    width: 13vw;
+    margin-top: 1vh;
+    outline: none;
+    border: 1px solid #460BA1;
+    border-radius: 15px;
+    background-color: #fff;
+    transition: 0.2s;
+    cursor: pointer;
+    animation-name: change;
+    animation-duration: 1s;
+}
+
+.logingoogle button:hover{
+    color: #fff;
+    background-color: #460BA1;
+}
+
+.registration button{
+    height: 6vh;
+    width: 30vw;
+    margin-top: 5vh;
+    border: 1px solid #460BA1;
+    border-radius: 10px;
+    background-color: #fff;
+    transition: 0.2s;
+    cursor: pointer;
+    animation-name: change;
+    animation-duration: 1s;
+}
+
+.registration button:hover{
+    color: #fff;
+    background-color: #460BA1;
+}

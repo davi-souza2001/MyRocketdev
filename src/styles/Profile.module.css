@@ -1,0 +1,64 @@
+@keyframes change{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+.box{
+    height: 15vh;
+    width: 30vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 12px;
+    background-color: #622bb4;
+    animation-name: change;
+    animation-duration: 0.5s;
+    margin-top: 5vh;
+    margin-left: 8vw;
+    margin-right: -8vw;
+}
+
+.imgProfile img{
+    height: 10vh;
+    width: 5vw;
+    border-radius: 100%;
+    margin-left: 1vw;
+}
+
+.information{
+    height: 15vh;
+    width: 15vw;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'poppins', sans-serif;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    color: #fff;
+}
+
+
+.match{
+    background-color: #fff;
+    height: 4vh;
+    width: 5vw;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    margin-right: 1vw;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.match:hover{
+    color: #fff;
+    background-color: #2c0568;
+}
