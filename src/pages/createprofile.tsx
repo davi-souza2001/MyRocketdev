@@ -1,13 +1,14 @@
 import { useState } from "react";
 import route from "next/router";
 import styles from "../styles/CreateProfile.module.css";
+import useAuth from "../data/hook/useAuth";
 
 interface CreateProfileProps {
     
 }
 
 export default function CreateProfile(Props: CreateProfileProps){
-
+    const { user } = useAuth();
 
     const [name, setName] = useState("");
     const [userName, setUserName] = useState("");
@@ -40,7 +41,7 @@ export default function CreateProfile(Props: CreateProfileProps){
         <div className={styles.contentGeral}>
             <div className={styles.contentForms}>
                 <form>
-                    <h2>Ola</h2>
+                    <h2>{user.name}</h2>
                     <input type="text" placeholder="Digite seu nome publico" onChange={(e) => setName(e.target.value)}/>
                     <input type="text" placeholder="Digite seu @ no qual as pessoas vão procurar você" onChange={(e) => setUserName(e.target.value)} />
                     <input type="text" placeholder="Linkedin" onChange={(e) => setLinkedin(e.target.value)} />

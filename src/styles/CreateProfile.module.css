@@ -44,9 +44,7 @@
     color: #fff;
 }
 
-::-webkit-input-placeholder {
-    padding-left: 1vw;
-}
+
 
 .contentForms form p{
     font-size: 80%;

@@ -6,16 +6,12 @@ import Image from "next/image";
 import astro from "../assets/img/austrotwo.jpg";
 import astrobye from "../assets/img/austrogoodbye.jpg";
 import styles from "../styles/Login.module.css";
+import useAuth from "../data/hook/useAuth";
 
 
 export default function Login(){
+    const { loginGoogle } = useAuth();
     const [boxone, setBoxone] = useState(true);
-
-    function navigateToNextRoom(e: any) {
-        e.preventDefault();
-        route.push("/profiling");
-    }
-    
 
     function changebox() {
         if (boxone) {
@@ -64,7 +60,7 @@ export default function Login(){
                 </form>
                 <p className={styles.p}>Or</p>
                 <div className={styles.logingoogle}>
-                    <button>Google</button>
+                    <button onClick={loginGoogle}>Google</button>
                 </div>
                 <div className={styles.registration}>
                     <button>Registrar-se</button>
