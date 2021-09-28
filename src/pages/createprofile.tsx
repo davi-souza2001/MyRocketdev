@@ -38,7 +38,6 @@ export default function CreateProfile(Props: CreateProfileProps) {
         route.push("/");
    }
 
-
     return (
         <div className={styles.contentGeral}>
             <div className={styles.contentForms}>
