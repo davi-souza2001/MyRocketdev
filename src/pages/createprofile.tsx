@@ -22,14 +22,21 @@ export default function CreateProfile(Props: CreateProfileProps) {
 
     async function setDatas(){
         const nameUser = await user?.name;
+        const emailUser = await user?.email;
         setName(nameUser);
+        setEmail(emailUser);
         const datas = {
-            nameUser
+            nameUser,
+            emailUser
         };
-        console.log(datas);
     }
 
     setDatas();
+
+    function navigateToHome(e){
+        e.preventDefault();
+        route.push("/");
+   }
 
 
     return (
@@ -44,10 +51,10 @@ export default function CreateProfile(Props: CreateProfileProps) {
                     <input type="text" placeholder="Instagrm" onChange={(e) => setInstagram(e.target.value)} />
                     <input type="text" placeholder="Youtube" onChange={(e) => setYoutube(e.target.value)} />
                     <input type="text" placeholder="Adicione uma descrição sobre você" onChange={(e) => setDescription(e.target.value)} />
-                    <input type="text" placeholder="Digite seu email" onChange={(e) => setEmail(e.target.value)} />
+                    <input type="text" placeholder="Digite seu email" value={email} />
                     <input type="password" placeholder="Digite sua senha" onChange={(e) => setPassword(e.target.value)} />
                     <p>Ao se cadastrar você concorda com os termos de uso da rede social. Deseja ler ? então clique <a href="https://github.com/davi-souza2001/Myrocket" target="_blank" rel="noreferrer">aqui</a> </p>
-                    <button type="submit" className={styles.buttonSubmit}>Cadastrar</button>
+                    <button type="submit" className={styles.buttonSubmit} onClick={navigateToHome}>Cadastrar</button>
                 </form>
             </div>
         </div>
