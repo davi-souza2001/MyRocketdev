@@ -41,7 +41,7 @@ export default function CreateProfile(Props: CreateProfileProps){
         <div className={styles.contentGeral}>
             <div className={styles.contentForms}>
                 <form>
-                    <h2>{user.name}</h2>
+                    <h2>{user ? user.name : "Ola"}</h2>
                     <input type="text" placeholder="Digite seu nome publico" onChange={(e) => setName(e.target.value)}/>
                     <input type="text" placeholder="Digite seu @ no qual as pessoas vão procurar você" onChange={(e) => setUserName(e.target.value)} />
                     <input type="text" placeholder="Linkedin" onChange={(e) => setLinkedin(e.target.value)} />

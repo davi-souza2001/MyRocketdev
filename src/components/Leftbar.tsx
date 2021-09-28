@@ -33,7 +33,7 @@ export default function Leftbar(props: LeftbarProps){
             <div className={styles.contatctab}>
                 <div className={styles.user}>
                     <Image src={Astro} alt="Foto do usuario" width={40} height={40} className={styles.imageB}></Image>
-                    <h5>Davi Souza</h5>
+                    <h5>Sem login</h5>
                 </div>
             </div>       
         </div> 

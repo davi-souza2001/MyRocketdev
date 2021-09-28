@@ -1,6 +1,8 @@
-import { createContext, useState } from "react";
-import route from "next/router";
+import { createContext, useEffect, useState } from "react";
 import firebase from "../../firebase/config";
+import Cookies from "js-cookie";
+
+import route from "next/router";
 import User from "../../model/User";
 
 interface AuthContextProps {
@@ -22,19 +24,47 @@ async function userNormal(userFirebase: firebase.User): Promise<User> {
     }
 }
 
+function manageCookie(logger: boolean) {
+    if(logger) {
+        Cookies.set('Myrocket-admin-auth', logger, {
+            expires: 7
+        });
+    } else {
+        Cookies.remove('Myrocket-admin-auth');
+    }
+}
+
 export function AuthProvider(props) {
+    const [loading, setLoading] = useState(true);
     const [user, setUser] = useState<User>(null);
+
+    async function configureSection(userFirebase) {
+        if(userFirebase?.email) {
+            const userWithCookie = await userNormal(userFirebase);
+            setUser(userWithCookie);
+            manageCookie(true);
+            setLoading(false);
+            return user?.email
+        } else {
+            setUser(null);
+            manageCookie(false);
+            setLoading(false);
+            return false
+        }
+    }
 
     async function loginGoogle() {
         const resp = await firebase.auth().signInWithPopup(
             new firebase.auth.GoogleAuthProvider()
         )
-        if (resp.user?.email) {
-            const userNo = await userNormal(resp.user);
-            setUser(userNo);
-            route.push('/createprofile');
-        }
-    }
+            configureSection(resp.user);
+            route.push('/createprofile');  
+    };
+
+    useEffect(() => {
+        const cancell = firebase.auth().onIdTokenChanged(configureSection);
+        return () => cancell();
+    }, []);
 
     return (
         <AuthContext.Provider value={{
