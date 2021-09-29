@@ -78,8 +78,10 @@ export function AuthProvider(props) {
     }
 
     useEffect(() => {
-        const cancell = firebase.auth().onIdTokenChanged(configureSection);
-        return () => cancell();
+        if (Cookies.get('Myrocket-admin-auth')) {
+            const cancell = firebase.auth().onIdTokenChanged(configureSection);
+            return () => cancell();
+        }
     }, []);
 
     return (
