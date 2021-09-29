@@ -1,7 +1,7 @@
 # My Rocket
 ## Social network designed for Devs
 
-## Building project !
+## Building project... !
 
 env example
 NEXT_PUBLIC_API_KEY=
