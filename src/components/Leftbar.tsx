@@ -11,7 +11,7 @@ interface LeftbarProps {
 
 export default function Leftbar(props: LeftbarProps) {
 
-    const { user } = useAuth();
+    const { user, logout, loginGoogle } = useAuth();
 
     function navigateToHomeRoom(e: any) {
         e.preventDefault();
@@ -34,14 +34,14 @@ export default function Leftbar(props: LeftbarProps) {
                     <div className={styles.profile} onClick={navigateToProfileRoom}><h3>Profile</h3></div>
                 </div>
                 <div className={styles.contatctab}>
-                    <div className={styles.user}>
+                    <div className={styles.user} onClick={user ? logout : loginGoogle }>
                         {user ? (
                             <>
-                                <Image src={user.imagemUrl} alt="Foto do usuario" width={40} height={40} className={styles.imageB}></Image>
-                                <h5>Com login</h5>
+                                <Image src={Astro} alt="Foto do usuario" width={40} height={40} className={styles.imageB}></Image>
+                                <h5>{user.name}</h5>
                             </>
                         ) :
-                            (<h5>Sem login</h5>)}
+                            (<h5>Fazer login</h5>)}
 
                     </div>
                 </div>

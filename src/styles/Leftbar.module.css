@@ -56,8 +56,8 @@
 }
 
 .user{
-    height: 8vh;
-    width: 14vw;
+    height: 6vh;
+    width: 11vw;
     display:flex;
     align-items: center;
     justify-content: center;
