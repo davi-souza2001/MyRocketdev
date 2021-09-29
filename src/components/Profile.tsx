@@ -3,10 +3,12 @@ import Austroone from "../assets/img/austroone.jpg";
 import Image from "next/image";
 
 interface ProfileProps {
-
+    name: String;
+    dev: String;
+    description: String;
 }
 
-export default function Profile(Props: ProfileProps) {
+export default function Profile(props: ProfileProps) {
 
     
     return (
@@ -14,9 +16,9 @@ export default function Profile(Props: ProfileProps) {
             <div className={styles.box}>
                 <div className={styles.imgProfile}><Image src={Austroone} alt="Imagem"></Image></div>
                 <div className={styles.information}>
-                        <h3>Davi Souzaaa</h3>
-                        <h4>Front-End</h4>
-                        <p>Ola sou programador front-end</p>
+                        <h3>{props.name}</h3>
+                        <h4>{props.dev}</h4>
+                        <p>{props.description}</p>
                 </div>
                 <div className={styles.match}><h3>Match</h3></div>
             </div>

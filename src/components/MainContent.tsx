@@ -8,39 +8,7 @@ interface MainContentProps {
 export default function MainContent(Props: MainContentProps){
     return (
         <div className={styles.contentProfiles}>
-            <Profile/>
-            <Profile/>
-            <Profile/>
-            <Profile/>
-            <Profile/>
-            <Profile/>
-            <Profile/>
-            <Profile/>
-            <Profile/>
-            <Profile/>
-            <Profile/>
-            <Profile/>
-            <Profile/>
-            <Profile/>
-            <Profile/>
-            <Profile/>
-            <Profile/>
-            <Profile/>
-            <Profile/>
-            <Profile/>
-            <Profile/>
-            <Profile/>
-            <Profile/>
-            <Profile/>
-            <Profile/>
-            <Profile/>
-            <Profile/>
-            <Profile/>
-            <Profile/>
-            <Profile/>
-            <Profile/>
-            <Profile/>
-            <Profile/>
+            <Profile name="Davi" dev="Full-stack" description="Ola sou front e back"/>
         </div>
     )
 }
