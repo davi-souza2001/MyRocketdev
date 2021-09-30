@@ -1,9 +1,7 @@
 import { useEffect, useState } from "react";
 import firebase from "../firebase/config";
-
-import styles from "../styles/MainContent.module.css";
+import ContentProfile from "./ContentProfile";
 import Profile from "./Profile";
-
 
 
 export default function MainContent() {
@@ -21,13 +19,24 @@ export default function MainContent() {
         })
       }, []);
 
-      profileList?.map((profile, index) => {
-          console.log(profile.name);
-      })
+      function renderProfiles(){
+        return profileList?.map((profile, index) => {
+            console.log(profile.name)
+            return(
+                <Profile name={profile.name} dev={profile.local} description={profile.description}/>
+            )
+        });
+      }
+
 
     return (
-        <div className={styles.contentProfiles}>
-            <Profile name="Davi" dev="Full-stack" description="Ola sou front e back" />
-        </div>
+        <>
+            {profileList ? 
+            <ContentProfile>
+                {renderProfiles()}
+            </ContentProfile>
+                : 
+            <h1>Não tem</h1>}
+        </>
     )
 }
