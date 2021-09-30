@@ -9,55 +9,29 @@ import useAuth from "../data/hook/useAuth";
 import styles from "../styles/ContentMainProfile.module.css";
 
 interface MainProfileProps {
-    
+
 }
 
-export default function MainProfile(Props: MainProfileProps){
+export default function MainProfile(Props: MainProfileProps) {
     const { profileList } = useProfile();
     const { user } = useAuth();
-
-    const [name, setName] = useState("");
 
     const [description, setDescription] = useState(true);
     const [projects, setProjects] = useState(false);
     const [social, setSocial] = useState(false);
-    
 
-    function activeModalDescription(){
-        if(!description){
-            setDescription(true);
-            setProjects(false);
-            setSocial(false);
-        }
-    }
-
-    function activeModalProjects(){
-        if(!projects){
-            setProjects(true);
-            setDescription(false);
-            setSocial(false);
-        }
-    }
-
-    function activeModalSocial(){
-        if(!social){
-            setSocial(true);
-            setDescription(false);
-            setProjects(false);
-        }
-    }
-
-    return (
-        <div className={styles.contentMainProfile}>
-            <Leftbar/>
-            <div className={styles.MainProfile}>
+    const renderProfiles = profileList.map(
+        function (prof, index){
+            if(prof.email == user?.email)
+            return (
+                <div className={styles.MainProfile} key={index}>
                 <div className={styles.imgBackground}>
-                    <Image src={AstroLike} alt="Astronauta dando like" height={200} width={200}/>
+                    <Image src={AstroLike} alt="Astronauta dando like" height={200} width={200} />
                 </div>
                 <div className={styles.imgProfileUser}>
                     <Image src={Austroone} alt="Foto de Perfil"></Image>
-                    <h3>{name}</h3>
-                    <p>@davisouzadev</p>
+                    <h3>{prof.name}</h3>
+                    <p>@{prof.userName}</p>
                 </div>
                 <div className={styles.bar}></div>
                 <div className={styles.optionsBar}>
@@ -74,9 +48,9 @@ export default function MainProfile(Props: MainProfileProps){
 
                 {description ? (
                     <div className={styles.descriptionProfile}>
-                        <h3>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum odit minima quisquam nam animi exercitationem quod, officia adipisci? Cum quis hic reiciendis quisquam aut repellendus consectetur perferendis, tempora quas tempore?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam inventore magnam, nesciunt cum modi reprehenderit obcaecati soluta ex recusandae laudantium in consectetur expedita optio ea, excepturi doloremque doloribus quia distinctio?Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam nisi voluptatum fugit facere amet! Temporibus quasi, qui ipsa laboriosam expedita, nam laudantium quod quas blanditiis reiciendis dolore excepturi soluta consecteturlorem lorem</h3>
+                        <h3>{prof.description}</h3>
                     </div>
-                ) : <div></div>} 
+                ) : <div></div>}
 
                 {projects ? (
                     <>
@@ -101,25 +75,57 @@ export default function MainProfile(Props: MainProfileProps){
                             </div>
                         </div>
                     </>
-                ) : <div></div>} 
+                ) : <div></div>}
 
                 {social ? (
                     <>
                         <div className={styles.descriptionProfile}>
-                            <h3><a href="https://www.linkedin.com/in/davi-souza2001/" target="_blank" rel="noreferrer">Likedin: davi-souza2001</a></h3>
+                            <h3><a href="https://www.linkedin.com/in/davi-souza2001/" target="_blank" rel="noreferrer">Likedin: {prof.linkedin}</a></h3>
                         </div>
                         <div className={styles.descriptionProfile}>
-                            <h3><a href="https://www.linkedin.com/in/davi-souza2001/" target="_blank" rel="noreferrer">GitHub: davi-souza2001</a></h3>
+                            <h3><a href="https://www.linkedin.com/in/davi-souza2001/" target="_blank" rel="noreferrer">GitHub: {prof.github}</a></h3>
                         </div>
                         <div className={styles.descriptionProfile}>
-                            <h3><a href="https://www.linkedin.com/in/davi-souza2001/" target="_blank" rel="noreferrer">Instagram: davi-souza2001</a></h3>
+                            <h3><a href="https://www.linkedin.com/in/davi-souza2001/" target="_blank" rel="noreferrer">Instagram: {prof.instagram}</a></h3>
                         </div>
                         <div className={styles.descriptionProfile}>
-                            <h3><a href="https://www.linkedin.com/in/davi-souza2001/" target="_blank" rel="noreferrer">Youtube: davi-souza2001</a></h3>
+                            <h3><a href="https://www.linkedin.com/in/davi-souza2001/" target="_blank" rel="noreferrer">Youtube: {prof.youtube}</a></h3>
                         </div>
-                   </>
-                ) : <div></div>} 
+                    </>
+                ) : false}
             </div>
+            )
+        }
+    )
+
+    function activeModalDescription() {
+        if (!description) {
+            setDescription(true);
+            setProjects(false);
+            setSocial(false);
+        }
+    }
+
+    function activeModalProjects() {
+        if (!projects) {
+            setProjects(true);
+            setDescription(false);
+            setSocial(false);
+        }
+    }
+
+    function activeModalSocial() {
+        if (!social) {
+            setSocial(true);
+            setDescription(false);
+            setProjects(false);
+        }
+    }
+
+    return (
+        <div className={styles.contentMainProfile}>
+            <Leftbar />
+            {renderProfiles}
         </div>
     )
 }
