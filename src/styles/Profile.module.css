@@ -43,6 +43,13 @@
     color: #fff;
 }
 
+.infoLocalAndDev{
+    display: flex;
+}
+
+.infoLocalAndDev h4{
+    margin-right: 0.2vw;
+}
 
 .match{
     background-color: #fff;

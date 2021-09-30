@@ -23,7 +23,7 @@ export default function MainContent() {
         return profileList?.map((profile, index) => {
             console.log(profile.name)
             return(
-                <Profile name={profile.name} dev={profile.local} description={profile.description}/>
+                <Profile name={profile.name} dev={profile.dev} local={profile.local} description={profile.description}/>
             )
         });
       }

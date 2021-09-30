@@ -20,6 +20,7 @@ export default function CreateProfile(Props: CreateProfileProps) {
     const [instagram, setInstagram] = useState("");
     const [youtube, setYoutube] = useState("");
     const [description, setDescription] = useState("");
+    const [dev, setDev] = useState("");
     const [local, setLocal] = useState("");
     const [email, setEmail] = useState("");
 
@@ -35,6 +36,7 @@ export default function CreateProfile(Props: CreateProfileProps) {
             instagram,
             youtube,
             description,
+            dev,
             local,
             email
         };
@@ -62,6 +64,7 @@ export default function CreateProfile(Props: CreateProfileProps) {
                     <input type="text" placeholder="Github" onChange={(e) => setGithub(e.target.value)} />
                     <input type="text" placeholder="Instagrm" onChange={(e) => setInstagram(e.target.value)} />
                     <input type="text" placeholder="Youtube" onChange={(e) => setYoutube(e.target.value)} />
+                    <input type="text" placeholder="Digite a area dev que você atua ou pretende" onChange={(e) => setDev(e.target.value)} />
                     <input type="text" placeholder="Adicione uma descrição sobre você" onChange={(e) => setDescription(e.target.value)} />
                     <input type="text" placeholder="De qual estado você é ?" onChange={(e) => setLocal(e.target.value)} />
                     <p>Ao se cadastrar você concorda com os termos de uso da rede social. Deseja ler ? então clique <a href="https://github.com/davi-souza2001/MyRocketdev" target="_blank" rel="noreferrer">aqui</a> </p>
