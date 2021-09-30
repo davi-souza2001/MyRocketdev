@@ -42,7 +42,6 @@ export default function Leftbar(props: LeftbarProps) {
                             </>
                         ) :
                             (<h5>Fazer login</h5>)}
-
                     </div>
                 </div>
             </div>

@@ -17,25 +17,34 @@ export default function CreateProfile(Props: CreateProfileProps) {
     const [instagram, setInstagram] = useState("");
     const [youtube, setYoutube] = useState("");
     const [description, setDescription] = useState("");
+    const [local, setLocal] = useState("");
     const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
 
     async function setDatas(){
-        const nameUser = await user?.name;
         const emailUser = await user?.email;
-        setName(nameUser);
         setEmail(emailUser);
         const datas = {
-            nameUser,
-            emailUser
+            name,
+            userName,
+            linkedin,
+            github,
+            instagram,
+            youtube,
+            description,
+            local,
+            email
         };
+        console.log(datas);
     }
+    
 
-    setDatas();
-
-    function navigateToHome(e){
+    async function navigateToHome(e){
         e.preventDefault();
-        route.push("/");
+        try{
+            await setDatas();
+        } finally {
+            route.push("/");
+        }
    }
 
     return (
@@ -43,16 +52,15 @@ export default function CreateProfile(Props: CreateProfileProps) {
             <div className={styles.contentForms}>
                 <form>
                     <h2>Cadastro</h2>
-                    <input type="text" placeholder="Digite seu nome publico" value={name} />
+                    <input type="text" placeholder="Digite seu nome publico" onChange={(e) => setName(e.target.value)}/>
                     <input type="text" placeholder="Digite seu @ no qual as pessoas vão procurar você" onChange={(e) => setUserName(e.target.value)} />
                     <input type="text" placeholder="Linkedin" onChange={(e) => setLinkedin(e.target.value)} />
                     <input type="text" placeholder="Github" onChange={(e) => setGithub(e.target.value)} />
                     <input type="text" placeholder="Instagrm" onChange={(e) => setInstagram(e.target.value)} />
                     <input type="text" placeholder="Youtube" onChange={(e) => setYoutube(e.target.value)} />
                     <input type="text" placeholder="Adicione uma descrição sobre você" onChange={(e) => setDescription(e.target.value)} />
-                    <input type="text" placeholder="Digite seu email" value={email} />
-                    <input type="password" placeholder="Digite sua senha" onChange={(e) => setPassword(e.target.value)} />
-                    <p>Ao se cadastrar você concorda com os termos de uso da rede social. Deseja ler ? então clique <a href="https://github.com/davi-souza2001/Myrocket" target="_blank" rel="noreferrer">aqui</a> </p>
+                    <input type="text" placeholder="De qual estado você é ?" />
+                    <p>Ao se cadastrar você concorda com os termos de uso da rede social. Deseja ler ? então clique <a href="https://github.com/davi-souza2001/MyRocketdev" target="_blank" rel="noreferrer">aqui</a> </p>
                     <button type="submit" className={styles.buttonSubmit} onClick={navigateToHome}>Cadastrar</button>
                 </form>
             </div>
