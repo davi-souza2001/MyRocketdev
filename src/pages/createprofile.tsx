@@ -1,7 +1,10 @@
 import { useState } from "react";
+import firebase from "../firebase/config";
 import route from "next/router";
-import styles from "../styles/CreateProfile.module.css";
 import useAuth from "../data/hook/useAuth";
+
+
+import styles from "../styles/CreateProfile.module.css";
 
 interface CreateProfileProps {
 
@@ -23,6 +26,7 @@ export default function CreateProfile(Props: CreateProfileProps) {
     async function setDatas(){
         const emailUser = await user?.email;
         setEmail(emailUser);
+        const todoRef = await firebase.database().ref("Profiles");
         const datas = {
             name,
             userName,
@@ -34,7 +38,7 @@ export default function CreateProfile(Props: CreateProfileProps) {
             local,
             email
         };
-        console.log(datas);
+        todoRef.push(datas);
     }
     
 
@@ -59,7 +63,7 @@ export default function CreateProfile(Props: CreateProfileProps) {
                     <input type="text" placeholder="Instagrm" onChange={(e) => setInstagram(e.target.value)} />
                     <input type="text" placeholder="Youtube" onChange={(e) => setYoutube(e.target.value)} />
                     <input type="text" placeholder="Adicione uma descrição sobre você" onChange={(e) => setDescription(e.target.value)} />
-                    <input type="text" placeholder="De qual estado você é ?" />
+                    <input type="text" placeholder="De qual estado você é ?" onChange={(e) => setLocal(e.target.value)} />
                     <p>Ao se cadastrar você concorda com os termos de uso da rede social. Deseja ler ? então clique <a href="https://github.com/davi-souza2001/MyRocketdev" target="_blank" rel="noreferrer">aqui</a> </p>
                     <button type="submit" className={styles.buttonSubmit} onClick={navigateToHome}>Cadastrar</button>
                 </form>
