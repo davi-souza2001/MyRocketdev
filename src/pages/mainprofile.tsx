@@ -1,20 +1,27 @@
 import { useState } from "react";
-import styles from "../styles/ContentMainProfile.module.css";
-
 import Image from "next/image";
 import Leftbar from "../components/Leftbar";
 import AstroLike from "../assets/img/austrolike.jpg";
 import Austroone from "../assets/img/austroone.jpg";
+import useProfile from "../data/hook/useProfile";
+import useAuth from "../data/hook/useAuth";
+
+import styles from "../styles/ContentMainProfile.module.css";
 
 interface MainProfileProps {
     
 }
 
 export default function MainProfile(Props: MainProfileProps){
+    const { profileList } = useProfile();
+    const { user } = useAuth();
+
+    const [name, setName] = useState("");
 
     const [description, setDescription] = useState(true);
     const [projects, setProjects] = useState(false);
     const [social, setSocial] = useState(false);
+    
 
     function activeModalDescription(){
         if(!description){
@@ -49,7 +56,7 @@ export default function MainProfile(Props: MainProfileProps){
                 </div>
                 <div className={styles.imgProfileUser}>
                     <Image src={Austroone} alt="Foto de Perfil"></Image>
-                    <h3>Davi Souza</h3>
+                    <h3>{name}</h3>
                     <p>@davisouzadev</p>
                 </div>
                 <div className={styles.bar}></div>

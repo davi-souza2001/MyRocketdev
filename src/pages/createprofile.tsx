@@ -31,14 +31,14 @@ export default function CreateProfile(Props: CreateProfileProps) {
         const datas = {
             name,
             userName,
+            email,
             linkedin,
             github,
             instagram,
             youtube,
-            description,
             dev,
-            local,
-            email
+            description,
+            local
         };
         todoRef.push(datas);
     }
@@ -60,6 +60,7 @@ export default function CreateProfile(Props: CreateProfileProps) {
                     <h2>Cadastro</h2>
                     <input type="text" placeholder="Digite seu nome publico" onChange={(e) => setName(e.target.value)}/>
                     <input type="text" placeholder="Digite seu @ no qual as pessoas vão procurar você" onChange={(e) => setUserName(e.target.value)} />
+                    <input type="text" placeholder="Digite seu email" onChange={(e) => setEmail(e.target.value)} />
                     <input type="text" placeholder="Linkedin" onChange={(e) => setLinkedin(e.target.value)} />
                     <input type="text" placeholder="Github" onChange={(e) => setGithub(e.target.value)} />
                     <input type="text" placeholder="Instagrm" onChange={(e) => setInstagram(e.target.value)} />
