@@ -25,25 +25,25 @@ export default function MainProfile(Props: MainProfileProps) {
             if(prof.email == user?.email)
             return (
                 <div className={styles.MainProfile} key={index}>
-                <div className={styles.imgBackground}>
-                    <Image src={AstroLike} alt="Astronauta dando like" height={200} width={200} />
-                </div>
-                <div className={styles.imgProfileUser}>
-                    <Image src={Austroone} alt="Foto de Perfil"></Image>
-                    <h3>{prof.name}</h3>
-                    <p>@{prof.userName}</p>
-                </div>
-                <div className={styles.bar}></div>
-                <div className={styles.optionsBar}>
-                    <div className={styles.contentOption} onClick={activeModalDescription}>
-                        <h4>Descrição</h4>
+                    <div className={styles.imgBackground}>
+                        <Image src={AstroLike} alt="Astronauta dando like" height={200} width={200} />
                     </div>
-                    <div className={styles.contentOption} onClick={activeModalProjects}>
-                        <h4>Projetos</h4>
+                    <div className={styles.imgProfileUser}>
+                        <Image src={Austroone} alt="Foto de Perfil"></Image>
+                        <h3>{prof.name}</h3>
+                        <p>@{prof.userName}</p>
                     </div>
-                    <div className={styles.contentOption} onClick={activeModalSocial}>
-                        <h4>Sociais</h4>
-                    </div>
+                    <div className={styles.bar}></div>
+                    <div className={styles.optionsBar}>
+                        <div className={styles.contentOption} onClick={activeModalDescription}>
+                            <h4>Descrição</h4>
+                        </div>
+                        <div className={styles.contentOption} onClick={activeModalProjects}>
+                            <h4>Projetos</h4>
+                        </div>
+                        <div className={styles.contentOption} onClick={activeModalSocial}>
+                            <h4>Sociais</h4>
+                        </div>
                 </div>
 
                 {description ? (
