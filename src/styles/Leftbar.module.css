@@ -76,6 +76,10 @@
     transition: 0.6s;
 }
 
+.user h5{
+    margin-left: 1vw;
+}
+
 .user:hover{
     background-color: #AE81FE;
 }
