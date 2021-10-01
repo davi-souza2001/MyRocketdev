@@ -30,7 +30,7 @@
     align-items: center;
     justify-content: space-around;
     flex-direction: column;
-    margin-top: 2.5vh;
+    
 }
 
 .home, .search, .profile{
@@ -58,7 +58,7 @@
     justify-content: center;
     flex-direction: column;
     border-radius: 20px;
-    margin-top: 3vh;
+    
 }
 
 .user{
@@ -78,10 +78,6 @@
 
 .user:hover{
     background-color: #AE81FE;
-}
-
-.user h5{
-    margin-left: 0.6vw;
 }
 
 .user .imageB{
