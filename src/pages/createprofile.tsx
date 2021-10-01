@@ -25,7 +25,7 @@ export default function CreateProfile(Props: CreateProfileProps) {
     const [email, setEmail] = useState("");
 
     async function setDatas(){
-        const emailUser = await user?.email;
+        const emailUser = user?.email;
         setEmail(emailUser);
         const todoRef = await firebase.database().ref("Profiles");
         const datas = {
@@ -60,10 +60,9 @@ export default function CreateProfile(Props: CreateProfileProps) {
                     <h2>Cadastro</h2>
                     <input type="text" placeholder="Digite seu nome publico" onChange={(e) => setName(e.target.value)}/>
                     <input type="text" placeholder="Digite seu @ no qual as pessoas vão procurar você" onChange={(e) => setUserName(e.target.value)} />
-                    <input type="text" placeholder="Digite seu email" onChange={(e) => setEmail(e.target.value)} />
                     <input type="text" placeholder="Linkedin" onChange={(e) => setLinkedin(e.target.value)} />
                     <input type="text" placeholder="Github" onChange={(e) => setGithub(e.target.value)} />
-                    <input type="text" placeholder="Instagrm" onChange={(e) => setInstagram(e.target.value)} />
+                    <input type="text" placeholder="Instagram" onChange={(e) => setInstagram(e.target.value)} />
                     <input type="text" placeholder="Youtube" onChange={(e) => setYoutube(e.target.value)} />
                     <input type="text" placeholder="Digite a area dev que você atua ou pretende" onChange={(e) => setDev(e.target.value)} />
                     <input type="text" placeholder="Adicione uma descrição sobre você" onChange={(e) => setDescription(e.target.value)} />
