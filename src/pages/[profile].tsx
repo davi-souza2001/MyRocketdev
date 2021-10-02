@@ -5,7 +5,6 @@ import Image from "next/image";
 import Leftbar from "../components/Leftbar";
 import Austroone from "../assets/img/austroone.jpg";
 import useProfile from "../data/hook/useProfile";
-import useAuth from "../data/hook/useAuth";
 
 import AstroLike from "../assets/img/austrolike.jpg";
 
