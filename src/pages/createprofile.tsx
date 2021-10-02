@@ -2,6 +2,7 @@ import { useState } from "react";
 import firebase from "../firebase/config";
 import route from "next/router";
 import useAuth from "../data/hook/useAuth";
+import useProfile from "../data/hook/useProfile";
 
 
 import styles from "../styles/CreateProfile.module.css";
@@ -11,8 +12,15 @@ interface CreateProfileProps {
 }
 
 export default function CreateProfile(Props: CreateProfileProps) {
+    const { profileList } = useProfile();
     const { user } = useAuth();
     const emailUser = user?.email;
+
+    const verifyEmailExists = profileList?.map((prof) => {
+        if(prof.email == emailUser) {
+            route.push("/");
+        }
+    })
 
     const [name, setName] = useState("");
     const [userName, setUserName] = useState("");
