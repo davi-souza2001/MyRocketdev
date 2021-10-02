@@ -13,17 +13,27 @@ import AstroLike from "../assets/img/austrolike.jpg";
 import styles from "../styles/ContentMainProfile.module.css";
 
 export default function MainProfile() {
-    const { profileList } = useProfile();
     const { user } = useAuth();
+    const { profileList } = useProfile();
     const [repos, setRepos] = useState([]);
+    const [seflgithub, setSeflgithub] = useState("");
+
+    //Start logic get user for api gitHub
+
+    useEffect(() => {
+        const getUserGithub = profileList.map((prof) => {
+            if(prof?.email == user?.email){
+                setSeflgithub(prof.github);
+            }
+        })
+    }, [user, profileList, repos, seflgithub]);
 
     useEffect(() => {
         client.get(`/davi-souza2001/repos`).then(({data}) => {
             setRepos(data);
-        });
-        
+        }).catch((err) => console.log("Erroou"))
     }, []);
-
+    
     function renderRepos(){
         return repos?.map((repo, index) => {
             return(
@@ -34,9 +44,17 @@ export default function MainProfile() {
         })
     }
 
+    //End logic get user for api gitHub
+
+    //Start state to open pages
+
     const [description, setDescription] = useState(true);
     const [projects, setProjects] = useState(false);
     const [social, setSocial] = useState(false);
+
+    //End state to open pages
+
+    //Start variable for render profile right in main profile (left bar)
 
     const renderProfiles = profileList.map(
         function (prof, index){
@@ -100,6 +118,10 @@ export default function MainProfile() {
         }
     )
 
+    //End variable for render profile right in main profile (left bar)
+
+    //Start functions to open modal pages
+
     function activeModalDescription() {
         if (!description) {
             setDescription(true);
@@ -123,6 +145,8 @@ export default function MainProfile() {
             setProjects(false);
         }
     }
+
+    //End functions to open modal pages
 
     return (
         <div className={styles.contentMainProfile}>

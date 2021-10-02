@@ -12,6 +12,7 @@ interface CreateProfileProps {
 
 export default function CreateProfile(Props: CreateProfileProps) {
     const { user } = useAuth();
+    const emailUser = user?.email;
 
     const [name, setName] = useState("");
     const [userName, setUserName] = useState("");
@@ -22,11 +23,9 @@ export default function CreateProfile(Props: CreateProfileProps) {
     const [description, setDescription] = useState("");
     const [dev, setDev] = useState("");
     const [local, setLocal] = useState("");
-    const [email, setEmail] = useState("");
+    const [email, setEmail] = useState(emailUser);
 
     async function setDatas(){
-        const emailUser = user?.email;
-        setEmail(emailUser);
         const todoRef = await firebase.database().ref("Profiles");
         const datas = {
             name,
