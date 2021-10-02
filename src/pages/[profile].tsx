@@ -20,13 +20,13 @@ export default function MainProfile() {
 
     //Start logic get user for api gitHub
 
-    /* useEffect(() => {
+    useEffect(() => {
         const getUserGithub = profileList.map((prof) => {
-            if (prof?.email == user?.email) {
+            if (prof.userName == profileSearch) {
                 setSeflgithub(prof.github);
             }
         })
-    }, [user, profileList, repos, seflgithub]);
+    }, [profileList, repos, seflgithub]);
 
     useEffect(() => {
         client.get(`/${seflgithub}/repos`).then(({ data }) => {
@@ -43,7 +43,7 @@ export default function MainProfile() {
             )
         })
     }
- */
+
     //End logic get user for api gitHub
 
     //Start state to open pages
@@ -54,7 +54,7 @@ export default function MainProfile() {
 
     //End state to open pages
 
-    //Start variable for render profile right in main profile (left bar)
+    //Start variable for render profile right in search profile (left bar)
 
     const renderProfiles = profileList.map(
         function (prof, index) {
@@ -92,24 +92,7 @@ export default function MainProfile() {
                         {projects ? (
                             <>
                                 <div className={styles.spacingbar}>
-                                    <div className={styles.descriptionProfile}>
-                                        <h3><a href="https://www.linkedin.com/in/davi-souza2001/" target="_blank" rel="noreferrer">Projeto 01</a></h3>
-                                    </div>
-                                    <div className={styles.descriptionProfile}>
-                                        <h3><a href="https://www.linkedin.com/in/davi-souza2001/" target="_blank" rel="noreferrer">Projeto 02</a></h3>
-                                    </div>
-                                    <div className={styles.descriptionProfile}>
-                                        <h3><a href="https://www.linkedin.com/in/davi-souza2001/" target="_blank" rel="noreferrer">Projeto 03</a></h3>
-                                    </div>
-                                    <div className={styles.descriptionProfile}>
-                                        <h3><a href="https://www.linkedin.com/in/davi-souza2001/" target="_blank" rel="noreferrer">Projeto 04</a></h3>
-                                    </div>
-                                    <div className={styles.descriptionProfile}>
-                                        <h3><a href="https://www.linkedin.com/in/davi-souza2001/" target="_blank" rel="noreferrer">Projeto 05</a></h3>
-                                    </div>
-                                    <div className={styles.descriptionProfile}>
-                                        <h3><a href="https://www.linkedin.com/in/davi-souza2001/" target="_blank" rel="noreferrer">Projeto 06</a></h3>
-                                    </div>
+                                    {renderRepos()}
                                 </div>
                             </>
                         ) : <div></div>}
@@ -135,7 +118,7 @@ export default function MainProfile() {
         }
     )
 
-    //End variable for render profile right in main profile (left bar)
+    //End variable for render profile right in search profile (left bar)
 
     //Start functions to open modal pages
 
