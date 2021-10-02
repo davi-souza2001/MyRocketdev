@@ -8,6 +8,7 @@ interface ProfileProps {
     dev: String;
     description: String;
     local: string;
+    link: () => any;
 }
 
 export default function Profile(props: ProfileProps) {
@@ -26,7 +27,7 @@ export default function Profile(props: ProfileProps) {
                         </div>
                         <p>{props.description}</p>
                 </div>
-                <div className={styles.match}><h3>Match</h3></div>
+                <div className={styles.match} onClick={props.link}><h3>Match</h3></div>
             </div>
         </div>
     )

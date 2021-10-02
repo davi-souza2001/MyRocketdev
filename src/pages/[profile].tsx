@@ -33,6 +33,7 @@ export default function MainProfile() {
                     <Image src={Austroone} alt="Foto de Perfil"></Image>
                     <h3>{prof.name}</h3>
                     <p>@{prof.userName}</p>
+                    <p>{prof.local}</p>
                 </div>
                 <div className={styles.bar}></div>
                 <div className={styles.optionsBar}>

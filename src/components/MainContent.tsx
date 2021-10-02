@@ -1,3 +1,4 @@
+import route from "next/router";
 import useProfile from "../data/hook/useProfile";
 import ContentProfile from "./ContentProfile";
 import Profile from "./Profile";
@@ -11,7 +12,7 @@ export default function MainContent() {
         return profileList?.map((profile, index) => {
             return (
                 <div key={index}>
-                    <Profile name={profile.name} dev={profile.dev} local={profile.local} description={profile.description} />
+                    <Profile name={profile.name} dev={profile.dev} local={profile.local} description={profile.description} link={() => route.push(`/${profile.userName}`)}/>
                 </div>
             )
         });
