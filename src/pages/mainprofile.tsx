@@ -29,10 +29,10 @@ export default function MainProfile() {
     }, [user, profileList, repos, seflgithub]);
 
     useEffect(() => {
-        client.get(`/davi-souza2001/repos`).then(({data}) => {
+        client.get(`/${seflgithub}/repos`).then(({data}) => {
             setRepos(data);
         }).catch((err) => console.log("Erroou"))
-    }, []);
+    }, [seflgithub]);
     
     function renderRepos(){
         return repos?.map((repo, index) => {
