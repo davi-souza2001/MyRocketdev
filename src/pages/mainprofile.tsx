@@ -1,21 +1,31 @@
 import { useState } from "react";
 import Image from "next/image";
-import Leftbar from "../components/Leftbar";
-import AstroLike from "../assets/img/austrolike.jpg";
-import Austroone from "../assets/img/austroone.jpg";
 import useProfile from "../data/hook/useProfile";
 import useAuth from "../data/hook/useAuth";
+import Leftbar from "../components/Leftbar";
+import client from "../services/client";
+
+import Austroone from "../assets/img/austroone.jpg";
+import AstroLike from "../assets/img/austrolike.jpg";
 
 import styles from "../styles/ContentMainProfile.module.css";
 
-interface MainProfileProps {
 
-}
-
-export default function MainProfile(Props: MainProfileProps) {
+export default function MainProfile() {
     const { profileList } = useProfile();
     const { user } = useAuth();
 
+    async function getProjectsUsersGitHub(){
+        try{
+            const response = await client.get(`/davi-souza2001/repos`);
+            const repos = response.data;
+        } catch(err){
+            console.log(err);
+        }
+    }   
+
+    getProjectsUsersGitHub()
+    
     const [description, setDescription] = useState(true);
     const [projects, setProjects] = useState(false);
     const [social, setSocial] = useState(false);
