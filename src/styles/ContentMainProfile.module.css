@@ -47,7 +47,10 @@
 }
 
 .spacingbar{
+    width: 88vw;
+    height:45vh;
     margin-top: -4vh;
+    overflow-y: scroll;
 }
 
 .descriptionProfile{

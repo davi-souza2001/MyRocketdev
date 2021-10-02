@@ -1,31 +1,39 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import useProfile from "../data/hook/useProfile";
 import useAuth from "../data/hook/useAuth";
-import Leftbar from "../components/Leftbar";
 import client from "../services/client";
+
+import ContentProfile from "../components/ContentProfile";
+import Leftbar from "../components/Leftbar";
 
 import Austroone from "../assets/img/austroone.jpg";
 import AstroLike from "../assets/img/austrolike.jpg";
 
 import styles from "../styles/ContentMainProfile.module.css";
 
-
 export default function MainProfile() {
     const { profileList } = useProfile();
     const { user } = useAuth();
+    const [repos, setRepos] = useState([]);
 
-    async function getProjectsUsersGitHub(){
-        try{
-            const response = await client.get(`/davi-souza2001/repos`);
-            const repos = response.data;
-        } catch(err){
-            console.log(err);
-        }
-    }   
+    useEffect(() => {
+        client.get(`/davi-souza2001/repos`).then(({data}) => {
+            setRepos(data);
+        });
+        
+    }, []);
 
-    getProjectsUsersGitHub()
-    
+    function renderRepos(){
+        return repos?.map((repo, index) => {
+            return(
+                <div className={styles.descriptionProfile} key={index}>
+                    <h3><a href={repo.html_url} target="_blank" rel="noreferrer">{repo.name}</a></h3>
+                </div>
+            )
+        })
+    }
+
     const [description, setDescription] = useState(true);
     const [projects, setProjects] = useState(false);
     const [social, setSocial] = useState(false);
@@ -61,32 +69,15 @@ export default function MainProfile() {
                     <div className={styles.descriptionProfile}>
                         <h3>{prof.description}</h3>
                     </div>
-                ) : <div></div>}
+                ) : false}
 
                 {projects ? (
                     <>
                         <div className={styles.spacingbar}>
-                            <div className={styles.descriptionProfile}>
-                                <h3><a href="https://www.linkedin.com/in/davi-souza2001/" target="_blank" rel="noreferrer">Projeto 01</a></h3>
-                            </div>
-                            <div className={styles.descriptionProfile}>
-                                <h3><a href="https://www.linkedin.com/in/davi-souza2001/" target="_blank" rel="noreferrer">Projeto 02</a></h3>
-                            </div>
-                            <div className={styles.descriptionProfile}>
-                                <h3><a href="https://www.linkedin.com/in/davi-souza2001/" target="_blank" rel="noreferrer">Projeto 03</a></h3>
-                            </div>
-                            <div className={styles.descriptionProfile}>
-                                <h3><a href="https://www.linkedin.com/in/davi-souza2001/" target="_blank" rel="noreferrer">Projeto 04</a></h3>
-                            </div>
-                            <div className={styles.descriptionProfile}>
-                                <h3><a href="https://www.linkedin.com/in/davi-souza2001/" target="_blank" rel="noreferrer">Projeto 05</a></h3>
-                            </div>
-                            <div className={styles.descriptionProfile}>
-                                <h3><a href="https://www.linkedin.com/in/davi-souza2001/" target="_blank" rel="noreferrer">Projeto 06</a></h3>
-                            </div>
+                            {renderRepos()}
                         </div>
                     </>
-                ) : <div></div>}
+                ) : false}
 
                 {social ? (
                     <>
