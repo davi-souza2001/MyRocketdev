@@ -99,18 +99,30 @@ export default function MainProfile() {
 
                 {social ? (
                     <>
-                        <div className={styles.descriptionProfile}>
-                            <h3><a href="https://www.linkedin.com/in/davi-souza2001/" target="_blank" rel="noreferrer">Likedin: {prof.linkedin}</a></h3>
-                        </div>
-                        <div className={styles.descriptionProfile}>
-                            <h3><a href="https://www.linkedin.com/in/davi-souza2001/" target="_blank" rel="noreferrer">GitHub: {prof.github}</a></h3>
-                        </div>
-                        <div className={styles.descriptionProfile}>
-                            <h3><a href="https://www.linkedin.com/in/davi-souza2001/" target="_blank" rel="noreferrer">Instagram: {prof.instagram}</a></h3>
-                        </div>
-                        <div className={styles.descriptionProfile}>
-                            <h3><a href="https://www.linkedin.com/in/davi-souza2001/" target="_blank" rel="noreferrer">Youtube: {prof.youtube}</a></h3>
-                        </div>
+                        {prof.linkedin ? 
+                            <div className={styles.descriptionProfile}>
+                                <h3><a href={`https://www.linkedin.com/in/${prof.linkedin}/`} target="_blank" rel="noreferrer">Likedin: {prof.linkedin}</a></h3>
+                            </div>
+                        :
+                        false}
+                        {prof.github ? 
+                            <div className={styles.descriptionProfile}>
+                                <h3><a href={`https://github.com/${prof.github}`} target="_blank" rel="noreferrer">GitHub: {prof.github}</a></h3>
+                            </div>
+                        :
+                        false}
+                        {prof.instagram ?
+                            <div className={styles.descriptionProfile}>
+                                <h3><a href={`https://www.instagram.com/${prof.instagram}/`} target="_blank" rel="noreferrer">Instagram: {prof.instagram}</a></h3>
+                            </div>
+                        :
+                        false}
+                        {prof.youtube ? 
+                            <div className={styles.descriptionProfile}>
+                                <h3><a href={`https://www.youtube.com/user/${prof.youtube}`} target="_blank" rel="noreferrer">Youtube: {prof.youtube}</a></h3>
+                            </div>
+                        : 
+                        false}
                     </>
                 ) : false}
             </div>
