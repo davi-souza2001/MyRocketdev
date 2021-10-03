@@ -7,6 +7,7 @@ import User from "../../model/User";
 
 interface AuthContextProps {
     user?: User;
+    loading?: boolean;
     loginGoogle?: () => Promise<void>;
     logout?: () => Promise<void>;
 }
@@ -56,7 +57,6 @@ export function AuthProvider(props) {
 
     async function loginGoogle() {
         try {
-            setLoading(true);
             const resp = await firebase.auth().signInWithPopup(
                 new firebase.auth.GoogleAuthProvider()
             )
@@ -87,6 +87,7 @@ export function AuthProvider(props) {
     return (
         <AuthContext.Provider value={{
             user,
+            loading,
             loginGoogle,
             logout
         }}>
