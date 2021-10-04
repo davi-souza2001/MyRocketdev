@@ -54,16 +54,16 @@ export default function Login(){
             <div className={styles.loginwelcome}>
                 <form>
                     <h2>Welcome to MyRocket</h2>
-                    <input type="text" placeholder="Email" className={styles.email}  />
-                    <input type="password" placeholder="Password" className={styles.password} />
-                    <input type="submit" value="Login" className={styles.login}/>
+                    <input type="text" placeholder="Email" className={styles.email} disabled />
+                    <input type="password" placeholder="Password" className={styles.password} disabled/>
+                    <input type="submit" value="Login"disabled className={styles.login}/>
                 </form>
                 <p className={styles.p}>Or</p>
                 <div className={styles.logingoogle}>
                     <button onClick={loginGoogle}>Google</button>
                 </div>
                 <div className={styles.registration}>
-                    <button>Registrar-se</button>
+                    <button disabled>Registrar-se</button>
                 </div>
             </div>
         </div>
