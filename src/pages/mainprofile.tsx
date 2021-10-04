@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import useProfile from "../data/hook/useProfile";
 import useAuth from "../data/hook/useAuth";
@@ -10,6 +10,7 @@ import Austroone from "../assets/img/austroone.jpg";
 import AstroLike from "../assets/img/austrolike.jpg";
 
 import styles from "../styles/ContentMainProfile.module.css";
+import ContentProfile from "../components/ContentProfile";
 
 export default function MainProfile() {
     const { user } = useAuth();
@@ -55,7 +56,7 @@ export default function MainProfile() {
 
     //Start variable for render profile right in main profile (left bar)
 
-    const renderProfiles = profileList?.map(
+    const renderProfiles = profileList.map(
         function (prof, index){
             if(prof.email == user?.email)
             return (
@@ -163,7 +164,9 @@ export default function MainProfile() {
         <div className={styles.contentMainProfile}>
             <Leftbar />
             {user ? 
-                {renderProfiles}    
+                <ContentProfile>
+                    {renderProfiles}
+                </ContentProfile>    
             :
                 <div className={styles.noLogin}>
                     <h1>Faça seu login para mostrar seu perfil para outros astronautas !</h1>

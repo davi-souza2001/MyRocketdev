@@ -3,7 +3,7 @@
 }
 
 .imgBackground{
-    width: 88vw;
+    width: 87vw;
     height: 15vh;
     display: flex;
     align-items: center;
@@ -26,7 +26,7 @@
 
 .bar{
     margin-top: 17vh;
-    width: 88vw;
+    width: 86vw;
     border: 1px solid #6f41be;
 }
 
@@ -47,7 +47,7 @@
 }
 
 .spacingbar{
-    width: 88vw;
+    width: 87vw;
     height:45vh;
     margin-top: -4vh;
     overflow-y: scroll;
