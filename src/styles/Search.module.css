@@ -1,0 +1,37 @@
+.searchContent{
+    display: flex;
+}
+
+.inputContent{
+    width: 88vw;
+    height: 100vh;
+    overflow-y: scroll;
+}
+
+.boxInBox{
+    height: 8vh;
+    width: 87vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inputContent .boxInput{
+    height: 8vh;
+    width: 80vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #AE81FE;
+    border-radius: 0 0 10px 10px;
+}
+
+.inputContent .input{
+    height: 5vh;
+    width: 25vw;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background-color: #fff;
+    font-family: 'poppins', sans-serif;
+}
