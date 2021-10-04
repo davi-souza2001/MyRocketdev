@@ -16,13 +16,10 @@ export default function CreateProfile(Props: CreateProfileProps) {
     const { profileList } = useProfile();
     const { user } = useAuth();
     const emailUser = user?.email;
-    const [look, setLook] = useState(true);
 
     const verifyEmailExists = profileList?.map((prof) => {
         if(prof.email == emailUser) {
             route.push("/");
-        } else{
-            setLook(false);
         }
     })
     

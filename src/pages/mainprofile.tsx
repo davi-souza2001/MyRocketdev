@@ -4,7 +4,6 @@ import useProfile from "../data/hook/useProfile";
 import useAuth from "../data/hook/useAuth";
 import client from "../services/client";
 
-import ContentProfile from "../components/ContentProfile";
 import Leftbar from "../components/Leftbar";
 
 import Austroone from "../assets/img/austroone.jpg";
@@ -56,7 +55,7 @@ export default function MainProfile() {
 
     //Start variable for render profile right in main profile (left bar)
 
-    const renderProfiles = profileList.map(
+    const renderProfiles = profileList?.map(
         function (prof, index){
             if(prof.email == user?.email)
             return (
@@ -125,7 +124,7 @@ export default function MainProfile() {
                         false}
                     </>
                 ) : false}
-            </div>
+                </div>
             )
         }
     )
@@ -163,7 +162,12 @@ export default function MainProfile() {
     return (
         <div className={styles.contentMainProfile}>
             <Leftbar />
-            {renderProfiles}
+            {user ? 
+                {renderProfiles}    
+            :
+                <div className={styles.noLogin}>
+                    <h1>Faça seu login para mostrar seu perfil para outros astronautas !</h1>
+                </div>}
         </div>
     )
 }
