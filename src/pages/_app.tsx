@@ -8,9 +8,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <AuthProvider>
       <AppProvider>
-        <ForceAuthentication>
           <Component {...pageProps} />
-        </ForceAuthentication>
       </AppProvider>
     </AuthProvider>
   )
