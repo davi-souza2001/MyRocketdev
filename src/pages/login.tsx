@@ -62,9 +62,6 @@ export default function Login(){
                 <div className={styles.logingoogle}>
                     <button onClick={loginGoogle}>Google</button>
                 </div>
-                <div className={styles.registration}>
-                    <button disabled>Registrar-se</button>
-                </div>
             </div>
         </div>
     )
