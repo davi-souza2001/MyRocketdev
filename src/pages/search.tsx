@@ -1,5 +1,5 @@
 import  route  from "next/router";
-import React, { useState } from "react";
+import { useState } from "react";
 import ContentProfile from "../components/ContentProfile";
 import Leftbar from "../components/Leftbar";
 import Profile from "../components/Profile";
@@ -11,7 +11,7 @@ interface searchProps {
     
 }
 
-export default function search(Props: searchProps){
+export default function Search(Props: searchProps){
     const { profileList } = useProfile();
     const [profSearch, setProfSearch] = useState("");
   

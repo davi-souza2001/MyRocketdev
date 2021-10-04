@@ -1,5 +1,4 @@
 import { useState } from "react";
-import route from "next/router";
 
 
 import Image from "next/image";
@@ -42,7 +41,7 @@ export default function Login(){
                     <Image src={astrobye} alt="astronauta boas vindas"></Image>
                     <div className={styles.mensagemore}>
                         <h1>Welcome to MyRocket</h1>
-                        <h3>Here on this rocket is where the devs can call others on their journey, and for them to be found too. Did you like it ? So come be part of our rocket, because it's all yours too! You can create your profile only in tabs login and password or login with google</h3>
+                        <h3>Here on this rocket is where the devs can call others on their journey, and for them to be found too. Did you like it ? So come be part of our rocket, because its all yours too! You can create your profile only in tabs login and password or login with google</h3>
                     </div>
                     <div className={styles.learmore}>
                         <div className={styles.morecontent} onClick={changebox}>
