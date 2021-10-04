@@ -3,8 +3,9 @@ import firebase from "../firebase/config";
 import route from "next/router";
 import useAuth from "../data/hook/useAuth";
 import useProfile from "../data/hook/useProfile";
+import Image from "next/dist/client/image";
 
-
+import Load from "../assets/img/GifLoading.gif";
 import styles from "../styles/CreateProfile.module.css";
 
 interface CreateProfileProps {
@@ -15,13 +16,16 @@ export default function CreateProfile(Props: CreateProfileProps) {
     const { profileList } = useProfile();
     const { user } = useAuth();
     const emailUser = user?.email;
+    const [look, setLook] = useState(true);
 
     const verifyEmailExists = profileList?.map((prof) => {
         if(prof.email == emailUser) {
             route.push("/");
+        } else{
+            setLook(false);
         }
     })
-
+    
     const [name, setName] = useState("");
     const [userName, setUserName] = useState("");
     const [linkedin, setLinkedin] = useState("");
@@ -50,7 +54,6 @@ export default function CreateProfile(Props: CreateProfileProps) {
         todoRef.push(datas);
     }
     
-
     async function navigateToHome(e){
         e.preventDefault();
         try{
