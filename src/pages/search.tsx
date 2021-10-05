@@ -1,10 +1,10 @@
 import  route  from "next/router";
 import { useState } from "react";
-import ContentProfile from "../components/ContentProfile";
 import Leftbar from "../components/Leftbar";
 import Profile from "../components/Profile";
 import useProfile from "../data/hook/useProfile";
 
+import astro from "../assets/img/austroone.jpg"
 import styles from "../styles/Search.module.css";
 
 interface searchProps {
@@ -20,7 +20,7 @@ export default function Search(Props: searchProps){
             if(profSearch == profile.dev || profSearch == profile.userName){
             return (
                 <div key={index}>
-                    <Profile name={profile.name} dev={profile.dev} local={profile.local} description={profile.description} link={() => route.push(`/${profile.userName}`)}/>
+                    <Profile image={profile.image  || astro} name={profile.name} dev={profile.dev} local={profile.local} description={profile.description} link={() => route.push(`/${profile.userName}`)}/>
                 </div>
             )}
         });
