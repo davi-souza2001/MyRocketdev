@@ -69,3 +69,34 @@
     color: #fff;
     background-color: #2c0568;
 }
+
+@media (max-width: 1050px){
+    .information{
+        font-size: 80%;
+    }
+
+    .match{
+        font-size: 80%;
+    }
+
+    .imgProfile img{
+        height: 8vh;
+        width: 5vw;
+    }
+} 
+
+
+@media (max-width: 860px){
+    .information{
+        font-size: 70%;
+    }
+
+    .match{
+        font-size: 70%;
+    }
+
+    .imgProfile img{
+        height: 6vh;
+        width: 6vw;
+    }
+}

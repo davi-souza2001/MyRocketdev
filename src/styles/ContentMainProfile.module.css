@@ -3,7 +3,7 @@
 }
 
 .imgBackground{
-    width: 87vw;
+    width: 86vw;
     height: 15vh;
     display: flex;
     align-items: center;
@@ -25,7 +25,7 @@
 }
 
 .bar{
-    margin-top: 17vh;
+    margin-top: 19vh;
     width: 86vw;
     border: 1px solid #6f41be;
 }

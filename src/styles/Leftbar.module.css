@@ -94,3 +94,28 @@
     border-radius: 99999px;
 }
 
+@media (max-width: 1070px){
+    .titletab{
+        font-size: 70%;
+    }
+
+    .iconstab{
+        font-size: 80%;
+    }
+    
+    .icon{
+        height: 3vh;
+        width: 2vw;
+        margin-right: 1vw;
+    }
+
+    .user{
+        font-size: 80%;
+    }
+}
+
+@media (max-width: 860px){
+    .titletab{
+        font-size: 60%;
+    }
+}
