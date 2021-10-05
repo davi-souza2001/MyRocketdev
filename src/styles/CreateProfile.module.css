@@ -49,6 +49,16 @@
     font-family: 'poppins', sans-serif;
 }
 
+.contentForms form select{
+    width: 25vw;
+    height: 5vh;
+    border: none;
+    border-radius: 10px;
+    animation-name: change;
+    animation-duration: 0.4s;
+    font-family: 'poppins', sans-serif;
+}
+
 .contentForms form input:focus::placeholder{
     color: #fff;
 }

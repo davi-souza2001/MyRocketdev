@@ -65,15 +65,24 @@ export default function CreateProfile(Props: CreateProfileProps) {
             <div className={styles.contentForms}>
                 <form>
                     <h2>Cadastro</h2>
-                    <input type="text" placeholder="Digite seu nome publico" onChange={(e) => setName(e.target.value)}/>
-                    <input type="text" placeholder="Digite seu @ no qual as pessoas vão procurar você" onChange={(e) => setUserName(e.target.value)} />
+                    <input required type="text" placeholder="Digite seu nome publico" onChange={(e) => setName(e.target.value)}/>
+                    <input required type="text" placeholder="Digite seu @ no qual as pessoas vão procurar você" onChange={(e) => setUserName(e.target.value)} />
                     <input type="text" placeholder="Linkedin" onChange={(e) => setLinkedin(e.target.value)} />
-                    <input type="text" placeholder="Github" onChange={(e) => setGithub(e.target.value)} />
+                    <input required type="text" placeholder="Github" onChange={(e) => setGithub(e.target.value)} />
                     <input type="text" placeholder="Instagram" onChange={(e) => setInstagram(e.target.value)} />
                     <input type="text" placeholder="Youtube" onChange={(e) => setYoutube(e.target.value)} />
-                    <input type="text" placeholder="Digite a area dev que você atua ou pretende" onChange={(e) => setDev(e.target.value)} />
-                    <input type="text" placeholder="Adicione uma descrição sobre você" onChange={(e) => setDescription(e.target.value)} />
-                    <input type="text" placeholder="De qual estado você é ?" onChange={(e) => setLocal(e.target.value)} />
+                    <select required onChange={(e) => setDev(e.target.value)} value={dev}>
+                        <option disabled selected >Senioridade</option>
+                        <option value="Front-End">Front-End</option>
+                        <option value="Back-End">Back-End</option>
+                        <option value="Full-Stack">Full-Stack</option>
+                        <option value="Mobile">Mobile</option>
+                        <option value="Dados">Dados</option>
+                        <option value="IOS">IOS</option>
+                        <option value="Android">Android</option>
+                    </select>
+                    <input required type="text" placeholder="Adicione uma descrição sobre você" onChange={(e) => setDescription(e.target.value)} />
+                    <input required type="text" placeholder="De qual estado você é ?" onChange={(e) => setLocal(e.target.value)} />
                     <p>Ao se cadastrar você concorda com os termos de uso da rede social. Deseja ler ? então clique <a href="https://github.com/davi-souza2001/MyRocketdev" target="_blank" rel="noreferrer">aqui</a> </p>
                     <button type="submit" className={styles.buttonSubmit} onClick={navigateToHome}>Cadastrar</button>
                 </form>
