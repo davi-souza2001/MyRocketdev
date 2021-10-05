@@ -18,7 +18,7 @@ export default function Profile(props: ProfileProps) {
     return (
         <div className={styles.contentbox}>
             <div className={styles.box}>
-                <div className={styles.imgProfile}><Image src={props.image} height={100} width={100} alt="Imagem"></Image></div>
+                <div className={styles.imgProfile}><Image src={props?.image || Austroone} height={100} width={100} alt="Imagem"></Image></div>
                 <div className={styles.information}>
                         <h3>{props.name}</h3>
                         <div className={styles.infoLocalAndDev}>

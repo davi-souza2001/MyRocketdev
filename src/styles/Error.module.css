@@ -1,0 +1,12 @@
+.errorContent{
+    width: 15vw;
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    background-color: #e74141;
+    font-family: "poppins", sans-serif;
+}

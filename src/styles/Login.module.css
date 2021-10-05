@@ -116,6 +116,7 @@
 .loginwelcome h2{
     color: #fff;
     font-size: 5vh;
+    margin-bottom: 3vh;
     animation-name: change;
     animation-duration: 0.8s;
 }
@@ -174,6 +175,21 @@
     cursor: pointer;
     animation-name: change;
     animation-duration: 1.4s;
+}
+
+.create{
+    height: 6vh;
+    margin-bottom: 1vh;
+    color: #fff;
+    background-color: #9824f1;
+    cursor: pointer;
+    animation-name: change;
+    animation-duration: 1.4s;
+    transition: 0.2s;
+}
+
+.create:hover{
+    background-color: #631a9b;
 }
 
 .p{

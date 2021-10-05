@@ -9,8 +9,13 @@ import useAuth from "../data/hook/useAuth";
 
 
 export default function Login(){
-    const { loginGoogle } = useAuth();
+    const { loginGoogle, loginWithEmailAndPassword, createUserWithEmailAndPassword} = useAuth();
     const [boxone, setBoxone] = useState(true);
+
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const [lookCreate, setLookCreate] = useState(false);
+    const [lookLogin, setLookLogin] = useState(true);
 
     function changebox() {
         if (boxone) {
@@ -18,6 +23,30 @@ export default function Login(){
         } else{
             setBoxone(true);
         }
+    }
+
+    async function createUser(e){
+        e.preventDefault();
+        try{
+            await createUserWithEmailAndPassword(email, password);
+        } catch(e) {
+            alert(e?.message);
+        }
+    }
+
+    async function loginWithEmail(e){
+        e.preventDefault();
+        try{
+            await loginWithEmailAndPassword(email, password);
+        } catch(e) {
+            alert(e);
+        }
+    }
+
+    function toggle(e){
+        e.preventDefault();
+        setLookCreate(true);
+        setLookLogin(false);
     }
 
     return (
@@ -53,9 +82,10 @@ export default function Login(){
             <div className={styles.loginwelcome}>
                 <form>
                     <h2>Welcome to MyRocket</h2>
-                    <input type="text" placeholder="Email" className={styles.email} disabled />
-                    <input type="password" placeholder="Password" className={styles.password} disabled/>
-                    <input type="submit" value="Login"disabled className={styles.login}/>
+                    <input type="text" placeholder="Email" className={styles.email} value={email} onChange={(e) => setEmail(e.target.value)}/>
+                    <input type="password" placeholder="Password" className={styles.password} value={password} onChange={(e) => setPassword(e.target.value)}/>
+                    {lookLogin ? <input type="submit" value="Login" className={styles.login} onClick={loginWithEmail}/> : false}
+                    {lookCreate ? <> <input type="submit" value="Cadastrar" className={styles.create} onClick={createUser}/>  </>: <input type="submit" value="Cadastrar" className={styles.create} onClick={toggle}/>}
                 </form>
                 <p className={styles.p}>Or</p>
                 <div className={styles.logingoogle}>
