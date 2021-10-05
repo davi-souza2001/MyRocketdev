@@ -33,6 +33,7 @@ export default function CreateProfile(Props: CreateProfileProps) {
     const [dev, setDev] = useState("");
     const [local, setLocal] = useState("");
     const [email, setEmail] = useState(emailUser);
+    const image = user?.imagemUrl;
 
     async function setDatas(){
         const todoRef = await firebase.database().ref("Profiles");
@@ -46,7 +47,8 @@ export default function CreateProfile(Props: CreateProfileProps) {
             youtube,
             dev,
             description,
-            local
+            local,
+            image
         };
         todoRef.push(datas);
     }

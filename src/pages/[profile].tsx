@@ -65,7 +65,7 @@ export default function MainProfile() {
                             <Image src={AstroLike} alt="Astronauta dando like" height={200} width={200} />
                         </div>
                         <div className={styles.imgProfileUser}>
-                            <Image src={Austroone} alt="Foto de Perfil"></Image>
+                            <Image src={prof.image} height={200} width={200} alt="Foto de Perfil"></Image>
                             <h3>{prof.name}</h3>
                             <p>@{prof.userName}</p>
                             <p>{prof.local}</p>

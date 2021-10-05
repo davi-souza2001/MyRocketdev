@@ -12,7 +12,7 @@ export default function MainContent() {
         return profileList?.map((profile, index) => {
             return (
                 <div key={index}>
-                    <Profile name={profile.name} dev={profile.dev} local={profile.local} description={profile.description} link={() => route.push(`/${profile.userName}`)}/>
+                    <Profile name={profile.name} image={profile.image} dev={profile.dev} local={profile.local} description={profile.description} link={() => route.push(`/${profile.userName}`)}/>
                 </div>
             )
         });

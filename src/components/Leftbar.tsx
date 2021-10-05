@@ -46,7 +46,7 @@ export default function Leftbar(props: LeftbarProps) {
                     <div className={styles.user} onClick={user ? logout : loginGoogle }>
                         {user ? (
                             <>
-                                <Image src={Astro} alt="Foto do usuario" width={40} height={40} className={styles.imageB}></Image>
+                                <Image src={user?.imagemUrl || Astro} alt="Foto do usuario" width={40} height={40} className={styles.imageB}></Image>
                                 <h5>{user.name}</h5>
                             </>
                         ) :
