@@ -21,3 +21,7 @@ process.env. ...
 - O usuário pode particiar de comunidades, postando comentários lá e dando feedback de algo com
 - Ele poderá participar de quantas comunidades quiser, uma vez que ele está logado na rede social
 - No perfil de casa usuário além das informações base, vai ser possível listar as ultimas postagens dele na rede social, seja em qualquer comunidade
+
+### Telas
+
+- Home (mostra todas as comunidades, listadas em boxes centrais)
