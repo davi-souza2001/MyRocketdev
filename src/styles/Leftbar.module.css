@@ -1,13 +1,13 @@
 .leftbarcontent{
     height: 100vh;
-    width: 12vw;
+    width: 9vw;
     background-color: #460BA1;
     border-radius: 0 10px 10px 0;
 }
 
 .titletab{
     height: 15vh;
-    width: 12vw;
+    width: 9vw;
     display:flex;
     align-items: center;
     justify-content: center;
@@ -15,7 +15,7 @@
     border-radius: 20px;
     cursor: pointer;
     color: #fff;
-    font-size: 85%;
+    font-size: 75%;
     transition: 0.2s;
 }
 
@@ -25,7 +25,7 @@
 
 .iconstab{
     height: 60vh;
-    width: 12vw;
+    width: 9vw;
     display:flex;
     align-items: center;
     justify-content: space-around;
@@ -58,7 +58,7 @@
 
 .contatctab{
     height: 20vh;
-    width: 12vw;
+    width: 9vw;
     display:flex;
     align-items: center;
     justify-content: center;
@@ -69,7 +69,7 @@
 
 .user{
     height: 6vh;
-    width: 11vw;
+    width: 9vw;
     display:flex;
     align-items: center;
     justify-content: center;
@@ -96,11 +96,11 @@
 
 @media (max-width: 1070px){
     .titletab{
-        font-size: 70%;
+        font-size: 50%;
     }
 
     .iconstab{
-        font-size: 80%;
+        font-size: 60%;
     }
     
     .icon{
@@ -110,12 +110,32 @@
     }
 
     .user{
-        font-size: 80%;
+        font-size: 70%;
     }
 }
 
 @media (max-width: 860px){
     .titletab{
+        font-size: 40%;
+    }
+
+    .iconstab{
+        font-size: 50%;
+    }
+    
+    .icon{
+        height: 3vh;
+        width: 2vw;
+        margin-right: 1vw;
+    }
+
+    .user{
         font-size: 60%;
+    }
+}
+
+@media (max-width: 780px){
+    .leftbarcontent{
+        display: none;
     }
 }
