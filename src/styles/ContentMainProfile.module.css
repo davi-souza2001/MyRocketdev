@@ -3,7 +3,7 @@
 }
 
 .imgBackground{
-    width: 86vw;
+    width: 89.7vw;
     height: 15vh;
     display: flex;
     align-items: center;
@@ -14,7 +14,7 @@
 
 .imgBackground img{
     height: 15vh;
-    width: 8vw;
+    width: 8vw; 
 }
 
 .imgProfileUser{
