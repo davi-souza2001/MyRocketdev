@@ -100,3 +100,15 @@
         width: 6vw;
     }
 }
+
+@media (max-width: 770px){
+    .match{
+        font-size: 60%;
+    }
+}
+
+@media (max-width: 690px){
+    .information{
+        font-size: 60%;
+    }
+}

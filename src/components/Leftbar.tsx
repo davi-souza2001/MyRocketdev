@@ -35,7 +35,7 @@ export default function Leftbar(props: LeftbarProps) {
         <>
             <div className={styles.leftbarcontent}>
                 <div className={styles.titletab}>
-                    <div className={styles.title}><h1>Test Color</h1></div>
+                    <div className={styles.title}><h1>MyRocket</h1></div>
                 </div>
                 <div className={styles.iconstab}>
                     <div className={styles.home} onClick={navigateToHomeRoom}><div className={styles.icon}>{IconHome}</div><h3>Home</h3></div>
