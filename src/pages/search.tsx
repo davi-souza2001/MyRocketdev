@@ -17,7 +17,7 @@ export default function Search(Props: searchProps){
   
     function renderProfiles() {
         return profileList?.map((profile, index) => {
-            if(profSearch == profile.dev || profSearch == profile.userName){
+            if(profSearch == profile.dev || profSearch == profile.userName || profSearch == profile.name){
             return (
                 <div key={index}>
                     <Profile image={profile.image  || astro} name={profile.name} dev={profile.dev} local={profile.local} description={profile.description} link={() => route.push(`/${profile.userName}`)}/>

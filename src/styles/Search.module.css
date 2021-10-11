@@ -26,6 +26,10 @@
     border-radius: 0 0 10px 10px;
 }
 
+.inputContent .boxInput input:focus{
+    border: 1px solid #2c0568;
+}
+
 .inputContent .input{
     height: 5vh;
     width: 25vw;
