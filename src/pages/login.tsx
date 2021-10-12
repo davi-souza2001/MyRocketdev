@@ -2,10 +2,16 @@ import { useState } from "react";
 
 
 import Image from "next/image";
+import useAuth from "../data/hook/useAuth";
+
+import githubIcon from "../assets/img/GithubIcon.svg";
+import googleIcon from "../assets/img/GoogleIcon.png";
+import rocket from "../assets/img/foguete.svg";
+import astroMyRocket from "../assets/img/astrounauta.svg";
 import astro from "../assets/img/austrotwo.jpg";
 import astrobye from "../assets/img/austrogoodbye.jpg";
+
 import styles from "../styles/Login.module.css";
-import useAuth from "../data/hook/useAuth";
 
 
 export default function Login(){
@@ -67,7 +73,7 @@ export default function Login(){
                 </div>
             ): (
                 <div className={styles.imgwelcome}>
-                    <Image src={astrobye} alt="astronauta boas vindas"></Image>
+                    <Image src={rocket} alt="astronauta boas vindas"></Image>
                     <div className={styles.mensagemore}>
                         <h1>Welcome to MyRocket</h1>
                         <h3>Here on this rocket is where the devs can call others on their journey, and for them to be found too. Did you like it ? So come be part of our rocket, because its all yours too! You can create your profile only in tabs login and password or login with google</h3>
@@ -81,15 +87,21 @@ export default function Login(){
             )}
             <div className={styles.loginwelcome}>
                 <form>
-                    <h2>Welcome to MyRocket</h2>
+                    <div className={styles.contentMyRocketAndRocket}>
+                        <div className={styles.imageIntoMyrocket}>
+                            <Image src={astroMyRocket}/>
+                        </div>
+                        <h2>MyRocket</h2>
+                    </div>
                     <input type="text" placeholder="Email" className={styles.email} value={email} onChange={(e) => setEmail(e.target.value)}/>
                     <input type="password" placeholder="Password" className={styles.password} value={password} onChange={(e) => setPassword(e.target.value)}/>
                     {lookLogin ? <input type="submit" value="Login" className={styles.login} onClick={loginWithEmail}/> : false}
                     {lookCreate ? <> <input type="submit" value="Cadastrar" className={styles.create} onClick={createUser}/>  </>: <input type="submit" value="Cadastrar" className={styles.create} onClick={toggle}/>}
                 </form>
-                <p className={styles.p}>Or</p>
+                <p className={styles.p}></p>
                 <div className={styles.logingoogle}>
-                    <button onClick={loginGoogle}>Google</button>
+                    <button onClick={loginGoogle}><Image src={googleIcon} height={19} width={20}/></button>
+                    <button className={styles.githubButton}><Image src={githubIcon} height={35} width={60}/></button>
                 </div>
             </div>
         </div>
