@@ -22,7 +22,7 @@
 .bar{
     margin-top: 21vh;
     width: 100vw;
-    border: 1px solid #6f41be;
+    border: 1px solid #161476;
 }
 
 .imgProfileUser img{
@@ -42,7 +42,7 @@
 }
 
 .spacingbar{
-    width: 100vw;
+    width: 96vw;
     height:45vh;
     margin-top: -4vh;
     overflow-y: scroll;
@@ -51,7 +51,7 @@
 .descriptionProfile{
     margin: 1vh 5vw;
     width: 89vw;
-    background-color: #5931a0;
+    background-color: #161476;
     padding: 1vh;
     word-wrap: break-word;
     color: #fff;
@@ -66,7 +66,7 @@
 }
 
 .descriptionProfile h3 a:hover{
-    color: #AE81FE;
+    color: rgb(81, 79, 212);
 }
 
 .optionsBar{
@@ -87,7 +87,7 @@
 .optionsBar .contentOption{
     margin-top: -5vh;
     height: 8vh;
-    width: 10vw;
+    width: 12vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -97,7 +97,7 @@
 }
 
 .optionsBar .contentOption:hover{
-    background-color: #460BA1;
+    background-color: #161476;
 }
 
 .noLogin{

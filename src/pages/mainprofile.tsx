@@ -10,7 +10,7 @@ import Austroone from "../assets/img/austroone.jpg";
 import AstroLike from "../assets/img/austrolike.jpg";
 
 import styles from "../styles/ContentMainProfile.module.css";
-import ContentProfile from "../components/ContentProfile";
+import ContentMainProfile from "../components/ContentMainProfille";
 
 export default function MainProfile() {
     const { user } = useAuth();
@@ -79,8 +79,11 @@ export default function MainProfile() {
                             <h4>Projetos</h4>
                         </div>
                         <div className={styles.contentOption} onClick={activeModalSocial}>
+                            <h4>Contribuições</h4>
+                        </div>
+                        <div className={styles.contentOption} onClick={activeModalSocial}>
                             <h4>Sociais</h4>
-                    </div>
+                        </div>
                 </div>
 
                 {description ? (
@@ -164,9 +167,9 @@ export default function MainProfile() {
         <div className={styles.contentMainProfile}>
             <Topbar/>
             {user ? 
-                <ContentProfile>
+                <ContentMainProfile>
                     {renderProfiles}
-                </ContentProfile>    
+                </ContentMainProfile>    
             :
                 <div className={styles.noLogin}>
                     <h1>Faça seu login para mostrar seu perfil para outros astronautas !</h1>
