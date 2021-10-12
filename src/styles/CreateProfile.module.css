@@ -13,8 +13,13 @@
     height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     font-family: 'poppins', sans-serif;
+}
+
+.astroBallon{
+    margin-right: -15vw;
+    width: 30vw;
 }
 
 .loading{

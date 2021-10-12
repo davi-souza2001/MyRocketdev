@@ -1,6 +1,4 @@
 import { useState } from "react";
-
-
 import Image from "next/image";
 import useAuth from "../data/hook/useAuth";
 
@@ -9,7 +7,6 @@ import googleIcon from "../assets/img/GoogleIcon.png";
 import rocket from "../assets/img/foguete.svg";
 import astroMyRocket from "../assets/img/astrounauta.svg";
 import astro from "../assets/img/austrotwo.jpg";
-import astrobye from "../assets/img/austrogoodbye.jpg";
 
 import styles from "../styles/Login.module.css";
 

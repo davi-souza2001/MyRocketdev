@@ -3,9 +3,10 @@ import firebase from "../firebase/config";
 import route from "next/router";
 import useAuth from "../data/hook/useAuth";
 import useProfile from "../data/hook/useProfile";
-import Image from "next/dist/client/image";
+import Image from "next/image";
 
-import Load from "../assets/img/GifLoading.gif";
+import astroBallon from "../assets/img/astronauta_balao.svg"
+
 import styles from "../styles/CreateProfile.module.css";
 
 interface CreateProfileProps {
@@ -64,6 +65,9 @@ export default function CreateProfile(Props: CreateProfileProps) {
 
     return (
         <div className={styles.contentGeral}>
+            <div className={styles.astroBallon}>
+                <Image src={astroBallon} height={900}/>
+            </div>
             <div className={styles.contentForms}>
                 <form>
                     <h2>Cadastro</h2>
