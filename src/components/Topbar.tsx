@@ -7,13 +7,13 @@ import Image from "next/image";
 import { IconHome } from "./Icons";
 import { IconSearch } from "./Icons";
 import { IconProfile } from "./Icons";
-import styles from "../styles/Leftbar.module.css";
+import styles from "../styles/Topbar.module.css";
 
-interface LeftbarProps {
+interface TopbarProps {
 
 }
 
-export default function Leftbar(props: LeftbarProps) {
+export default function Topbar(props: TopbarProps) {
 
     const { user, logout, loginGoogle } = useAuth();
 
@@ -35,19 +35,22 @@ export default function Leftbar(props: LeftbarProps) {
         <>
             <div className={styles.leftbarcontent}>
                 <div className={styles.titletab}>
-                    <div className={styles.title}><h1>MyRocket</h1></div>
+                    <div className={styles.title}><h2>MyRocket</h2></div>
+                </div>
+                <div className={styles.search}>
+                    <div className={styles.iconSearch}>{IconSearch}</div>
+                    <input type="text" placeholder="Search"/>
                 </div>
                 <div className={styles.iconstab}>
-                    <div className={styles.home} onClick={navigateToHomeRoom}><div className={styles.icon}>{IconHome}</div><h3>Home</h3></div>
-                    <div className={styles.search}onClick={navigateToSearchRoom}><div className={styles.icon}>{IconSearch}</div><h3>Search</h3></div>
-                    <div className={styles.profile} onClick={navigateToProfileRoom}><div className={styles.icon}>{IconProfile}</div><h3>Profile</h3></div>
+                    <div className={styles.home} ><div className={styles.iconstabIcon}>{IconHome}</div></div>
+                    <div className={styles.profile}><div className={styles.iconstabIcon}>{IconProfile}</div></div>
                 </div>
-                <div className={styles.contatctab}>
+                <div className={styles.usertab}>
                     <div className={styles.user} onClick={user ? logout : loginGoogle }>
                         {user ? (
                             <>
-                                <Image src={user?.imagemUrl || Astro} alt="Foto do usuario" width={40} height={40} className={styles.imageB}></Image>
                                 <h5>{user.name}</h5>
+                                <Image src={user?.imagemUrl || Astro} alt="Foto do usuario" width={40} height={40} className={styles.imageB}></Image>
                             </>
                         ) :
                             (<h5>Fazer login</h5>)}

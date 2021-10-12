@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import Image from "next/image";
 import client from "../services/client";
 
-import Leftbar from "../components/Leftbar";
+import Topbar from "../components/Topbar";
 import Austroone from "../assets/img/austroone.jpg";
 import useProfile from "../data/hook/useProfile";
 
@@ -162,7 +162,7 @@ export default function MainProfile() {
 
     return (
         <div className={styles.contentMainProfile}>
-            <Leftbar />
+            <Topbar />
             {renderProfiles}
         </div>
     )

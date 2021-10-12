@@ -1,6 +1,6 @@
 import  route  from "next/router";
 import { useState } from "react";
-import Leftbar from "../components/Leftbar";
+import Topbar from "../components/Topbar";
 import Profile from "../components/Profile";
 import useProfile from "../data/hook/useProfile";
 
@@ -28,7 +28,7 @@ export default function Search(Props: searchProps){
 
     return (
         <div className={styles.searchContent}>
-            <Leftbar/>
+            <Topbar/>
             <div className={styles.inputContent}>
                 <div className={styles.boxInBox}>
                     <div className={styles.boxInput}>

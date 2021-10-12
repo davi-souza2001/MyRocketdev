@@ -4,7 +4,7 @@ import useProfile from "../data/hook/useProfile";
 import useAuth from "../data/hook/useAuth";
 import client from "../services/client";
 
-import Leftbar from "../components/Leftbar";
+import Topbar from "../components/Topbar";
 
 import Austroone from "../assets/img/austroone.jpg";
 import AstroLike from "../assets/img/austrolike.jpg";
@@ -162,7 +162,7 @@ export default function MainProfile() {
 
     return (
         <div className={styles.contentMainProfile}>
-            <Leftbar />
+            <Topbar />
             {user ? 
                 <ContentProfile>
                     {renderProfiles}

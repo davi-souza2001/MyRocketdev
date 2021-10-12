@@ -1,0 +1,105 @@
+.leftbarcontent {
+    height: 7vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #181818;
+    color: #fff;
+    border-radius: 0 10px 10px 0;
+    font-family: "poppins", sans-serif;
+}
+
+.titletab {
+    height: 6vh;
+    width: 12vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+    background-color: #161476;
+}
+
+.titletab:hover {
+    background-color: #09083b;
+} 
+
+.search{
+    display: flex;
+    margin-left: -2vw;
+}
+
+.search input{
+    height: 5vh;
+    width: 18vw;
+    border: none;
+    outline: none;
+    color: #fff;
+    background-color: #444444;
+    border-radius: 10px;
+    font-family: "poppins", sans-serif;
+}
+
+.iconSearch{
+    height: 4.4vh;
+    width: 2vw;
+    margin-right: 1vw;
+}
+
+.iconstab{
+    height: 9vh;
+    width: 19vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.iconstabIcon {
+    height: 6vh;
+    width: 3vw;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.iconstabIcon:hover {
+    color: #13117c;
+}
+
+.usertab{
+    height: 7vh;
+    width: 13vw;
+}
+
+.user{
+    height: 7vh;
+    width: 13vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    cursor: pointer;
+    transition: 0.2s;
+    border-radius: 10px;
+}
+
+.user h5{
+    font-size: 100%;
+}
+
+.user img{
+    border-radius: 15px;
+}
+
+.user:hover{
+    background-color: #13117c;
+}
+
+
+
+
+
+
+
+
+

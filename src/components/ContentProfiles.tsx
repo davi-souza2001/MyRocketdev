@@ -5,7 +5,7 @@ import Profile from "./Profile";
 import Austroone from "../assets/img/austroone.jpg";
 
 
-export default function MainContent() {
+export default function ContentProfiles() {
 
     const { profileList } = useProfile();
 
