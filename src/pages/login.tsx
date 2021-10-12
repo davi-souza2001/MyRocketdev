@@ -100,8 +100,12 @@ export default function Login(){
                 </form>
                 <p className={styles.p}></p>
                 <div className={styles.logingoogle}>
-                    <button onClick={loginGoogle}><Image src={googleIcon} height={19} width={20}/></button>
-                    <button className={styles.githubButton}><Image src={githubIcon} height={35} width={60}/></button>
+                    <button onClick={loginGoogle}>
+                        <Image src={googleIcon} height={19} width={20}/>
+                    </button>
+                    <button className={styles.githubButton}>
+                        <Image src={githubIcon} height={35} width={60}/>
+                    </button>
                 </div>
             </div>
         </div>
