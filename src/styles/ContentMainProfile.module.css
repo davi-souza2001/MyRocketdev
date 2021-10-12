@@ -1,5 +1,5 @@
 .imgBackground{
-    width: 89.7vw;
+    width: 99vw;
     height: 15vh;
     display: flex;
     align-items: center;
@@ -10,7 +10,6 @@
 
 .imgBackground img{
     height: 15vh;
-    width: 8vw; 
 }
 
 .imgProfileUser{
@@ -21,8 +20,8 @@
 }
 
 .bar{
-    margin-top: 19vh;
-    width: 86vw;
+    margin-top: 21vh;
+    width: 100vw;
     border: 1px solid #6f41be;
 }
 
@@ -43,7 +42,7 @@
 }
 
 .spacingbar{
-    width: 87vw;
+    width: 100vw;
     height:45vh;
     margin-top: -4vh;
     overflow-y: scroll;
@@ -51,7 +50,7 @@
 
 .descriptionProfile{
     margin: 1vh 5vw;
-    width: 75vw;
+    width: 89vw;
     background-color: #5931a0;
     padding: 1vh;
     word-wrap: break-word;
@@ -72,7 +71,7 @@
 
 .optionsBar{
     height: 7vh;
-    width: 75vw;
+    width: 95vw;
     margin-top: 8vh;
     margin-left: 5vw;
     display: flex;

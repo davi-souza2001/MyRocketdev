@@ -28,7 +28,6 @@
 
 .search{
     display: flex;
-    margin-left: -2vw;
 }
 
 .search input{
@@ -45,7 +44,6 @@
 .iconSearch{
     height: 4.4vh;
     width: 2vw;
-    margin-right: 1vw;
 }
 
 .iconstab{

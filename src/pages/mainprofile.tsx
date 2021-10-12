@@ -80,7 +80,7 @@ export default function MainProfile() {
                         </div>
                         <div className={styles.contentOption} onClick={activeModalSocial}>
                             <h4>Sociais</h4>
-                        </div>
+                    </div>
                 </div>
 
                 {description ? (
@@ -162,7 +162,7 @@ export default function MainProfile() {
 
     return (
         <div className={styles.contentMainProfile}>
-            <Topbar />
+            <Topbar/>
             {user ? 
                 <ContentProfile>
                     {renderProfiles}

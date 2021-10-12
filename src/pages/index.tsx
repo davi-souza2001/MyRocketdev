@@ -11,7 +11,7 @@ export default function Main(props: MainProps){
         <div>
             <Topbar/>
             <div className={styles.contentCommunity}>
-                <h2>Comunidades</h2>
+                <h1>Comunidades</h1>
             </div>
             <div className={styles.contentCommunityOptions}>
                 <h2>Front-End</h2>
