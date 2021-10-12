@@ -1,0 +1,29 @@
+.contentCommunity{
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+.contentCommunityOptions{
+    height: 50vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.contentOption{
+    width: 20vw;
+    color: #fff;
+    padding: 1vw;
+    border-radius: 10px;
+    background-color: #161476;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.contentOption:hover{
+    background-color: #09083b;
+}
