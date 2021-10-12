@@ -17,20 +17,6 @@ export default function Topbar(props: TopbarProps) {
 
     const { user, logout, loginGoogle } = useAuth();
 
-    function navigateToHomeRoom(e: any) {
-        e.preventDefault();
-        route.push("/");
-    }
-
-    function navigateToSearchRoom(e: any) {
-        e.preventDefault();
-        route.push("/search");
-    }
-
-    function navigateToProfileRoom(e: any) {
-        route.push("/mainprofile");
-    }
-
     return (
         <>
             <div className={styles.leftbarcontent}>
@@ -42,8 +28,8 @@ export default function Topbar(props: TopbarProps) {
                     <input type="text" placeholder="Search"/>
                 </div>
                 <div className={styles.iconstab}>
-                    <div className={styles.home} ><div className={styles.iconstabIcon}>{IconHome}</div></div>
-                    <div className={styles.profile}><div className={styles.iconstabIcon}>{IconProfile}</div></div>
+                    <div className={styles.home} onClick={() => route.push("/")}><div className={styles.iconstabIcon}>{IconHome}</div></div>
+                    <div className={styles.profile} onClick={() => route.push("/mainprofile")}><div className={styles.iconstabIcon}>{IconProfile}</div></div>
                 </div>
                 <div className={styles.usertab}>
                     <div className={styles.user} onClick={user ? logout : loginGoogle }>

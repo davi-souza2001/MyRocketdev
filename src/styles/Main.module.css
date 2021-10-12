@@ -1,5 +1,5 @@
 .contentCommunity{
-    height: 20vh;
+    height: 10vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -9,15 +9,28 @@
 .contentCommunityOptions{
     height: 50vh;
     width: 100vw;
+}
+
+.contentCommunityOptions h2{
+    margin-left: 2vw;
+    color: #fff;
+}
+
+.frameworks{
+    height: 20vh;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 .contentOption{
-    width: 20vw;
+    width: 10vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: #fff;
     padding: 1vw;
+    margin: 0 1vw;
     border-radius: 10px;
     background-color: #161476;
     cursor: pointer;
