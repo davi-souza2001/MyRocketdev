@@ -6,7 +6,7 @@ import githubIcon from "../assets/img/GithubIcon.svg";
 import googleIcon from "../assets/img/GoogleIcon.png";
 import rocket from "../assets/img/foguete.svg";
 import astroMyRocket from "../assets/img/astrounauta.svg";
-import astro from "../assets/img/austrotwo.jpg";
+import astro from "../assets/img/astronauta_dab.svg";
 
 import styles from "../styles/Login.module.css";
 
@@ -95,7 +95,7 @@ export default function Login(){
                     {lookLogin ? <input type="submit" value="Login" className={styles.login} onClick={loginWithEmail}/> : false}
                     {lookCreate ? <> <input type="submit" value="Cadastrar" className={styles.create} onClick={createUser}/>  </>: <input type="submit" value="Cadastrar" className={styles.create} onClick={toggle}/>}
                 </form>
-                <p className={styles.p}></p>
+                <div className={styles.line}></div>
                 <div className={styles.logingoogle}>
                     <button onClick={loginGoogle}>
                         <Image src={googleIcon} height={19} width={20}/>

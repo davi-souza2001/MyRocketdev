@@ -106,6 +106,7 @@
 .loginwelcome{
     height:100vh;
     width: 40vw;
+    border: 2px solid #3936eb;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -131,12 +132,20 @@
 }
 
 .loginwelcome form input{
-    width: 30vw;
+    width: 25vw;
     border-radius: 10px;
     outline: none;
     border: none;
     font-size: 90%;
     color: #fff;
+}
+
+.loginwelcome form .login{
+    width: 10vw;
+}
+
+.loginwelcome form .create{
+    width: 10vw;
 }
 
 .loginwelcome form input:focus::placeholder{
@@ -206,11 +215,13 @@
     background-color: #161468;
 }
 
-.p{
-    color: #fff;
-    border: 1px solid #3533D7;
-    width: 40vw;
-    margin-top: 8vh;
+.line{
+    background-color: #3533D7;
+    border-radius: 5px;
+    padding: 2px;
+    width: 20vw;
+    opacity: 50%;
+    margin-top: 5vh;
 }
 
 .logingoogle {

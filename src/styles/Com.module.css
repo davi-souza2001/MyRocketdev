@@ -1,0 +1,35 @@
+.content{
+    font-family: 'poppins', sans-serif,;
+}
+
+.contentBarTitle{
+    margin-top: 4vh;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+.contentPosts{
+    padding: 0.5vw;
+    background-color: #161476;
+    border-radius: 10px;
+    margin-left: 1vw;
+}
+
+.divRow{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -5vh;
+    margin-bottom: -3vh;
+}
+
+.row{
+    width: 500px;
+    padding: 2px;
+    background-color: #3936eb;
+    opacity: 50%;
+    border-radius: 5px;
+}

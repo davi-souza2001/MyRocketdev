@@ -21,18 +21,21 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 8vh;
 }
 
 .contentOption{
     width: 10vw;
+    height: 25vh;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    flex-direction: column;
     color: #fff;
     padding: 1vw;
     margin: 0 1vw;
     border-radius: 10px;
-    background-color: #161476;
+    background-color: #16147691;
     cursor: pointer;
     transition: 0.2s;
 }
