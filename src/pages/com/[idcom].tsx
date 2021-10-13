@@ -12,7 +12,7 @@ interface idCommunitie {
     
 }
 
-export default function com(props: idCommunitie){
+export default function Com(props: idCommunitie){
     const router = useRouter();
     const idcom = router.query.idcom;
     return (
@@ -27,7 +27,7 @@ export default function com(props: idCommunitie){
                 </div>
             </div>
             <div className={styles.divRow}>
-                <div className={styles.row}></div><Image src={astroMyRocket} height={150} width={150}/><div className={styles.row}></div>
+                <div className={styles.row}></div><Image src={astroMyRocket} height={150} width={150} alt="Astro"/><div className={styles.row}></div>
             </div>
             <PostUser/>
         </div>

@@ -66,7 +66,7 @@ export default function CreateProfile(Props: CreateProfileProps) {
     return (
         <div className={styles.contentGeral}>
             <div className={styles.astroBallon}>
-                <Image src={astroBallon} height={900}/>
+                <Image src={astroBallon} height={900} alt="Astro"/>
             </div>
             <div className={styles.contentForms}>
                 <form>

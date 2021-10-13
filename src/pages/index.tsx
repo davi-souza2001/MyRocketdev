@@ -37,7 +37,7 @@ export default function Main() {
                 <div className={styles.frameworks}>
                     <div className={styles.contentOption}>
                         <div>
-                            <Image src={reactImg} height={100} width={200}/>
+                            <Image alt="astro" src={reactImg} height={100} width={200}/>
                         </div>
                         <div className={styles.framework}>
                             <h3>ReactJS</h3>
@@ -46,7 +46,7 @@ export default function Main() {
                     </div>
                     <div className={styles.contentOption}>
                         <div>
-                            <Image src={angularImg} height={100} width={200}/>
+                            <Image alt="astro" src={angularImg} height={100} width={200}/>
                         </div>
                         <div className={styles.framework}>
                             <h3>Angular</h3>
@@ -55,7 +55,7 @@ export default function Main() {
                     </div>
                     <div className={styles.contentOption}>
                         <div>
-                            <Image src={vueImg} height={100} width={200}/> 
+                            <Image alt="astro" src={vueImg} height={100} width={200}/> 
                         </div>
                         <div className={styles.framework}>
                             <h3>Vue</h3>
@@ -64,7 +64,7 @@ export default function Main() {
                     </div>
                     <div className={styles.contentOption}>
                         <div>
-                            <Image src={nextImg} height={100} width={200}/> 
+                            <Image alt="astro" src={nextImg} height={100} width={200}/> 
                         </div>
                         <div className={styles.framework}>
                             <h3>Next</h3>
@@ -73,7 +73,7 @@ export default function Main() {
                     </div>
                     <div className={styles.contentOption}>
                         <div>
-                            <Image src={emberImg} height={100} width={200}/> 
+                            <Image alt="astro" src={emberImg} height={100} width={200}/> 
                         </div>
                         <div className={styles.framework}>
                             <h3>Ember</h3>
@@ -85,7 +85,7 @@ export default function Main() {
                 <div className={styles.frameworks}>
                     <div className={styles.contentOption}>
                         <div>
-                            <Image src={nodeImg} height={100} width={200}/> 
+                            <Image alt="astro" src={nodeImg} height={100} width={200}/> 
                         </div>
                         <div className={styles.framework}>
                             <h3>NodeJS</h3>
@@ -94,7 +94,7 @@ export default function Main() {
                     </div>
                     <div className={styles.contentOption}>
                         <div>
-                            <Image src={mongoImg} height={100} width={200}/> 
+                            <Image alt="astro" src={mongoImg} height={100} width={200}/> 
                         </div>
                         <div className={styles.framework}>
                             <h3>Mongo</h3>
@@ -103,7 +103,7 @@ export default function Main() {
                     </div>
                     <div className={styles.contentOption}>
                         <div>
-                            <Image src={sqlImg} height={100} width={200}/> 
+                            <Image alt="astro" src={sqlImg} height={100} width={200}/> 
                         </div>
                         <div className={styles.framework}>
                             <h3>SQL/MySQL</h3>
@@ -112,7 +112,7 @@ export default function Main() {
                     </div>
                     <div className={styles.contentOption}>
                         <div>
-                            <Image src={firebaseImg} height={100} width={200}/> 
+                            <Image alt="astro" src={firebaseImg} height={100} width={200}/> 
                         </div>
                         <div className={styles.framework}>
                             <h3>Firebase</h3>
@@ -121,7 +121,7 @@ export default function Main() {
                     </div>
                     <div className={styles.contentOption}>
                         <div>
-                            <Image src={csharpImg} height={100} width={200}/> 
+                            <Image alt="astro" src={csharpImg} height={100} width={200}/> 
                         </div>
                         <div className={styles.framework}>
                             <h3>C#</h3>
@@ -130,7 +130,7 @@ export default function Main() {
                     </div>
                     <div className={styles.contentOption}>
                         <div>
-                            <Image src={javaImg} height={100} width={200}/> 
+                            <Image alt="astro" src={javaImg} height={100} width={200}/> 
                         </div>
                         <div className={styles.framework}>
                             <h3>Java</h3>
@@ -142,7 +142,7 @@ export default function Main() {
                 <div className={styles.frameworks}>
                     <div className={styles.contentOption}>
                         <div>
-                            <Image src={reactImg} height={100} width={200}/>
+                            <Image alt="astro" src={reactImg} height={100} width={200}/>
                         </div>
                         <div className={styles.framework}>
                             <h3>ReactJS</h3>
@@ -151,7 +151,7 @@ export default function Main() {
                     </div>
                     <div className={styles.contentOption}>
                         <div>
-                            <Image src={flutterImg} height={100} width={200}/>
+                            <Image alt="astro" src={flutterImg} height={100} width={200}/>
                         </div>
                         <div className={styles.framework}>
                             <h3>Flutter</h3>
@@ -160,7 +160,7 @@ export default function Main() {
                     </div>
                     <div className={styles.contentOption}>
                         <div>
-                            <Image src={swiftImg} height={100} width={200}/>
+                            <Image alt="astro" src={swiftImg} height={100} width={200}/>
                         </div>
                         <div className={styles.framework}>
                             <h3>Swift</h3>
@@ -169,7 +169,7 @@ export default function Main() {
                     </div>
                     <div className={styles.contentOption}>
                         <div>
-                            <Image src={ionicImg} height={100} width={200}/>
+                            <Image alt="astro" src={ionicImg} height={100} width={200}/>
                         </div>
                         <div className={styles.framework}>
                             <h3>Ionic</h3>

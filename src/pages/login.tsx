@@ -86,7 +86,7 @@ export default function Login(){
                 <form>
                     <div className={styles.contentMyRocketAndRocket}>
                         <div className={styles.imageIntoMyrocket}>
-                            <Image src={astroMyRocket}/>
+                            <Image src={astroMyRocket} alt="astro"/>
                         </div>
                         <h2>MyRocket</h2>
                     </div>
@@ -98,10 +98,10 @@ export default function Login(){
                 <div className={styles.line}></div>
                 <div className={styles.logingoogle}>
                     <button onClick={loginGoogle}>
-                        <Image src={googleIcon} height={19} width={20}/>
+                        <Image src={googleIcon} height={19} alt="Logo" width={20}/>
                     </button>
                     <button className={styles.githubButton}>
-                        <Image src={githubIcon} height={35} width={60}/>
+                        <Image src={githubIcon} height={35} alt="Logo" width={60}/>
                     </button>
                 </div>
             </div>
