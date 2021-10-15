@@ -16,10 +16,10 @@ process.env. ...
 
 ## Falta
 
-### Função de publicar posts
 ### Função de listar os membros da comunuidade
 ### Função de favoritas cada posts
 ### Função de listar as mais curtidas da semana
+### Função de excluir post
 
 ## Regras de negocio
 

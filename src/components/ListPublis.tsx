@@ -24,6 +24,15 @@ export default function ListPublis(props: ListPublisProps){
         })
       }, []);
 
+    function renderPublis(){
+        return publisList?.map((publis) => {
+          if(publis.post != ""){
+          return(
+                <PostUser publi={publis.post} key={publis.id}/>
+          )}
+        })
+      }
+
     return (
         <>
             {publisList?.map(publis => {
