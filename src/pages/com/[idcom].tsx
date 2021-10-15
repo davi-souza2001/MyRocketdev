@@ -29,7 +29,9 @@ export default function Com(props: idCommunitie){
             <div className={styles.divRow}>
                 <div className={styles.row}></div><Image src={astroMyRocket} height={150} width={150} alt="Astro"/><div className={styles.row}></div>
             </div>
-            <PostUser/>
+            <div>
+                <PostUser/>
+            </div>
         </div>
     )
 }

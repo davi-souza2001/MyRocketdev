@@ -1,4 +1,36 @@
+.contentGeral{
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "poppins", sans-serif;
+}
+
 .content{
     color: #fff;
     background-color: #333333;
+    width: 50vw;
+    border-radius: 10px;
+}
+
+.content p{
+    padding: 20px;
+}
+
+.userSettings{
+    height: 6vh;
+}
+
+.userImageAndName{
+    display: flex;
+    margin-left: 1vw;
+    padding: 5px;
+}
+
+.userImageAndName img{
+    border-radius: 9999px;
+}
+
+.userImageAndName h4 {
+    margin-left: 1vw;
 }
