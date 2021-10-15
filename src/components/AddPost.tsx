@@ -23,7 +23,9 @@ export default function AddPost(props: AddPostProps) {
         const todoRef = firebase.database().ref(props.linkComu);
         const email = user.email;
         const name = user.name;
+        const id = Math.random()
         const list = {
+            id,
             post,
             email,
             name
