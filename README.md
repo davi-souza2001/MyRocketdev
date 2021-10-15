@@ -14,14 +14,27 @@ NEXT_PUBLIC_APP_ID=`
 
 process.env. ...
 
-- Usuário (sem login) entra na rede sem login e consegue ver as comunidades e perfis dos usuários
-- Ao clicar em fazer login ou em alguma função que precisa de login, ele é direcionado para a tela de login
-- Na tela de login ele faz o cadastro com google ou com email e senha (so exibira a foto caso ele entra com o googole), e em seguida ele é direcionado para criação de perfil
-- Uma vez preenchida, o perfil é criado
-- O usuário pode particiar de comunidades, postando comentários lá e dando feedback de algo com
-- Ele poderá participar de quantas comunidades quiser, uma vez que ele está logado na rede social
-- No perfil de casa usuário além das informações base, vai ser possível listar as ultimas postagens dele na rede social, seja em qualquer comunidade
+## Falta
 
-### Telas
+### Por contribuições no perfil buscado
+### Função de publicar posts
+### Função de listar os membros da comunuidade
+### Função de favoritas cada posts
+### Função de listar as mais curtidas da semana
 
-- Home (mostra todas as comunidades, listadas em boxes centrais)
+## Regras de negocio
+
+-[x] A principal missão do MyRockteDev é disponibilizar comunidades de tecnologias especificas que estimulam as pessoas a interagir sobre o assunto. Lá você pode encontrar pessoas que estão procurando entender uma feature nova ou até pessoas com experiência na tecnologia explicando como ela está no mercado ou tirando dúvidas, ou seja todo tipo de interação.
+-[x] Público alvo: Público que gosta de tecnologia
+-[x] 6 telas
+-[x] Para interação é necessário cadastro
+-[x] O usuário vai poder escolher qual comunidade ele va participar (quantas quiser)
+-[x] Dentro da comunidade ele poderá postar e assim se tornar membro
+-[x] Cada comunidade irá ter um moderador e um adm para fazer o gerenciamento da comunidade (se eles estão seguindo as regras da comunidade)
+-[x] Cada usuário pode dar estrelas na postagem de outro usuário
+-[x] No final da semana, cada comunidade vai listar os top 10 posts mais bem avaliados pelos membros
+-[x] E o assunto destes estaria listado ao lado da comunidade
+-[x] Como ser membro ?
+-[x] Na aba pesquisa, a pessoa pode filtrar os devs da plataforma por: senioridade, nome da pessoa, por comunidade ou nick
+-[x] O perfil do usuário terá: Nome, foto, descrição, email do usuário, nick, e estado do usuário. Na aba de projetos serão listados os links e o nome do projeto do Github. Na aba sociais vão conter as principais rede sociais do usuário
+
