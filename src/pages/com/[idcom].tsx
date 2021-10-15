@@ -2,7 +2,7 @@ import { useRouter } from "next/router";
 import Image from "next/image";
 
 import Topbar from "../../components/Topbar";
-import PostUser from "../../components/PostUser";
+import ListPublis from "../../components/ListPublis";
 import AddPost from "../../components/AddPost";
 import astroMyRocket from "../../assets/img/astrounauta.svg";
 
@@ -36,7 +36,7 @@ export default function Com(props: idCommunitie){
             </div>
             <div >
                 <AddPost linkComu={idcom} name={user ? user?.name : "Faça login para fazer parte da comunidade"}/>
-                <PostUser/>
+                <ListPublis linkComuList={idcom}/>
             </div>
         </div>
     )
