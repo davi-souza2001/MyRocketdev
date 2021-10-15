@@ -2,7 +2,8 @@ import React from 'react';
 import Image from "next/image";
 
 import useAuth from '../data/hook/useAuth';
-import Icon from "../assets/img/austrolike.jpg"
+import Icon from "../assets/img/austrolike.jpg";
+import { IconStar, IconTrash } from "../components/Icons";
 
 import styles from "../styles/PostUser.module.css";
 
@@ -21,6 +22,14 @@ export default function PostUser(props: PostUser){
                     <div className={styles.userImageAndName}>
                         <Image src={user ? user?.imagemUrl : Icon} width={28} height={10}/>
                         <h4>Davi Souza</h4>
+                    </div>
+                    <div className={styles.contentIcons}>
+                        <div className={styles.icon}>
+                            {IconStar}
+                        </div>
+                        <div className={styles.icon}>
+                            {IconTrash}
+                        </div>
                     </div>
                 </div>
             </div>

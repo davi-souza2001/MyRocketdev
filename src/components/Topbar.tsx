@@ -8,6 +8,7 @@ import { IconHome } from "./Icons";
 import { IconSearch } from "./Icons";
 import { IconProfile } from "./Icons";
 import { IconUsersList } from "./Icons";
+
 import styles from "../styles/Topbar.module.css";
 
 interface TopbarProps {

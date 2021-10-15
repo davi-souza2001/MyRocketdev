@@ -18,6 +18,9 @@
 }
 
 .userSettings{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     height: 6vh;
 }
 
@@ -33,4 +36,16 @@
 
 .userImageAndName h4 {
     margin-left: 1vw;
+}
+
+.contentIcons{
+    display: flex;
+    margin-right: 3vw;
+    margin-bottom: 1vh;
+}
+
+.icon{
+    height: 1.3vh;
+    width: 1.3vw;
+    margin-left: 2vw;
 }
