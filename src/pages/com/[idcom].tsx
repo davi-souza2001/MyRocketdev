@@ -1,13 +1,14 @@
 import { useRouter } from "next/router";
+import Image from "next/image";
 
 import Topbar from "../../components/Topbar";
 import PostUser from "../../components/PostUser";
-import Image from "next/image";
-
+import AddPost from "../../components/AddPost";
 import astroMyRocket from "../../assets/img/astrounauta.svg";
 
+import useAuth from "../../data/hook/useAuth";
+
 import styles from "../../styles/Com.module.css"
-import AddPost from "../../components/AddPost";
 
 interface idCommunitie {
     
@@ -16,6 +17,9 @@ interface idCommunitie {
 export default function Com(props: idCommunitie){
     const router = useRouter();
     const idcom = router.query.idcom;
+
+    const { user } = useAuth();
+
     return (
         <div className={styles.content}>
             <Topbar />
@@ -31,13 +35,7 @@ export default function Com(props: idCommunitie){
                 <div className={styles.row}></div><Image src={astroMyRocket} height={150} width={150} alt="Astro"/><div className={styles.row}></div>
             </div>
             <div >
-                <AddPost/>
-                <PostUser/>
-                <PostUser/>
-                <PostUser/>
-                <PostUser/>
-                <PostUser/>
-                <PostUser/>
+                <AddPost linkComu={idcom} name={user ? user?.name : "Faça login para fazer parte da comunidade"}/>
                 <PostUser/>
             </div>
         </div>

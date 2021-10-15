@@ -16,7 +16,6 @@ process.env. ...
 
 ## Falta
 
-### Por contribuições no perfil buscado
 ### Função de publicar posts
 ### Função de listar os membros da comunuidade
 ### Função de favoritas cada posts

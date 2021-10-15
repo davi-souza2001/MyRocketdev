@@ -79,6 +79,9 @@ export default function MainProfile() {
                                 <h4>Projetos</h4>
                             </div>
                             <div className={styles.contentOption} onClick={activeModalSocial}>
+                                <h4>Contribuições</h4>
+                            </div>
+                            <div className={styles.contentOption} onClick={activeModalSocial}>
                                 <h4>Sociais</h4>
                             </div>
                         </div>
