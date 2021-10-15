@@ -1,5 +1,6 @@
 .contentCommunity{
     height: 10vh;
+    width: 98vw;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -8,7 +9,7 @@
 
 .contentCommunityOptions{
     height: 50vh;
-    width: 100vw;
+    width: 98vw;
 }
 
 .contentCommunityOptions h2{
@@ -17,7 +18,7 @@
 }
 
 .frameworks{
-    height: 20vh;
+    height: 15vh;
     display: flex;
     align-items: center;
     justify-content: center;
