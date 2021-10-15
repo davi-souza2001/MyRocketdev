@@ -17,7 +17,7 @@ export default function Search(Props: searchProps){
   
     function renderProfiles() {
         return profileList?.map((profile, index) => {
-            if(profSearch == profile.dev || profSearch == profile.userName || profSearch == profile.name){
+            if( profSearch == profile.userName || profSearch == profile.name){
             return (
                 <div key={index}>
                     <Profile image={profile.image  || astro} name={profile.name} dev={profile.dev} local={profile.local} description={profile.description} link={() => route.push(`/${profile.userName}`)}/>
@@ -30,11 +30,9 @@ export default function Search(Props: searchProps){
         <div className={styles.searchContent}>
             <Topbar/>
             <div className={styles.inputContent}>
-                <div className={styles.boxInBox}>
                     <div className={styles.boxInput}>
                         <input type="text" className={styles.input} value={profSearch} onChange={(e) => setProfSearch(e.target.value)} placeholder="Ache aqui o astronauta que você procura"/>
                     </div>
-                </div>
                 <div className={styles.profilesContent}>
                     {renderProfiles()}
                 </div>

@@ -30,7 +30,7 @@ export default function Topbar(props: TopbarProps) {
                 </div>
                 <div className={styles.iconstab}>
                     <div className={styles.home} onClick={() => route.push("/")}><div className={styles.iconstabIcon}>{IconHome}</div></div>
-                    <div className={styles.home} onClick={() => route.push("/")}><div className={styles.iconstabIcon}>{IconUsersList}</div></div>
+                    <div className={styles.home} onClick={() => route.push("/search")}><div className={styles.iconstabIcon}>{IconUsersList}</div></div>
                     <div className={styles.profile} onClick={() => route.push("/mainprofile")}><div className={styles.iconstabIcon}>{IconProfile}</div></div>
                 </div>
                 <div className={styles.usertab}>
