@@ -7,6 +7,7 @@ import Image from "next/image";
 import astroMyRocket from "../../assets/img/astrounauta.svg";
 
 import styles from "../../styles/Com.module.css"
+import AddPost from "../../components/AddPost";
 
 interface idCommunitie {
     
@@ -30,6 +31,7 @@ export default function Com(props: idCommunitie){
                 <div className={styles.row}></div><Image src={astroMyRocket} height={150} width={150} alt="Astro"/><div className={styles.row}></div>
             </div>
             <div >
+                <AddPost/>
                 <PostUser/>
                 <PostUser/>
                 <PostUser/>

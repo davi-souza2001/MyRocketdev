@@ -1,0 +1,66 @@
+.contentGeral{
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "poppins", sans-serif;
+    margin-bottom: 3vh;
+}
+
+.content{
+    color: #fff;
+    background-color: #333333;
+    width: 50vw;
+    height: 20vh;
+    border-radius: 10px;
+}
+
+.userSettings {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.userImageAndName {
+    height: 9vh;
+    width: 50vw;
+    padding: 1vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.userImageAndName h4{
+    margin-left: -30vw;
+}
+
+.userImageAndName img{
+    border-radius: 9999px;
+}
+
+.icon{
+    height: 4vh;
+    width: 5vw;
+    margin-right: 2vw;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+    background-color: #161476;
+}
+
+.icon:hover{
+    background-color: #0f0d4d;
+}
+
+.userSettings input {
+    height: 7vh;
+    width: 48vw;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background-color: #2c2c2e;
+    color: #fff;
+    font-family: "poppins", sans-serif;
+}
+

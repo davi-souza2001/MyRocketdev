@@ -25,6 +25,11 @@
     height: 6vh;
 }
 
+.userSettings input {
+    margin-left: 2vw;
+    height: 6vh;
+}
+
 .userImageAndName{
     display: flex;
     margin-left: 1vw;
