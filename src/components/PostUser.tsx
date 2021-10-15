@@ -17,7 +17,7 @@ export default function PostUser(props: PostUser){
     return (
         <div className={styles.contentGeral}>
             <div className={styles.content}>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo vel eligendi ad, ipsum quas voluptatum reprehenderit quis facere aliquid blanditiis expedita dolores, illum consectetur rerum velit ut, cumque odit. Corporis.</p>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo vel eligendi ad, ipsum quas voluptatum reprehenderit quis facere aliquid blanditiis expedita dolores, illum consectetur rerum velit ut, cumque odit. Corporis. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto cupiditate itaque distinctio ratione! Laborum voluptas omnis fugit quibusdam cumque delectus dolor distinctio! Assumenda nam officia provident possimus tenetur? Placeat, dignissimos.</p>
                 <div className={styles.userSettings}>
                     <div className={styles.userImageAndName}>
                         <Image src={user ? user?.imagemUrl : Icon} width={28} height={10}/>
