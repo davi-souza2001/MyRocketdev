@@ -24,10 +24,10 @@ export default function PostUser(props: PostUser){
                         <h4>Davi Souza</h4>
                     </div>
                     <div className={styles.contentIcons}>
-                        <div className={styles.icon} >
+                        <div className={styles.icon}>
                             {IconStar}
                         </div>
-                        <div className={styles.icon} >
+                        <div className={styles.icon}>
                             {IconTrash}
                         </div>
                     </div>
