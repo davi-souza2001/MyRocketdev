@@ -14,6 +14,8 @@ NEXT_PUBLIC_APP_ID=`
 
 process.env. 
 
+...
+
 ## Falta
 
 ### Função de excluir post pegando por parametro email do post
