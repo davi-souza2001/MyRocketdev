@@ -19,8 +19,9 @@ process.env.
 ## Falta
 
 ### Função de listar os membros da comunuidade
-### Função de favoritas cada posts
+### Mudar a barra no topo
 ### Função de listar as mais curtidas da semana
+### Função de favoritar cada posts
 
 ## Regras de negocio
 
