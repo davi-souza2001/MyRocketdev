@@ -18,7 +18,6 @@ process.env.
 
 ## Falta
 
-### Função de excluir post pegando por parametro email do post
 ### Função de listar os membros da comunuidade
 ### Função de favoritas cada posts
 ### Função de listar as mais curtidas da semana

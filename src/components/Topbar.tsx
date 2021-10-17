@@ -22,7 +22,7 @@ export default function Topbar(props: TopbarProps) {
     return (
         <>
             <div className={styles.leftbarcontent}>
-                <div className={styles.titletab}>
+                <div className={styles.titletab} onClick={() => route.push("/")}>
                     <div className={styles.title}><h2>MyRocket</h2></div>
                 </div>
                 <div className={styles.search}>

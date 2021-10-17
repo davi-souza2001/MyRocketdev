@@ -34,7 +34,7 @@ export default function Com(props: idCommunitie){
             <div className={styles.divRow}>
                 <div className={styles.row}></div><Image src={astroMyRocket} height={150} width={150} alt="Astro"/><div className={styles.row}></div>
             </div>
-            <div >
+            <div>
                 <AddPost linkComu={idcom} name={user ? user?.name : "Faça login para fazer parte da comunidade"}/>
                 <ListPublis linkComuList={idcom}/>
             </div>
