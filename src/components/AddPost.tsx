@@ -19,18 +19,25 @@ export default function AddPost(props: AddPostProps) {
 
     const [post, setPost] = useState("");
 
-    function sub() {
-        const todoRef = firebase.database().ref(props.linkComu);
-        const email = user.email;
-        const name = user.name;
-        const id = Math.random()
-        const list = {
-            id,
-            post,
-            email,
-            name
+    async function sub() {
+        await user?.email
+        if(user?.email){
+            const todoRef = firebase.database().ref(props.linkComu);
+            const email = user.email;
+            const name = user.name;
+            const photo = user.imagemUrl;
+            const idForList = Math.random()
+            const list = {
+                idForList,
+                post,
+                email,
+                photo,
+                name
+            }
+            todoRef.push(list);
+        } else{
+            alert("Opa, parece que você ainda não fez seu login")
         }
-        todoRef.push(list);
       }
 
     return (

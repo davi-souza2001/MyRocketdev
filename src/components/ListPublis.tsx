@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import useAuth from '../data/hook/useAuth';
 
 import firebase from "../firebase/config";
 
@@ -10,6 +11,7 @@ interface ListPublisProps {
 }
 
 export default function ListPublis(props: ListPublisProps){
+    const { user } = useAuth();
     const [publisList, setPublisListList] = useState([]);
 
     useEffect(() => {
@@ -24,20 +26,16 @@ export default function ListPublis(props: ListPublisProps){
         })
       }, []);
 
-    function renderPublis(){
-        return publisList?.map((publis) => {
-          if(publis.post != ""){
-          return(
-                <PostUser publi={publis.post} key={publis.id}/>
-          )}
-        })
-      }
-
     return (
         <>
             {publisList?.map(publis => {
                 return (
-                    <PostUser publi={publis.post} key={publis.id}/>
+                    <PostUser publi={publis.post} 
+                    name={publis.name} 
+                    imageUser={publis.photo} 
+                    trash={user?.email == publis.email ? true : false} 
+                    delete={() => firebase.database().ref(props.linkComuList).child(publis.id).remove()}
+                    key={publis.id}/>
                 )
             })}
         </>
