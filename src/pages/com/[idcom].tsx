@@ -36,7 +36,9 @@ export default function Com(props: idCommunitie){
             </div>
             <div>
                 <AddPost linkComu={idcom} name={user ? user?.name : "Faça login para fazer parte da comunidade"}/>
-                <ListPublis linkComuList={idcom}/>
+                <div>
+                    <ListPublis linkComuList={idcom}/>
+                </div>
             </div>
         </div>
     )
