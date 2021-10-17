@@ -18,6 +18,7 @@ process.env.
 
 ## Falta
 
+### Corrigir o numero de postagens
 ### Função de listar os membros da comunuidade
 ### Mudar a barra no topo
 ### Função de listar as mais curtidas da semana
