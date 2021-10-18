@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import Image from "next/image";
 
@@ -7,6 +8,7 @@ import AddPost from "../../components/AddPost";
 import astroMyRocket from "../../assets/img/astrounauta.svg";
 
 import useAuth from "../../data/hook/useAuth";
+import firebase from "../../firebase/config";
 
 import styles from "../../styles/Com.module.css"
 
@@ -17,8 +19,22 @@ interface idCommunitie {
 export default function Com(props: idCommunitie){
     const router = useRouter();
     const idcom = router.query.idcom;
+    const [publisList, setPublisListList] = useState([]);
 
     const { user } = useAuth();
+
+    useEffect(() => {
+        const todoRef = firebase.database().ref(idcom?.toString());
+        todoRef.on('value', (snapshot) => {
+          const todos = snapshot.val();
+          const todoList = [];
+          for (let id in todos) {
+            todoList.push({ id, ...todos[id] });
+          }
+          setPublisListList(todoList);
+        })
+      }, []);
+
 
     return (
         <div className={styles.content}>
@@ -28,7 +44,7 @@ export default function Com(props: idCommunitie){
                     <h2>Comunidade {idcom}</h2>
                 </div>
                 <div className={styles.contentPosts}>
-                    <h2>4 postagens</h2>
+                    <h2>{publisList?.length} postagens</h2>
                 </div>
             </div>
             <div className={styles.divRow}>
