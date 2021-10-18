@@ -11,6 +11,7 @@ import useAuth from "../../data/hook/useAuth";
 import firebase from "../../firebase/config";
 
 import styles from "../../styles/Com.module.css"
+import CommunityMembers from "../../components/CommunityMembers";
 
 interface idCommunitie {
     
@@ -51,10 +52,21 @@ export default function Com(props: idCommunitie){
                 <div className={styles.row}></div><Image src={astroMyRocket} height={150} width={150} alt="Astro"/><div className={styles.row}></div>
             </div>
             <div>
-                <AddPost linkComu={idcom} name={user ? user?.name : "Faça login para fazer parte da comunidade"}/>
-                <div>
-                    <ListPublis linkComuList={idcom}/>
+                <div className={styles.contentMembersAndAddPost}>
+                    <CommunityMembers linkComuList={idcom} showAdmin>
+                        <div className={styles.contentMembers}>
+                            {/* <Image/> */}
+                            <p>Davi</p>
+                            {/* <Image/> */}
+                            <p>Davi</p>
+                            {/* <Image/> */}
+                            <p>Davi</p>
+                        </div>
+                    </CommunityMembers>
+                    <AddPost linkComu={idcom} name={user ? user?.name : "Faça login para fazer parte da comunidade"}/>
+                    <CommunityMembers linkComuList={idcom} showAdmin={false}/>
                 </div>
+                <ListPublis linkComuList={idcom}/>
             </div>
         </div>
     )

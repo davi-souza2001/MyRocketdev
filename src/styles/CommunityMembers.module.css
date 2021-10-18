@@ -1,0 +1,45 @@
+.contentGeral{
+    background-color: #333333;
+    width: 20vw;
+    height: 60vh;
+    margin-left: 3vw; 
+    margin-right: 3vw;
+    border-radius: 10px;
+    font-family: "poppins", sans-serif;
+    color: #fff;
+}
+
+.contentAdmin{
+    margin-top: 1vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.contentAdminSection{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2vh;
+}
+
+.contentAdminSection p {
+    margin-left: 10px;
+}
+
+.contentAdminSection img{
+    border-radius: 999999px;
+}
+
+.bar{
+    width: 150px;
+    padding: 2px;
+    background-color: #3936eb;
+    opacity: 50%;
+    border-radius: 5px;
+}
+
+.members{
+    overflow-y: scroll;
+}

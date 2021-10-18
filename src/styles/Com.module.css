@@ -34,3 +34,14 @@
     opacity: 50%;
     border-radius: 5px;
 }
+
+.contentMembersAndAddPost{
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contentMembers{
+    margin-right: 9vw;
+}

@@ -19,6 +19,7 @@ process.env.
 ## Falta
 
 ### Função de listar os membros da comunuidade
+### Adicionar botao de entrar na comunidade
 ### Mudar a barra no topo
 ### Mudar tela de perfil do usuario
 ### Função de listar as mais curtidas da semana
