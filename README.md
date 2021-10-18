@@ -18,7 +18,6 @@ process.env.
 
 ## Falta
 
-### Use replace ao em vez de push quando o usuário não em perfil
 ### Corrigir o numero de postagens
 ### Função de listar os membros da comunuidade
 ### Mudar a barra no topo

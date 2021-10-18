@@ -20,7 +20,7 @@ export default function CreateProfile(Props: CreateProfileProps) {
 
     const verifyEmailExists = profileList?.map((prof) => {
         if(prof.email == emailUser) {
-            route.push("/");
+            route.replace("/");
         }
     })
     
