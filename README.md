@@ -20,6 +20,7 @@ process.env.
 
 ### Função de listar os membros da comunuidade
 ### Mudar a barra no topo
+### Mudar tela de perfil do usuario
 ### Função de listar as mais curtidas da semana
 ### Função de favoritar cada posts
 
