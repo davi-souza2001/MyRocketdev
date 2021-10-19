@@ -18,10 +18,10 @@ process.env.
 
 ## Falta
 
+### Mudar tela de perfil do usuario;
 ### Mudar tela de criar perfil;
 ### Fazer tela de chat;
 ### Fazer tela de reunião;
-### Mudar tela de perfil do usuario;
 ### Fazer função de editar o perfil;
 ### Adicionar foguete na pesquisa de usuário.
 ### Copiar tela de moon no github na tela de clicar escolhendo front, back ou mobile;
