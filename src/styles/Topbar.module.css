@@ -12,19 +12,27 @@
 
 .titletab {
     height: 6vh;
-    width: 12vw;
+    width: 13vw;
+    margin-left: 1vw;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 10px;
     cursor: pointer;
     transition: 0.2s;
-    background-color: #161476;
 }
 
 .titletab:hover {
     background-color: #09083b;
 } 
+
+.title{
+    height: 7vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
 
 .search{
     display: flex;
@@ -47,22 +55,21 @@
 }
 
 .iconstab{
-    height: 9vh;
-    width: 19vw;
+    height: 7vh;
+    width: 40vw;
+    margin-left: 30vw;
     display: flex;
     align-items: center;
     justify-content: space-around;
 }
 
-.iconstabIcon {
-    height: 6vh;
-    width: 3vw;
+.iconstab h3{
     cursor: pointer;
     transition: 0.2s;
 }
 
-.iconstabIcon:hover {
-    color: #13117c;
+.iconstab h3:hover{
+    color: #12107c;
 }
 
 .usertab{

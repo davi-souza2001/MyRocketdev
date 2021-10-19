@@ -18,12 +18,17 @@ process.env.
 
 ## Falta
 
-### Função de listar os membros da comunuidade
-### Adicionar botao de entrar na comunidade
-### Mudar a barra no topo
-### Mudar tela de perfil do usuario
-### Função de listar as mais curtidas da semana
-### Função de favoritar cada posts
+### Mudar topbar;
+### Mudar nomes de cada rota;
+### Mudar / da aplicação pra feed
+### Função de entrar na comunidade;
+### Fazer tela de feed, incrementando as comunidades que ela segue, digitando as 3 últimas postagens da comunidade;
+### Fazer tela de chat;
+### Fazer tela de reunião;
+### Copiar tela de moon no github na tela de clicar escolhendo front, back ou mobile;
+### Mudar tela de perfil do usuario;
+### Fazer função de editar o perfil;
+### Adicionar foguete na pesquisa de usuário.
 
 ## Regras de negocio
 

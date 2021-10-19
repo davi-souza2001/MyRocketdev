@@ -37,6 +37,10 @@ export default function Com(props: idCommunitie){
       }, []);
 
 
+      publisList.map((publis) => {
+          console.log(publis.email)
+      })
+
     return (
         <div className={styles.content}>
             <Topbar />
@@ -55,12 +59,7 @@ export default function Com(props: idCommunitie){
                 <div className={styles.contentMembersAndAddPost}>
                     <CommunityMembers linkComuList={idcom} showAdmin>
                         <div className={styles.contentMembers}>
-                            {/* <Image/> */}
-                            <p>Davi</p>
-                            {/* <Image/> */}
-                            <p>Davi</p>
-                            {/* <Image/> */}
-                            <p>Davi</p>
+                            
                         </div>
                     </CommunityMembers>
                     <AddPost linkComu={idcom} name={user ? user?.name : "Faça login para fazer parte da comunidade"}/>

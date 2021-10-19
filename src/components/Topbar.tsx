@@ -4,10 +4,7 @@ import Astro from "../assets/img/austrotwo.jpg";
 import route from "next/router";
 import Image from "next/image";
 
-import { IconHome } from "./Icons";
-import { IconSearch } from "./Icons";
-import { IconProfile } from "./Icons";
-import { IconUsersList } from "./Icons";
+import astroMyRocket from "../assets/img/astrounauta.svg";
 
 import styles from "../styles/Topbar.module.css";
 
@@ -23,16 +20,30 @@ export default function Topbar(props: TopbarProps) {
         <>
             <div className={styles.leftbarcontent}>
                 <div className={styles.titletab} onClick={() => route.push("/")}>
-                    <div className={styles.title}><h2>MyRocket</h2></div>
-                </div>
-                <div className={styles.search}>
-                    <div className={styles.iconSearch}>{IconSearch}</div>
-                    <input type="text" placeholder="Search"/>
+                    <div className={styles.title}>
+                        <Image src={astroMyRocket} height={150} width={150}/>
+                        <h2>MyRocket</h2>
+                    </div>
                 </div>
                 <div className={styles.iconstab}>
-                    <div className={styles.home} onClick={() => route.push("/")}><div className={styles.iconstabIcon}>{IconHome}</div></div>
-                    <div className={styles.home} onClick={() => route.push("/search")}><div className={styles.iconstabIcon}>{IconUsersList}</div></div>
-                    <div className={styles.profile} onClick={() => route.push("/mainprofile")}><div className={styles.iconstabIcon}>{IconProfile}</div></div>
+                    <div  onClick={() => route.push("/")}>
+                        <div><h3>Inicio</h3></div>
+                    </div>
+                    <div  onClick={() => route.push("/")}>
+                        <div><h3>Comunidades</h3></div>
+                    </div>
+                    <div onClick={() => route.push("/search")}>
+                        <div><h3>Pesquisar</h3></div>
+                    </div>
+                    <div onClick={() => route.push("/search")}>
+                        <div><h3>Reuniões</h3></div>
+                    </div>
+                    <div onClick={() => route.push("/search")}>
+                        <div><h3>Chat</h3></div>
+                    </div>
+                    <div onClick={() => route.push("/mainprofile")}>
+                        <div><h3>Perfil</h3></div>
+                    </div>
                 </div>
                 <div className={styles.usertab}>
                     <div className={styles.user} onClick={user ? logout : loginGoogle }>
