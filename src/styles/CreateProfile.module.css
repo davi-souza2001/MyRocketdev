@@ -68,6 +68,14 @@
     color: #fff;
 }
 
+.contentForms form h3{
+    margin:10px 0;
+}
+
+.contentComum{
+    margin-bottom:10px;
+}
+
 .contentForms form p{
     font-size: 80%;
     animation-name: change;
