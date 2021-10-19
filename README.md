@@ -18,7 +18,6 @@ process.env.
 
 ## Falta
 
-### Fazer tela de feed, incrementando as comunidades que ela segue, digitando as 3 últimas postagens da comunidade;
 ### Fazer tela de chat;
 ### Fazer tela de reunião;
 ### Mudar tela de criar perfil;
