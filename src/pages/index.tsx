@@ -104,7 +104,12 @@ export default function MainPage(props: MainPage) {
                         </div>
                     </>
                 ) : 
-                <h1>Faça login</h1>}
+                (
+                <>
+                    <h1>Parece que você ainda não fez login</h1>
+                    <h1>ou não entrou ainda em alguma comunidade :(</h1>
+                </>
+                )}
             </div>
         </>
     )

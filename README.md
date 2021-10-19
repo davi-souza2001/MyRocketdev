@@ -18,9 +18,9 @@ process.env.
 
 ## Falta
 
+### Mudar tela de criar perfil;
 ### Fazer tela de chat;
 ### Fazer tela de reunião;
-### Mudar tela de criar perfil;
 ### Mudar tela de perfil do usuario;
 ### Fazer função de editar o perfil;
 ### Adicionar foguete na pesquisa de usuário.
