@@ -36,11 +36,6 @@ export default function Com(props: idCommunitie){
         })
       }, []);
 
-
-      publisList.map((publis) => {
-          console.log(publis.email)
-      })
-
     return (
         <div className={styles.content}>
             <Topbar />

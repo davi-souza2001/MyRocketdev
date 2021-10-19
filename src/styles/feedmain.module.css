@@ -1,0 +1,50 @@
+.contentGeral{
+    margin-top: 5vh;
+    height: 88vh;
+    color: #fff;
+    overflow-x: hidden;
+    font-family: 'poppins', sans-serif;
+}
+
+.contentTitle{
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contentFeedName{
+    width: 100vw;
+    height: 10vh;
+    margin-top: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.boxNameFeed{
+    background-color: #3936EB;
+    height: 5vh;
+    width: 9vw;
+    margin: 0 30px;
+    border-radius:  10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.boxNameFeed:hover{
+    background-color: #1613B2;
+}
+
+.contentFeed{
+    width: 100vw;
+    margin-top: 5vh;
+}
+
+.feed{
+    margin-top: 20vh;
+}
+

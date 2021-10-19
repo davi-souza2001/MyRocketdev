@@ -96,14 +96,14 @@ export default function CreateProfile(Props: CreateProfileProps) {
                     <h3>Escolha 3 tecnologias para você ter no seu feed:</h3>
                     <select required onChange={(e) => setFirstComum(e.target.value)} value={firstComum} className={styles.contentComum}>
                         <option selected>--Front-End--</option>
-                            <option value="ReactJs">ReactJs</option>
-                            <option value="AngularJs">AngularJs</option>
-                            <option value="Vuejs">Vuejs</option>
-                            <option value="NextJs">NextJs</option>
+                            <option value="React">ReactJs</option>
+                            <option value="Angular">AngularJs</option>
+                            <option value="Vue">Vuejs</option>
+                            <option value="Next">NextJs</option>
                             <option value="Ember">Ember</option>
                         <option selected>--Back-End--</option>
-                            <option value="NodeJs">NodeJs</option>
-                            <option value="MongoDb">MongoDb</option>
+                            <option value="Node">NodeJs</option>
+                            <option value="Mongo">MongoDb</option>
                             <option value="Sql">Sql</option>
                             <option value="Firebase">Firebase</option>
                             <option value="CSharp">CSharp</option>
@@ -116,14 +116,14 @@ export default function CreateProfile(Props: CreateProfileProps) {
                     </select>
                     <select required onChange={(e) => setSecondComum(e.target.value)} value={secondComum} className={styles.contentComum}>
                         <option  selected>--Front-End--</option>
-                            <option value="ReactJs">ReactJs</option>
-                            <option value="AngularJs">AngularJs</option>
-                            <option value="Vuejs">Vuejs</option>
-                            <option value="NextJs">NextJs</option>
+                            <option value="React">ReactJs</option>
+                            <option value="Angular">AngularJs</option>
+                            <option value="Vue">Vuejs</option>
+                            <option value="Next">NextJs</option>
                             <option value="Ember">Ember</option>
                         <option  selected>--Back-End--</option>
-                            <option value="NodeJs">NodeJs</option>
-                            <option value="MongoDb">MongoDb</option>
+                            <option value="Node">NodeJs</option>
+                            <option value="Mongo">MongoDb</option>
                             <option value="Sql">Sql</option>
                             <option value="Firebase">Firebase</option>
                             <option value="CSharp">CSharp</option>
@@ -136,14 +136,14 @@ export default function CreateProfile(Props: CreateProfileProps) {
                     </select>
                     <select required onChange={(e) => setThirdComum(e.target.value)} value={thirdComum} className={styles.contentComum}>
                         <option  selected>--Front-End--</option>
-                            <option value="ReactJs">ReactJs</option>
-                            <option value="AngularJs">AngularJs</option>
-                            <option value="Vuejs">Vuejs</option>
-                            <option value="NextJs">NextJs</option>
+                            <option value="React">ReactJs</option>
+                            <option value="Angular">AngularJs</option>
+                            <option value="Vue">Vuejs</option>
+                            <option value="Next">NextJs</option>
                             <option value="Ember">Ember</option>
                         <option  selected>--Back-End--</option>
-                            <option value="NodeJs">NodeJs</option>
-                            <option value="MongoDb">MongoDb</option>
+                            <option value="Node">NodeJs</option>
+                            <option value="Mongo">MongoDb</option>
                             <option value="Sql">Sql</option>
                             <option value="Firebase">Firebase</option>
                             <option value="CSharp">CSharp</option>
