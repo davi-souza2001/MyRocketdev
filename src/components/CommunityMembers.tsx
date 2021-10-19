@@ -48,13 +48,7 @@ export default function CommunityMembers(props: CommunityMembers){
             {showadmin ? (
                 <>
                     <div className={styles.contentAdmin}>
-                        <h2>Admins</h2>
-                        <div className={styles.contentAdminSection}>
-                            <Image src={adminPhoto ? adminPhoto : astroMyRocket} width={30} height={30}/>
-                            <p>{adminsList[0]?.name}</p>
-                        </div>
-                        <div className={styles.bar}></div>
-                        <h2>Moderadores</h2>
+                        <h2>Comandante</h2>
                         <div className={styles.contentAdminSection}>
                             <Image src={adminPhoto ? adminPhoto : astroMyRocket} width={30} height={30}/>
                             <p>{adminsList[0]?.name}</p>

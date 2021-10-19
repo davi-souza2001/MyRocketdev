@@ -46,7 +46,7 @@ export default function Com(props: idCommunitie){
             <Topbar />
             <div className={styles.contentBarTitle}>
                 <div>
-                    <h2>Comunidade {idcom}</h2>
+                    <h2>Planeta {idcom}</h2>
                 </div>
                 <div className={styles.contentPosts}>
                     <h2>{publisList?.length} postagens</h2>

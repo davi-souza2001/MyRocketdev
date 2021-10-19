@@ -18,8 +18,6 @@ process.env.
 
 ## Falta
 
-### Mudar topbar;
-### Mudar nomes de cada rota;
 ### Mudar / da aplicação pra feed
 ### Função de entrar na comunidade;
 ### Fazer tela de feed, incrementando as comunidades que ela segue, digitando as 3 últimas postagens da comunidade;
