@@ -15,42 +15,119 @@
 .imgProfileUser{
     height: 14vh;
     width: 70vw;
-    margin-left: 6vw;
-    margin-top: -8vh;
+    display: flex;
+    margin-left: 4vw;
 }
 
-.bar{
-    margin-top: 21vh;
-    width: 100vw;
-    border: 1px solid #161476;
-}
 
 .imgProfileUser img{
-    height: 19vh;
-    width: 10vw;
+    height: 10vh;   
+    width: 7vw;
     border-radius: 999999px;
 }
 
-.imgProfileUser h3{
+.contentUser{
+    margin-top: 2vh;
+    margin-left: 1vw;
+}
+
+.contentUser h3{
     color: #fff;
     font-family: 'poppins', sans-serif;
     font-size: 200%;
 }
 
-.imgProfileUser p {
+.contentUser p {
     color: #fff;
 }
 
+.description{
+    color: #fff;
+    margin-top: 1vh;
+    width: 60vw;
+    height: 10vh;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: #151515;
+}
+
+.bar{
+    margin-top: 14vh;
+    border: 1px solid #161476;
+}
+
+.finalGeral{
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.communitiesUser{
+    background-color: #363636;
+    margin-top: -10vh;
+    height: 40vh;
+    width: 15vw;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    color: #fff;
+    border-radius: 10px;
+    font-family: 'poppins', sans-serif;
+}
+
+.communitiesUser h3{
+    margin-top: 2vh;
+}
+
+.communitiesPerson{
+    margin-top: 8vh;
+}
+
+.communitiesPerson p{
+    cursor: pointer;
+    transition: 0.2s;
+    margin-top: 1vh;
+}
+
+.communitiesPerson p:hover{
+    color: #3936EB;
+}
+
 .spacingbar{
-    width: 96vw;
-    height:45vh;
+    width: 32vw;
+    height:40vh;
     margin-top: -4vh;
     overflow-y: scroll;
 }
 
+.socialMedias{
+    background-color: #363636;
+    margin-top: -10vh;
+    width: 20vw;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    color: #fff;
+    border-radius: 10px;
+    padding: 10px;
+    font-family: 'poppins', sans-serif;
+}
+
+.socialMedias h3{
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.socialMedias h3:hover{
+    color: #3936EB;
+}
+
 .descriptionProfile{
-    margin: 1vh 5vw;
-    width: 89vw;
+    width: 30vw;
+    margin: 5px 0;
     background-color: #161476;
     padding: 1vh;
     word-wrap: break-word;
@@ -72,11 +149,11 @@
 .optionsBar{
     height: 7vh;
     width: 95vw;
-    margin-top: 8vh;
+    margin-top: 5vh;
     margin-left: 5vw;
     display: flex;
     align-content: center;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 .optionsBar h4{

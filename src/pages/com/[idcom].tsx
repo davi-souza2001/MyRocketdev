@@ -50,18 +50,16 @@ export default function Com(props: idCommunitie){
             <div className={styles.divRow}>
                 <div className={styles.row}></div><Image src={astroMyRocket} height={150} width={150} alt="Astro"/><div className={styles.row}></div>
             </div>
-            <div>
-                <div className={styles.contentMembersAndAddPost}>
-                    <CommunityMembers linkComuList={idcom} showAdmin>
-                        <div className={styles.contentMembers}>
+            <div className={styles.contentMembersAndAddPost}>
+                <CommunityMembers linkComuList={idcom} showAdmin>
+                    <div className={styles.contentMembers}>
                             
-                        </div>
-                    </CommunityMembers>
-                    <AddPost linkComu={idcom} name={user ? user?.name : "Faça login para fazer parte da comunidade"}/>
-                    <CommunityMembers linkComuList={idcom} showAdmin={false}/>
-                </div>
-                <ListPublis linkComuList={idcom}/>
+                    </div>
+                </CommunityMembers>
+                <AddPost linkComu={idcom} name={user ? user?.name : "Faça login para fazer parte da comunidade"}/>
+                <CommunityMembers linkComuList={idcom} showAdmin={false}/>
             </div>
+            <ListPublis linkComuList={idcom}/>
         </div>
     )
 }

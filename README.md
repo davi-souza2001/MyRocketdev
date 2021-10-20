@@ -19,12 +19,15 @@ process.env.
 ## Falta
 
 ### Mudar tela de perfil do usuario;
+### Fazer função de avisar caso github esteja vazio
 ### Mudar tela de criar perfil;
 ### Fazer tela de chat;
 ### Fazer tela de reunião;
 ### Fazer função de editar o perfil;
 ### Adicionar foguete na pesquisa de usuário.
 ### Copiar tela de moon no github na tela de clicar escolhendo front, back ou mobile;
+### Sala de reuniao
+### Função dar like
 
 ## Regras de negocio
 

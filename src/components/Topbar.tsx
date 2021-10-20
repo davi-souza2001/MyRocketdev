@@ -35,11 +35,8 @@ export default function Topbar(props: TopbarProps) {
                     <div onClick={() => route.push("/search")}>
                         <div><h3>Pesquisar</h3></div>
                     </div>
-                    <div onClick={() => route.push("/search")}>
+                    <div onClick={() => route.push("/")}>
                         <div><h3>Reuniões</h3></div>
-                    </div>
-                    <div onClick={() => route.push("/search")}>
-                        <div><h3>Chat</h3></div>
                     </div>
                     <div onClick={() => route.push("/mainprofile")}>
                         <div><h3>Perfil</h3></div>

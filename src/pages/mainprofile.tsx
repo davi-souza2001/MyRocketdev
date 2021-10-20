@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import route from "next/router";
 import Image from "next/image";
 import useProfile from "../data/hook/useProfile";
 import useAuth from "../data/hook/useAuth";
@@ -46,13 +47,7 @@ export default function MainProfile() {
 
     //End logic get user for api gitHub
 
-    //Start state to open pages
 
-    const [description, setDescription] = useState(true);
-    const [projects, setProjects] = useState(false);
-    const [social, setSocial] = useState(false);
-
-    //End state to open pages
 
     //Start variable for render profile right in main profile (left bar)
 
@@ -65,69 +60,41 @@ export default function MainProfile() {
                         <Image src={AstroLike} alt="Astronauta dando like" height={200} width={200} />
                     </div>
                     <div className={styles.imgProfileUser}>
-                        <Image src={prof.image || Austroone} height={800} width={800} alt="Foto de Perfil"></Image>
-                        <h3>{prof.name}</h3>
-                        <p>@{prof.userName}</p>
-                        <p>{prof.local}</p>
+                        <Image src={prof.image || Austroone} height={999} width={999} alt="Foto de Perfil"></Image>
+                        <div className={styles.contentUser}>
+                            <h3>{prof.name}</h3>
+                            <p>@{prof.userName}</p>
+                            <p>{prof.dev} em {prof.local}</p>
+                                <div className={styles.description}>
+                                    <h4>{prof.description}</h4>
+                                </div>
+                        </div>
                     </div>
                     <div className={styles.bar}></div>
                     <div className={styles.optionsBar}>
-                        <div className={styles.contentOption} onClick={activeModalDescription}>
-                            <h4>Descrição</h4>
-                        </div>
-                        <div className={styles.contentOption} onClick={activeModalProjects}>
+                        <div className={styles.contentOption}>
                             <h4>Projetos</h4>
                         </div>
-                        <div className={styles.contentOption} onClick={activeModalSocial}>
-                            <h4>Contribuições</h4>
-                        </div>
-                        <div className={styles.contentOption} onClick={activeModalSocial}>
-                            <h4>Sociais</h4>
-                        </div>
-                </div>
-
-                {description ? (
-                    <div className={styles.descriptionProfile}>
-                        <h3>{prof.description}</h3>
                     </div>
-                ) : false}
-
-                {projects ? (
-                    <>
+                    <div className={styles.finalGeral}>
+                        <div className={styles.communitiesUser}>
+                            <h3>Comunidades</h3>
+                            <div className={styles.communitiesPerson}>
+                                <p onClick={() => route.push(`/com/${prof.firstComum}`)}>{prof.firstComum}</p>
+                                <p onClick={() => route.push(`/com/${prof.secondComum}`)}>{prof.secondComum}</p>
+                                <p onClick={() => route.push(`/com/${prof.thirdComum}`)}>{prof.thirdComum}</p>
+                            </div>
+                        </div>
                         <div className={styles.spacingbar}>
                             {renderRepos()}
                         </div>
-                    </>
-                ) : false}
-
-                {social ? (
-                    <>
-                        {prof.linkedin ? 
-                            <div className={styles.descriptionProfile}>
-                                <h3><a href={`https://www.linkedin.com/in/${prof.linkedin}/`} target="_blank" rel="noreferrer">Likedin: {prof.linkedin}</a></h3>
-                            </div>
-                        :
-                        false}
-                        {prof.github ? 
-                            <div className={styles.descriptionProfile}>
-                                <h3><a href={`https://github.com/${prof.github}`} target="_blank" rel="noreferrer">GitHub: {prof.github}</a></h3>
-                            </div>
-                        :
-                        false}
-                        {prof.instagram ?
-                            <div className={styles.descriptionProfile}>
-                                <h3><a href={`https://www.instagram.com/${prof.instagram}/`} target="_blank" rel="noreferrer">Instagram: {prof.instagram}</a></h3>
-                            </div>
-                        :
-                        false}
-                        {prof.youtube ? 
-                            <div className={styles.descriptionProfile}>
-                                <h3><a href={`https://www.youtube.com/user/${prof.youtube}`} target="_blank" rel="noreferrer">Youtube: {prof.youtube}</a></h3>
-                            </div>
-                        : 
-                        false}
-                    </>
-                ) : false}
+                        <div className={styles.socialMedias}>
+                            {prof.linkedin ? <h3 onClick={() => route.push(`https://www.linkedin.com/in/${prof.linkedin}/`)}>Linkedin: {prof.linkedin}</h3> : false}
+                            {prof.github ? <h3 onClick={() => route.push(`https://github.com/${prof.github}`)}>Github: {prof.github}</h3> : false}
+                            {prof.instagram ? <h3 onClick={() => route.push(`https://www.instagram.com/${prof.instagram}/`)}>Instagram: {prof.instagram}</h3> : false}
+                            {prof.youtube ? <h3 onClick={() => route.push(`https://www.youtube.com/user/${prof.youtube}`)}>Youtube: {prof.youtube}</h3> : false}
+                        </div>
+                    </div>
                 </div>
             )
         }
@@ -135,33 +102,6 @@ export default function MainProfile() {
 
     //End variable for render profile right in main profile (left bar)
 
-    //Start functions to open modal pages
-
-    function activeModalDescription() {
-        if (!description) {
-            setDescription(true);
-            setProjects(false);
-            setSocial(false);
-        }
-    }
-
-    function activeModalProjects() {
-        if (!projects) {
-            setProjects(true);
-            setDescription(false);
-            setSocial(false);
-        }
-    }
-
-    function activeModalSocial() {
-        if (!social) {
-            setSocial(true);
-            setDescription(false);
-            setProjects(false);
-        }
-    }
-
-    //End functions to open modal pages
 
     return (
         <div className={styles.contentMainProfile}>
