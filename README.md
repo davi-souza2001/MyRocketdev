@@ -18,7 +18,6 @@ process.env.
 
 ## Falta
 
-### Mudar tela de perfil do usuario;
 ### Fazer função de avisar caso github esteja vazio
 ### Mudar tela de criar perfil;
 ### Fazer tela de chat;
