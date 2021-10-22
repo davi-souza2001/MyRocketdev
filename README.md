@@ -18,6 +18,9 @@ process.env.
 
 ## Falta
 
+### Corrigir que o usuario so pode postar se tiver login e perfil
+### Trocar tela de inicio por comunidades
+### Corrigir requiirimento html na tela de cadastro
 ### Fazer função de avisar caso github esteja vazio
 ### Mudar tela de criar perfil;
 ### Fazer tela de chat;
