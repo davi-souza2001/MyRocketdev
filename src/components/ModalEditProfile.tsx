@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import firebase from "../firebase/config";
 import useAuth from "../data/hook/useAuth";
-import styles from "../styles/ModalEditProfile.module.css";
 import useProfile from "../data/hook/useProfile";
+
+import styles from "../styles/ModalEditProfile.module.css";
 
 interface ModalEditProfile {
     modalActivity: any;
@@ -31,9 +32,11 @@ export default function ModalEditProfile(props: ModalEditProfile) {
     const [thirdComum, setThirdComum] = useState("");
     const [local, setLocal] = useState("");
 
+    const [key, setKey] = useState("");
+
     useEffect(() => {
         const renderProfiles = profileList.map(
-            function (prof, index) {
+            function (prof) {
                 if (prof.email == user?.email) {
                     setName(prof.name);
                     setUserName(prof.userName);
@@ -47,12 +50,13 @@ export default function ModalEditProfile(props: ModalEditProfile) {
                     setSecondComum(prof.secondComum)
                     setThirdComum(prof.thirdComum)
                     setLocal(prof.local)
+                    setKey(prof.id)
                 }
             })
     }, [])
 
     async function setDatas() {
-        /* const todoRef = await firebase.database().ref("Profiles"); */
+        const todoRef = await firebase.database().ref("Profiles");
         const datas = {
             name,
             userName,
@@ -69,16 +73,15 @@ export default function ModalEditProfile(props: ModalEditProfile) {
             local,
             image
         };
-        /* todoRef.push(datas); */
-        console.log(datas);
+        todoRef.child(key).update(datas);
     }
 
     async function editProfile(e){
         e.preventDefault();
         try{
             await setDatas();
-        } finally {
-           console.log("errouu");
+        } catch(e) {
+           console.log(e);
         }
    }
 
