@@ -19,6 +19,7 @@ process.env.
 ## Falta
 
 ### Corrigir que o usuario so pode postar se tiver login e perfil;
+### Procurar como percorrer um map ao contrario
 ### Fazer tela de reunião;
 ### Adicionar foguete na pesquisa de usuário;
 ### Adicionar login com github;
