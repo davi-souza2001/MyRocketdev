@@ -15,7 +15,7 @@ NEXT_PUBLIC_APP_ID=`
 process.env. 
 
 ...
-
+### Ver foguete animado em favoritos e animação de emote na playlist do youtube
 ## Falta
 
 ### Trocar tela de inicio por comunidades
