@@ -186,3 +186,12 @@
     color: #fff;
     font-family: "poppins", sans-serif;
 }
+
+.config{
+    display: flex;
+}
+
+.config p {
+    margin-left: 10px;
+    cursor: pointer;
+}

@@ -6,18 +6,22 @@ import useAuth from "../data/hook/useAuth";
 import client from "../services/client";
 
 import Topbar from "../components/Topbar";
+import ContentMainProfile from "../components/ContentMainProfille";
+import ModalEditProfile from "../components/ModalEditProfile";
 
 import Austroone from "../assets/img/austroone.jpg";
 import AstroLike from "../assets/img/austrolike.jpg";
 
 import styles from "../styles/ContentMainProfile.module.css";
-import ContentMainProfile from "../components/ContentMainProfille";
+
 
 export default function MainProfile() {
     const { user } = useAuth();
     const { profileList } = useProfile();
     const [repos, setRepos] = useState([]);
     const [seflgithub, setSeflgithub] = useState("");
+
+    const [modal, setModal] = useState(true);
 
     //Start logic get user for api gitHub
 
@@ -47,6 +51,12 @@ export default function MainProfile() {
 
     //End logic get user for api gitHub
 
+    //Start login to edit profile
+
+
+
+    //End login to edit profile
+
 
 
     //Start variable for render profile right in main profile (left bar)
@@ -56,13 +66,17 @@ export default function MainProfile() {
             if(prof.email == user?.email)
             return (
                 <div className={styles.MainProfile} key={index}>
+                    {modal ? <ModalEditProfile/> : false}
                     <div className={styles.imgBackground}>
                         <Image src={AstroLike} alt="Astronauta dando like" height={200} width={200} />
                     </div>
                     <div className={styles.imgProfileUser}>
                         <Image src={prof.image || Austroone} height={999} width={999} alt="Foto de Perfil"></Image>
                         <div className={styles.contentUser}>
+                            <div className={styles.config}>
                             <h3>{prof.name}</h3>
+                            <p onClick={() => console.log("dsaa")}>Ajustar</p>
+                            </div>
                             <p>@{prof.userName}</p>
                             <p>{prof.dev} em {prof.local}</p>
                                 <div className={styles.description}>

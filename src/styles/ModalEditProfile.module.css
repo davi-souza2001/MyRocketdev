@@ -1,0 +1,26 @@
+.contentGeral{
+    position: absolute;
+    width: 100vw;
+    height: 93vh;
+    z-index: 9999;
+    background-color: black;
+    opacity: 70%;
+}
+
+.contentForms{
+    height: 93vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contentForms form{
+    height: 93vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 120%;
+    color: #fff;
+}
