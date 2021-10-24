@@ -18,18 +18,12 @@ process.env.
 ### Ver foguete animado em favoritos e animação de emote na playlist do youtube
 ## Falta
 
-### Trocar tela de inicio por comunidades
-### Corrigir requiirimento html na tela de cadastro
-### Corrigir que o usuario so pode postar se tiver login e perfil
-### Fazer função de avisar caso github esteja vazio
-### Mudar tela de criar perfil;
-### Fazer tela de chat;
+### Corrigir que o usuario so pode postar se tiver login e perfil;
 ### Fazer tela de reunião;
-### Fazer função de editar o perfil;
-### Adicionar foguete na pesquisa de usuário.
+### Adicionar foguete na pesquisa de usuário;
+### Adicionar login com github;
 ### Copiar tela de moon no github na tela de clicar escolhendo front, back ou mobile;
-### Sala de reuniao
-### Função dar like
+### Função dar like;
 
 ## Regras de negocio
 

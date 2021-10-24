@@ -60,8 +60,7 @@ export default function CreateProfile(Props: CreateProfileProps) {
         todoRef.push(datas);
     }
     
-    async function navigateToHome(e){
-        e.preventDefault();
+    async function navigateToHome(): Promise<void>{
         try{
             await setDatas();
         } finally {
@@ -77,14 +76,13 @@ export default function CreateProfile(Props: CreateProfileProps) {
             <div className={styles.contentForms}>
                 <form>
                     <h2>Cadastro</h2>
-                    <input required type="text" placeholder="Digite seu nome publico" onChange={(e) => setName(e.target.value)}/>
-                    <input required type="text" placeholder="Digite seu @ no qual as pessoas vão procurar você" onChange={(e) => setUserName(e.target.value)} />
+                    <input type="text" placeholder="Digite seu nome publico" onChange={(e) => setName(e.target.value)}/>
+                    <input type="text" placeholder="Digite seu @ no qual as pessoas vão procurar você" onChange={(e) => setUserName(e.target.value)} />
                     <input type="text" placeholder="Digite seu @ no Linkedin" onChange={(e) => setLinkedin(e.target.value)} />
-                    <input required type="text" placeholder="Digite seu @ no Github" onChange={(e) => setGithub(e.target.value)} />
                     <input type="text" placeholder="Digite seu @ no Instagram" onChange={(e) => setInstagram(e.target.value)} />
                     <input type="text" placeholder="Digite seu @ no Youtube" onChange={(e) => setYoutube(e.target.value)} />
                     <select required onChange={(e) => setDev(e.target.value)} value={dev}>
-                        <option selected >--Senioridade--</option>
+                        <option defaultValue="Senioridade" >--Senioridade--</option>
                         <option value="Front-End">Front-End</option>
                         <option value="Back-End">Back-End</option>
                         <option value="Full-Stack">Full-Stack</option>
@@ -95,60 +93,60 @@ export default function CreateProfile(Props: CreateProfileProps) {
                     </select>
                     <h3>Escolha 3 tecnologias para você ter no seu feed:</h3>
                     <select required onChange={(e) => setFirstComum(e.target.value)} value={firstComum} className={styles.contentComum}>
-                        <option selected>--Front-End--</option>
+                        <option defaultValue="Senioridade">--Front-End--</option>
                             <option value="React">ReactJs</option>
                             <option value="Angular">AngularJs</option>
                             <option value="Vue">Vuejs</option>
                             <option value="Next">NextJs</option>
                             <option value="Ember">Ember</option>
-                        <option selected>--Back-End--</option>
+                        <option defaultValue="Senioridade">--Back-End--</option>
                             <option value="Node">NodeJs</option>
                             <option value="Mongo">MongoDb</option>
                             <option value="Sql">Sql</option>
                             <option value="Firebase">Firebase</option>
                             <option value="CSharp">CSharp</option>
                             <option value="Java">Java</option>
-                        <option selected>--Mobile--</option>
+                        <option defaultValue="Senioridade">--Mobile--</option>
                             <option value="React-Native">React-Native</option>
                             <option value="Flutter">Flutter</option>
                             <option value="Swift">Swift</option>
                             <option value="Ionic">Ionic</option>
                     </select>
                     <select required onChange={(e) => setSecondComum(e.target.value)} value={secondComum} className={styles.contentComum}>
-                        <option  selected>--Front-End--</option>
+                        <option defaultValue="Senioridade">--Front-End--</option>
                             <option value="React">ReactJs</option>
                             <option value="Angular">AngularJs</option>
                             <option value="Vue">Vuejs</option>
                             <option value="Next">NextJs</option>
                             <option value="Ember">Ember</option>
-                        <option  selected>--Back-End--</option>
+                        <option defaultValue="Senioridade">--Back-End--</option>
                             <option value="Node">NodeJs</option>
                             <option value="Mongo">MongoDb</option>
                             <option value="Sql">Sql</option>
                             <option value="Firebase">Firebase</option>
                             <option value="CSharp">CSharp</option>
                             <option value="Java">Java</option>
-                        <option  selected>--Mobile--</option>
+                        <option defaultValue="Senioridade">--Mobile--</option>
                             <option value="React-Native">React-Native</option>
                             <option value="Flutter">Flutter</option>
                             <option value="Swift">Swift</option>
                             <option value="Ionic">Ionic</option>
                     </select>
                     <select required onChange={(e) => setThirdComum(e.target.value)} value={thirdComum} className={styles.contentComum}>
-                        <option  selected>--Front-End--</option>
+                        <option defaultValue="Senioridade">--Front-End--</option>
                             <option value="React">ReactJs</option>
                             <option value="Angular">AngularJs</option>
                             <option value="Vue">Vuejs</option>
                             <option value="Next">NextJs</option>
                             <option value="Ember">Ember</option>
-                        <option  selected>--Back-End--</option>
+                        <option defaultValue="Senioridade">--Back-End--</option>
                             <option value="Node">NodeJs</option>
                             <option value="Mongo">MongoDb</option>
                             <option value="Sql">Sql</option>
                             <option value="Firebase">Firebase</option>
                             <option value="CSharp">CSharp</option>
                             <option value="Java">Java</option>
-                        <option  selected>--Mobile--</option>
+                        <option defaultValue="Senioridade">--Mobile--</option>
                             <option value="React-Native">React-Native</option>
                             <option value="Flutter">Flutter</option>
                             <option value="Swift">Swift</option>
