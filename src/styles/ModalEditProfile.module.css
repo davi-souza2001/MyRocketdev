@@ -1,3 +1,15 @@
+@keyframes openModal {
+    from{
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
 .contentGeral{
     position: absolute;
     width: 100vw;
@@ -14,10 +26,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    animation-name: openModal;
+    animation-duration: 0.5s;
 }
 
 .contentForms form{
-    height: 93vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -26,6 +39,37 @@
     color: #fff;
 }
 
+.contentForms form input{
+    height: 30px;
+    width: 180px;
+    margin-bottom: 8px;
+    background-color: #fff;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+.contentForms form button{
+    height: 30px;
+    width: 100px;
+    background-color: #fff;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.contentForms form button:hover{
+    background-color: #12107c;
+    color: #fff;
+}
+
 .modalActivity{
+    margin-top: 10px;
+    padding: 5px;
+    background-color: #FF393F;
+    border-radius: 5px;
     cursor: pointer;
 }
+

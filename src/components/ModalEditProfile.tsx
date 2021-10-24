@@ -88,9 +88,6 @@ export default function ModalEditProfile(props: ModalEditProfile) {
     return (
         <div className={styles.contentGeral}>
             <div className={styles.contentForms}>
-                <div className={styles.modalActivity} onClick={props.modalActivity}>
-                    Me aperte
-                </div>
                 <form>
                     <input required type="text" placeholder="Digite seu nome publico" value={name} onChange={(e) => setName(e.target.value)} />
                     <input required type="text" placeholder="Digite seu @ no qual as pessoas vão procurar você" value={userName} onChange={(e) => setUserName(e.target.value)} />
@@ -171,6 +168,9 @@ export default function ModalEditProfile(props: ModalEditProfile) {
                     <input required type="text" placeholder="Adicione uma descrição sobre você" value={description} onChange={(e) => setDescription(e.target.value)} />
                     <input required type="text" placeholder="De qual estado você é ?" value={local} onChange={(e) => setLocal(e.target.value)} />
                     <button type="submit" className={styles.buttonSubmit} onClick={editProfile}>Editar</button>
+                    <div className={styles.modalActivity} onClick={props.modalActivity}>
+                        <h3>Cancelar</h3>
+                    </div>
                 </form>
             </div>
         </div>

@@ -78,7 +78,7 @@ export default function MainProfile() {
                         <div className={styles.contentUser}>
                             <div className={styles.config}>
                             <h3>{prof.name}</h3>
-                            <p onClick={() => setModal(true)}>Ajustar</p>
+                            <p onClick={() => setModal(true)}>Editar</p>
                             </div>
                             <p>@{prof.userName}</p>
                             <p>{prof.dev} em {prof.local}</p>
