@@ -21,7 +21,7 @@ export default function MainProfile() {
     const [repos, setRepos] = useState([]);
     const [seflgithub, setSeflgithub] = useState("");
 
-    const [modal, setModal] = useState(true);
+    const [modal, setModal] = useState(false);
 
     //Start logic get user for api gitHub
 
@@ -66,7 +66,21 @@ export default function MainProfile() {
             if(prof.email == user?.email)
             return (
                 <div className={styles.MainProfile} key={index}>
-                    {modal ? <ModalEditProfile modalActivity={() => setModal(false)}/> : false}
+                    {modal ? <ModalEditProfile 
+                    modalActivity={() => setModal(false)}
+                    namePublic={prof.name}
+                    userName={prof.userName}
+                    linkedin={prof.linkedin}
+                    github={prof.github}
+                    instagram={prof.instagram}
+                    youtube={prof.youtube}
+                    devChange={prof.dev}
+                    firstComum={prof.firstComum}
+                    secondComum={prof.secondComum}
+                    thirdComum={prof.thirdComum}
+                    description={prof.description}
+                    region={prof.local}
+                    /> : false}
                     <div className={styles.imgBackground}>
                         <Image src={AstroLike} alt="Astronauta dando like" height={200} width={200} />
                     </div>
