@@ -11,8 +11,12 @@ interface ModalEditProfile {
 export default function ModalEditProfile(props: ModalEditProfile) {
 
     const { user } = useAuth();
-    const emailUser = user?.email;
     const { profileList } = useProfile();
+    const emailUser = user?.email;
+    const image = user?.imagemUrl;
+    const [email, setEmail] = useState(emailUser);
+
+
 
     const [name, setName] = useState("");
     const [userName, setUserName] = useState("");
@@ -26,22 +30,29 @@ export default function ModalEditProfile(props: ModalEditProfile) {
     const [secondComum, setSecondComum] = useState("");
     const [thirdComum, setThirdComum] = useState("");
     const [local, setLocal] = useState("");
-    const [email, setEmail] = useState(emailUser);
-    const image = user?.imagemUrl;
 
     useEffect(() => {
         const renderProfiles = profileList.map(
             function (prof, index) {
                 if (prof.email == user?.email) {
-                    setName(prof.name)
+                    setName(prof.name);
+                    setUserName(prof.userName);
+                    setLinkedin(prof.linkedin);
+                    setGithub(prof.github);
+                    setInstagram(prof.instagram);
+                    setYoutube(prof.youtube);
+                    setDescription(prof.description);
+                    setDev(prof.dev)
+                    setFirstComum(prof.firstComum)
+                    setSecondComum(prof.secondComum)
+                    setThirdComum(prof.thirdComum)
+                    setLocal(prof.local)
                 }
             })
     }, [])
 
-
-
     async function setDatas() {
-        const todoRef = await firebase.database().ref("Profiles");
+        /* const todoRef = await firebase.database().ref("Profiles"); */
         const datas = {
             name,
             userName,
@@ -58,8 +69,18 @@ export default function ModalEditProfile(props: ModalEditProfile) {
             local,
             image
         };
-        todoRef.push(datas);
+        /* todoRef.push(datas); */
+        console.log(datas);
     }
+
+    async function editProfile(e){
+        e.preventDefault();
+        try{
+            await setDatas();
+        } finally {
+           console.log("errouu");
+        }
+   }
 
     return (
         <div className={styles.contentGeral}>
@@ -146,7 +167,7 @@ export default function ModalEditProfile(props: ModalEditProfile) {
                     </select>
                     <input required type="text" placeholder="Adicione uma descrição sobre você" value={description} onChange={(e) => setDescription(e.target.value)} />
                     <input required type="text" placeholder="De qual estado você é ?" value={local} onChange={(e) => setLocal(e.target.value)} />
-                    <button type="submit" className={styles.buttonSubmit}>Editar</button>
+                    <button type="submit" className={styles.buttonSubmit} onClick={editProfile}>Editar</button>
                 </form>
             </div>
         </div>
