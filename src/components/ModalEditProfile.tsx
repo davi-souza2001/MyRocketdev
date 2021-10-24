@@ -1,13 +1,19 @@
+import { useState } from "react";
 import styles from "../styles/ModalEditProfile.module.css";
 
 interface ModalEditProfile {
-    
+    modalActivity: any;
 }
 
 export default function ModalEditProfile(props: ModalEditProfile){
+    const [modal, setModal] = useState(false);
+
     return (
         <div className={styles.contentGeral}>
             <div className={styles.contentForms}>
+                <div className={styles.modalActivity} onClick={props.modalActivity}>
+                    Me aperte
+                </div>
                 <form>
                 <input required type="text" placeholder="Digite seu nome publico" />
                     <input required type="text" placeholder="Digite seu @ no qual as pessoas vão procurar você"  />

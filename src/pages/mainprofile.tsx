@@ -66,7 +66,7 @@ export default function MainProfile() {
             if(prof.email == user?.email)
             return (
                 <div className={styles.MainProfile} key={index}>
-                    {modal ? <ModalEditProfile/> : false}
+                    {modal ? <ModalEditProfile modalActivity={() => setModal(false)}/> : false}
                     <div className={styles.imgBackground}>
                         <Image src={AstroLike} alt="Astronauta dando like" height={200} width={200} />
                     </div>
@@ -75,7 +75,7 @@ export default function MainProfile() {
                         <div className={styles.contentUser}>
                             <div className={styles.config}>
                             <h3>{prof.name}</h3>
-                            <p onClick={() => console.log("dsaa")}>Ajustar</p>
+                            <p onClick={() => setModal(true)}>Ajustar</p>
                             </div>
                             <p>@{prof.userName}</p>
                             <p>{prof.dev} em {prof.local}</p>
