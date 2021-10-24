@@ -1,115 +1,63 @@
-import { useEffect, useState } from "react";
-
 import Topbar from "../components/Topbar";
-import ListPublis from "../components/ListPublis";
 
-import useAuth from "../data/hook/useAuth";
-import firebase from "../firebase/config";
+import styles from "../styles/Main.module.css";
 
-import styles from "../styles/feedmain.module.css";
+import CommunityOption from "../components/CommunityOption";
 
-interface MainPage {
+// Icons catched in "https://simpleicons.org/"
 
-}
+/* front-end svg's */
+import reactImg from "../assets/img/front/react.svg";
+import angularImg from "../assets/img/front/angularjs.svg";
+import vueImg from "../assets/img/front/vuedotjs.svg";
+import nextImg from "../assets/img/front/nextdotjs.svg";
+import emberImg from "../assets/img/front/emberdotjs.svg";
 
-export default function MainPage(props: MainPage) {
+/* back-end svg's */
+import nodeImg from "../assets/img/back/nodedotjs.svg";
+import mongoImg from "../assets/img/back/mongodb.svg";
+import sqlImg from "../assets/img/back/mysql.svg";
+import firebaseImg from "../assets/img/back/firebase.svg";
+import csharpImg from "../assets/img/back/csharp.svg";
+import javaImg from "../assets/img/back/java.svg";
 
-    const { user } = useAuth();
-    const [profilesList, setProfilesList] = useState([]);
-    const [first, setFirst] = useState("");
-    const [second, setSecond] = useState("");
-    const [third, setThird] = useState("");
-    const [showfirst, setShowFirst] = useState(true);
-    const [showsecond, setShowSecond] = useState(false);
-    const [showthird, setShowThird] = useState(false);
+/* mobile svg's */
+import flutterImg from "../assets/img/mobile/flutter.svg";
+import ionicImg from "../assets/img/mobile/ionic.svg";
+import swiftImg from "../assets/img/mobile/swift.svg";
 
-    useEffect(() => {
-        const todoRef = firebase.database().ref("Profiles");
-        todoRef.on('value', (snapshot) => {
-            const todos = snapshot.val();
-            const todoList = [];
-            for (let id in todos) {
-                todoList.push({ id, ...todos[id] });
-            }
-            setProfilesList(todoList);
-        })
-
-    }, []);
-
-    useEffect(() => {
-        const getUserCommuns = profilesList.map((prof) => {
-            if (prof?.email == user?.email) {
-                setFirst(prof.firstComum);
-                setSecond(prof.secondComum);
-                setThird(prof.thirdComum);
-            }
-        })
-    }, [user, profilesList]);
-
-    function showFeedFirst(){
-        setShowFirst(true);
-        setShowSecond(false);
-        setShowThird(false);
-       
-    }
-
-    function showFeedSecond(){
-        setShowFirst(false);
-        setShowSecond(true);
-        setShowThird(false);
-    }
-
-    function showFeedThird(){
-        setShowFirst(false);
-        setShowSecond(false);
-        setShowThird(true);
-    }
-
+export default function Main() {
     return (
         <>
             <Topbar />
-            <div className={styles.contentGeral}>
-                {first && user ? (
-                    <>
-                        <div className={styles.contentTitle}>
-                            <h2>Posts recentes da Comunidade</h2>
-                        </div>
-                        <div className={styles.contentFeedName}>
-                            <div className={styles.boxNameFeed} onClick={showFeedFirst}>
-                                {first}
-                            </div>
-                            <div className={styles.boxNameFeed} onClick={showFeedSecond}>
-                                {second}
-                            </div>
-                            <div className={styles.boxNameFeed} onClick={showFeedThird}>
-                                {third}
-                            </div>
-                        </div>
-                        <div className={styles.contentFeed}>
-                            {showfirst ? (
-                                <div className={styles.feed}>
-                                    <ListPublis linkComuList={first} />
-                                </div>
-                            ): false}
-                            {showsecond ? (
-                                <div className={styles.feed}>
-                                    <ListPublis linkComuList={second} />
-                                </div>
-                            ): false}
-                            {showthird ? (
-                                <div className={styles.feed}>
-                                    <ListPublis linkComuList={third} />
-                                </div>
-                            ): false}
-                        </div>
-                    </>
-                ) : 
-                (
-                <>
-                    <h1>Parece que você ainda não fez login</h1>
-                    <h1>ou não entrou ainda em alguma comunidade :(</h1>
-                </>
-                )}
+            <div className={styles.contentCommunity}>
+                <h1>Comunidades</h1>
+            </div>
+            <div className={styles.contentCommunityOptions}>
+                <h2>Front-End</h2>
+                <div className={styles.frameworks}>
+                    <CommunityOption image={reactImg} tec="React.Js" area="Front-End" routeCommunity="React"/>
+                    <CommunityOption image={angularImg} tec="Angular.js" area="Front-End" routeCommunity="Angular"/>
+                    <CommunityOption image={vueImg} tec="Vue.js" area="Front-End" routeCommunity="Vue"/>
+                    <CommunityOption image={nextImg} tec="Next.js" area="Front-End" routeCommunity="Next"/>
+                    <CommunityOption image={emberImg} tec="Ember" area="Front-End" routeCommunity="Ember"/>
+                </div>
+                <h2>Back-End</h2>
+                <div className={styles.frameworks}>
+                    <CommunityOption image={nodeImg} tec="Node.js" area="Back-End" routeCommunity="Node"/>
+                    <CommunityOption image={mongoImg} tec="Mongo" area="Back-End" routeCommunity="Mongo"/>
+                    <CommunityOption image={sqlImg} tec="Sql/MySql" area="Back-End" routeCommunity="Sql"/>
+                    <CommunityOption image={firebaseImg} tec="Firebase" area="Back-End" routeCommunity="Firebase"/>
+                    <CommunityOption image={csharpImg} tec="C#" area="Back-End" routeCommunity="CSharp"/>
+                    <CommunityOption image={javaImg} tec="Java" area="Back-End" routeCommunity="Java"/>
+                </div>
+                <h2>Mobile</h2>
+                <div className={styles.frameworks}>
+                <CommunityOption image={reactImg} tec="React-Native" area="Mobile" routeCommunity="React-Native"/>
+                <CommunityOption image={flutterImg} tec="Flutter" area="Mobile" routeCommunity="Flutter"/>
+                <CommunityOption image={swiftImg} tec="Swift" area="Mobile" routeCommunity="Swift"/>
+                <CommunityOption image={ionicImg} tec="Ionic" area="Mobile" routeCommunity="Ionic"/>
+                </div>
             </div>
         </>
     )

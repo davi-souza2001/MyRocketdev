@@ -29,8 +29,8 @@ export default function Topbar(props: TopbarProps) {
                     <div  onClick={() => route.push("/")}>
                         <div><h3>Inicio</h3></div>
                     </div>
-                    <div  onClick={() => route.push("/communities")}>
-                        <div><h3>Comunidades</h3></div>
+                    <div  onClick={() => route.push("/feed")}>
+                        <div><h3>Feed</h3></div>
                     </div>
                     <div onClick={() => route.push("/search")}>
                         <div><h3>Pesquisar</h3></div>
