@@ -19,12 +19,12 @@ process.env.
 ## Falta
 
 ### Corrigir que o usuario so pode postar se tiver login e perfil;
-### Procurar como percorrer um map ao contrario
-### Fazer tela de reunião;
+### Procurar como percorrer um map ao contrario;
 ### Adicionar foguete na pesquisa de usuário;
 ### Adicionar login com github;
 ### Copiar tela de moon no github na tela de clicar escolhendo front, back ou mobile;
 ### Função dar like;
+### Função de reunião;
 
 ## Regras de negocio
 
