@@ -60,11 +60,16 @@ export default function CreateProfile(Props: CreateProfileProps) {
         todoRef.push(datas);
     }
     
-    async function navigateToHome(): Promise<void>{
-        try{
-            await setDatas();
-        } finally {
-            route.push("/");
+    async function navigateToHome(e): Promise<void>{
+        e.preventDefault();
+        if(github != ""){
+            try{
+                await setDatas();
+            } finally {
+                route.push("/");
+            }
+        } else{
+            alert("Por favor coloque seu nick do github")
         }
    }
 
@@ -79,6 +84,7 @@ export default function CreateProfile(Props: CreateProfileProps) {
                     <input type="text" placeholder="Digite seu nome publico" onChange={(e) => setName(e.target.value)}/>
                     <input type="text" placeholder="Digite seu @ no qual as pessoas vão procurar você" onChange={(e) => setUserName(e.target.value)} />
                     <input type="text" placeholder="Digite seu @ no Linkedin" onChange={(e) => setLinkedin(e.target.value)} />
+                    <input required type="text" placeholder="Digite seu @ no Github" onChange={(e) => setGithub(e.target.value)} />
                     <input type="text" placeholder="Digite seu @ no Instagram" onChange={(e) => setInstagram(e.target.value)} />
                     <input type="text" placeholder="Digite seu @ no Youtube" onChange={(e) => setYoutube(e.target.value)} />
                     <select required onChange={(e) => setDev(e.target.value)} value={dev}>
