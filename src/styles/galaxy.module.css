@@ -1,0 +1,209 @@
+@keyframes orbit2 {
+    from{transform: rotate(0deg)translateX(70px) rotate(0deg);}
+    to{transform: rotate(360deg)translateX(70px) rotate(-360deg);}
+}
+
+@keyframes orbit3 {
+    from{transform: rotate(0deg)translateX(100px) rotate(0deg);}
+    to{transform: rotate(360deg)translateX(100px) rotate(-360deg);}
+}
+
+@keyframes orbit4 {
+    from{transform: rotate(0deg)translateX(150px) rotate(0deg);}
+    to{transform: rotate(360deg)translateX(150px) rotate(-360deg);}
+}
+
+@keyframes orbit5 {
+    from{transform: rotate(0deg)translateX(185px) rotate(0deg);}
+    to{transform: rotate(360deg)translateX(185px) rotate(-360deg);}
+}
+
+@keyframes orbit6 {
+    from{transform: rotate(0deg)translateX(217px) rotate(0deg);}
+    to{transform: rotate(360deg)translateX(217px) rotate(-360deg);}
+}
+
+@keyframes orbit7 {
+    from{transform: rotate(0deg)translateX(250px) rotate(0deg);}
+    to{transform: rotate(360deg)translateX(250px) rotate(-360deg);}
+}
+
+.geral{
+    margin: 0px;
+    padding: 0px;
+}
+
+.sun{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: #FCC662;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.mercuryOutline, .venusOutline, .earthOutline, .marsOutline, .jupiterOutline{
+    border-radius: 50%;
+    border: 1px dotted #ddd9;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.mercuryOutline{
+    height: 140px;
+    width: 140px;
+}
+
+.mercury{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    position: absolute;
+    left: 43%;
+    top: 42%;
+    background-color: #935f2a;
+    transform: translate(-50%,-50%);
+    animation:orbit2 8s linear infinite;
+}
+
+.mercury p {
+    color: #fff;
+    font-family: 'poppins', sans-serif;
+    position: absolute;
+    left: -62px;
+    top: -11px;
+}
+
+.venusOutline{
+    height: 200px;
+    width: 200px;
+}
+
+.venus{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    position: absolute;
+    left: 40%;
+    top: 42%;
+    background-color: #c1aa81;
+    transform: translate(-50%,-50%);
+    animation:orbit3 10s linear infinite;
+}
+
+.venus p {
+    color: #fff;
+    font-family: 'poppins', sans-serif;
+    position: absolute;
+    left: -62px;
+    top: -11px;
+}
+
+.earthOutline{
+    height: 300px;
+    width: 300px;
+}
+
+.earth{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    position: absolute;
+    left: 44%;
+    top: 43%;
+    background-color: #151686;
+    transform: translate(-50%,-50%);
+    animation:orbit4 20s linear infinite;
+}
+
+.earth p {
+    color: #fff;
+    font-family: 'poppins', sans-serif;
+    position: absolute;
+    left: -62px;
+    top: -11px;
+}
+
+.marsOutline{
+    height: 370px;
+    width: 370px;
+}
+
+.mars{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    position: absolute;
+    left: 46.5%;
+    top: 46.5%;
+    background-color: #fea535;
+    transform: translate(-50%,-50%);
+    animation:orbit5 30s linear infinite;
+}
+
+.mars p {
+    color: #fff;
+    font-family: 'poppins', sans-serif;
+    position: absolute;
+    left: -62px;
+    top: -11px;
+}
+
+.jupiterOutline{
+    height: 430px;
+    width: 430px;
+}
+
+.jupiter{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    position: absolute;
+    left: 45%;
+    top: 45%;
+    background-color: #cac2b9;
+    transform: translate(-50%,-50%);
+    animation:orbit6 60s linear infinite;
+}
+
+.jupiter p {
+    color: #fff;
+    font-family: 'poppins', sans-serif;
+    position: absolute;
+    left: -62px;
+    top: -11px;
+}
+
+.saturnOutline{
+    height: 500px;
+    width: 500px;
+}
+
+.saturn{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    position: absolute;
+    left: 45%;
+    top: 45%;
+    background-color: #cac2b9;
+    transform: translate(-50%,-50%);
+    animation:orbit7 9s linear infinite;
+}
+
+.saturn p {
+    color: #fff;
+    font-family: 'poppins', sans-serif;
+    position: absolute;
+    left: -62px;
+    top: -11px;
+}
+
+
+
+
+
