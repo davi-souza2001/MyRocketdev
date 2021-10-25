@@ -44,7 +44,7 @@
     transform: translate(-50%,-50%);
 }
 
-.mercuryOutline, .venusOutline, .earthOutline, .marsOutline, .jupiterOutline{
+.mercuryOutline, .venusOutline, .earthOutline, .marsOutline, .jupiterOutline, .saturnOutline{
     border-radius: 50%;
     border: 1px dotted #ddd9;
     position: absolute;
