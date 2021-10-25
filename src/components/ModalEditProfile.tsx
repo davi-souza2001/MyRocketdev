@@ -7,6 +7,7 @@ import styles from "../styles/ModalEditProfile.module.css";
 
 interface ModalEditProfile {
     modalActivity: any;
+    closeModal: any;
 }
 
 export default function ModalEditProfile(props: ModalEditProfile) {
@@ -89,14 +90,14 @@ export default function ModalEditProfile(props: ModalEditProfile) {
         <div className={styles.contentGeral}>
             <div className={styles.contentForms}>
                 <form>
-                    <input required type="text" placeholder="Digite seu nome publico" value={name} onChange={(e) => setName(e.target.value)} />
-                    <input required type="text" placeholder="Digite seu @ no qual as pessoas vão procurar você" value={userName} onChange={(e) => setUserName(e.target.value)} />
+                    <input type="text" placeholder="Digite seu nome publico" value={name} onChange={(e) => setName(e.target.value)} />
+                    <input type="text" placeholder="Digite seu @ no qual as pessoas vão procurar você" value={userName} onChange={(e) => setUserName(e.target.value)} />
                     <input type="text" placeholder="Digite seu @ no Linkedin" value={linkedin} onChange={(e) => setLinkedin(e.target.value)} />
-                    <input required type="text" placeholder="Digite seu @ no Github" value={github} onChange={(e) => setGithub(e.target.value)} />
+                    <input type="text" placeholder="Digite seu @ no Github" value={github} onChange={(e) => setGithub(e.target.value)} />
                     <input type="text" placeholder="Digite seu @ no Instagram" value={instagram} onChange={(e) => setInstagram(e.target.value)} />
                     <input type="text" placeholder="Digite seu @ no Youtube" value={youtube} onChange={(e) => setYoutube(e.target.value)} />
-                    <select required onChange={(e) => setDev(e.target.value)} value={dev}>
-                        <option selected >--Senioridade--</option>
+                    <select  onChange={(e) => setDev(e.target.value)} value={dev}>
+                        <option defaultValue="Senioridade" >--Senioridade--</option>
                         <option value="Front-End">Front-End</option>
                         <option value="Back-End">Back-End</option>
                         <option value="Full-Stack">Full-Stack</option>
@@ -106,60 +107,60 @@ export default function ModalEditProfile(props: ModalEditProfile) {
                         <option value="Android">Android</option>
                     </select>
                     <select required onChange={(e) => setFirstComum(e.target.value)} value={firstComum} className={styles.contentComum}>
-                        <option selected>--Front-End--</option>
+                        <option defaultValue="Senioridade">--Front-End--</option>
                         <option value="React">ReactJs</option>
                         <option value="Angular">AngularJs</option>
                         <option value="Vue">Vuejs</option>
                         <option value="Next">NextJs</option>
                         <option value="Ember">Ember</option>
-                        <option selected>--Back-End--</option>
+                        <option defaultValue="Senioridade">--Back-End--</option>
                         <option value="Node">NodeJs</option>
                         <option value="Mongo">MongoDb</option>
                         <option value="Sql">Sql</option>
                         <option value="Firebase">Firebase</option>
                         <option value="CSharp">CSharp</option>
                         <option value="Java">Java</option>
-                        <option selected>--Mobile--</option>
+                        <option defaultValue="Senioridade">--Mobile--</option>
                         <option value="React-Native">React-Native</option>
                         <option value="Flutter">Flutter</option>
                         <option value="Swift">Swift</option>
                         <option value="Ionic">Ionic</option>
                     </select>
-                    <select required onChange={(e) => setSecondComum(e.target.value)} value={secondComum} className={styles.contentComum}>
-                        <option selected>--Front-End--</option>
+                    <select  onChange={(e) => setSecondComum(e.target.value)} value={secondComum} className={styles.contentComum}>
+                        <option defaultValue="Senioridade">--Front-End--</option>
                         <option value="React">ReactJs</option>
                         <option value="Angular">AngularJs</option>
                         <option value="Vue">Vuejs</option>
                         <option value="Next">NextJs</option>
                         <option value="Ember">Ember</option>
-                        <option selected>--Back-End--</option>
+                        <option defaultValue="Senioridade">--Back-End--</option>
                         <option value="Node">NodeJs</option>
                         <option value="Mongo">MongoDb</option>
                         <option value="Sql">Sql</option>
                         <option value="Firebase">Firebase</option>
                         <option value="CSharp">CSharp</option>
                         <option value="Java">Java</option>
-                        <option selected>--Mobile--</option>
+                        <option defaultValue="Senioridade">--Mobile--</option>
                         <option value="React-Native">React-Native</option>
                         <option value="Flutter">Flutter</option>
                         <option value="Swift">Swift</option>
                         <option value="Ionic">Ionic</option>
                     </select>
-                    <select required onChange={(e) => setThirdComum(e.target.value)} value={thirdComum} className={styles.contentComum}>
-                        <option selected>--Front-End--</option>
+                    <select  onChange={(e) => setThirdComum(e.target.value)} value={thirdComum} className={styles.contentComum}>
+                        <option defaultValue="Senioridade">--Front-End--</option>
                         <option value="React">ReactJs</option>
                         <option value="Angular">AngularJs</option>
                         <option value="Vue">Vuejs</option>
                         <option value="Next">NextJs</option>
                         <option value="Ember">Ember</option>
-                        <option selected>--Back-End--</option>
+                        <option defaultValue="Senioridade">--Back-End--</option>
                         <option value="Node">NodeJs</option>
                         <option value="Mongo">MongoDb</option>
                         <option value="Sql">Sql</option>
                         <option value="Firebase">Firebase</option>
                         <option value="CSharp">CSharp</option>
                         <option value="Java">Java</option>
-                        <option selected>--Mobile--</option>
+                        <option defaultValue="Senioridade">--Mobile--</option>
                         <option value="React-Native">React-Native</option>
                         <option value="Flutter">Flutter</option>
                         <option value="Swift">Swift</option>
