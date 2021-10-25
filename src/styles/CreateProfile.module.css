@@ -41,7 +41,7 @@
     color: #fff;
 }
 
-.contentForms form input{
+.contentForms form input[type="text"]{
     margin: 2vh 0;
     width: 25vw;
     height: 5vh;
@@ -101,6 +101,10 @@
     animation-name: change;
     animation-duration: 0.6s;
     font-family: 'poppins', sans-serif;
+}
+
+.termsAndConditionsArea label{
+    margin-left: 10px;
 }
 
 .buttonSubmit:hover{

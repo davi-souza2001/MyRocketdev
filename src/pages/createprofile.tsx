@@ -160,7 +160,10 @@ export default function CreateProfile(Props: CreateProfileProps) {
                     </select>
                     <input required type="text" placeholder="Adicione uma descrição sobre você" onChange={(e) => setDescription(e.target.value)} />
                     <input required type="text" placeholder="De qual estado você é ?" onChange={(e) => setLocal(e.target.value)} />
-                    <p>Ao se cadastrar você concorda com os termos de uso da rede social. Deseja ler ? então clique <a href="https://github.com/davi-souza2001/MyRocketdev" target="_blank" rel="noreferrer">aqui</a> </p>
+                    <div className={styles.termsAndConditionsArea}>
+                        <input className={styles.termsAndConditions} type="checkbox"></input>
+                        <label>Você concorda com os <a href="https://github.com/davi-souza2001/MyRocketdev" target="_blank" rel="noreferrer">Termos e Condições</a>?</label>
+                    </div>
                     <button type="submit" className={styles.buttonSubmit} onClick={navigateToHome}>Cadastrar</button>
                 </form>
             </div>

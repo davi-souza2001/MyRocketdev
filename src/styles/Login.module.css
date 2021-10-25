@@ -73,13 +73,11 @@
     background-color: #fff;
     transition: 0.2s;
     cursor: pointer;
-}
-
-.morecontent h4{
     color:#3533D7;
 }
 
 .morecontent:hover{
+    color: #fff;
     background-color: #161468;
 }
 
@@ -158,7 +156,7 @@
 }
 
 .loginwelcome form .login:hover{
-    background-color: #161468;
+    opacity: 0.8;
 }
 
 .contentMyRocketAndRocket{
@@ -212,7 +210,7 @@
 }
 
 .create:hover{
-    background-color: #161468;
+    opacity: 0.8;
 }
 
 .line{
@@ -247,8 +245,7 @@
 }
 
 .logingoogle button:hover{
-    color: #fff;
-    background-color: #161468;
+    opacity: 0.8;
 }
 
 .githubButton {
