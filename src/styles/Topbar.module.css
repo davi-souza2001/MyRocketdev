@@ -23,7 +23,7 @@
 }
 
 .titletab:hover {
-    background-color: #09083b;
+    opacity: 0.8;
 } 
 
 .title{
@@ -31,7 +31,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    
 }
 
 .search{
@@ -69,7 +68,7 @@
 }
 
 .iconstab h3:hover{
-    color: #12107c;
+    opacity: 0.8;
 }
 
 .usertab{
@@ -98,7 +97,7 @@
 }
 
 .user:hover{
-    background-color: #13117c;
+    opacity: 0.8;
 }
 
 

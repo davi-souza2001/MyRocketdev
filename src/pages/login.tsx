@@ -86,7 +86,7 @@ export default function Login(){
                 <form>
                     <div className={styles.contentMyRocketAndRocket}>
                         <div className={styles.imageIntoMyrocket}>
-                            <Image src={astroMyRocket} alt="astro"/>
+                            <Image src={astroMyRocket} alt="astro" height={900}/>
                         </div>
                         <h2>MyRocket</h2>
                     </div>
