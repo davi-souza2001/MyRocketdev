@@ -4,7 +4,7 @@ import Topbar from "../components/Topbar";
 import Profile from "../components/Profile";
 import useProfile from "../data/hook/useProfile";
 
-import astro from "../assets/img/austroone.jpg"
+import astro from "../assets/img/austroone.jpg";
 import styles from "../styles/Search.module.css";
 
 interface searchProps {

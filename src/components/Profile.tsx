@@ -1,5 +1,8 @@
-import Austroone from "../assets/img/austroone.jpg";
 import Image from "next/image";
+
+import Austroone from "../assets/img/austroone.jpg";
+import rocket from "../assets/img/foguete.svg";
+
 
 import styles from "../styles/Profile.module.css";
 
@@ -28,7 +31,9 @@ export default function Profile(props: ProfileProps) {
                         </div>
                         <p>{props.description}</p>
                 </div>
-                <div className={styles.match} onClick={props.link}><h3>Match</h3></div>
+                <div className={styles.match} onClick={props.link}>
+                    <Image src={rocket} width={71} height={100}/>
+                </div>
             </div>
         </div>
     )
