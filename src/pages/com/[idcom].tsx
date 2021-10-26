@@ -60,7 +60,6 @@ export default function Com(props: idCommunitie) {
                     <div className={styles.contentMembers}>
                         {profileList.map((prof) => {
                             if (prof.firstComum == idcom || prof.secondComum == idcom || prof.thirdComum == idcom) {
-                                const nameOutSpace = prof.name.split(" ");
                                 return(
                                     <div className={styles.contentMembersIntoComum}>
                                         <Image src={prof.image} width={30} height={30}/>
@@ -74,7 +73,9 @@ export default function Com(props: idCommunitie) {
                 <AddPost linkComu={idcom} name={user ? user?.name : "Faça login para fazer parte da comunidade"} />
                 <CommunityMembers linkComuList={idcom} showAdmin={false} />
             </div>
-            <ListPublis linkComuList={idcom} />
+            <div className={styles.contentBodyPosts}>
+                <ListPublis linkComuList={idcom} />
+            </div>
         </div>
     )
 }

@@ -18,7 +18,7 @@ process.env.
 ### Ver foguete animado em favoritos e animação de emote na playlist do youtube
 ## Falta
 
-### Procurar como percorrer um map ao contrario;
+### Colocar estrelas de fundo noos planetas
 ### Adicionar login com github;
 ### Função dar like;
 ### Função de reunião;

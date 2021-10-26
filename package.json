@@ -9,12 +9,16 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@react-three/drei": "^7.16.3",
+    "@react-three/fiber": "^7.0.16",
     "axios": "^0.22.0",
     "firebase": "8.8.0",
     "js-cookie": "3.0.0",
     "next": "11.1.2",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "react-scripts": "^4.0.3",
+    "three": "0.128.0"
   },
   "devDependencies": {
     "@types/node": "^16.10.1",
