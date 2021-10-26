@@ -18,8 +18,11 @@ process.env.
 ### Ver foguete animado em favoritos e animação de emote na playlist do youtube
 ## Falta
 
-### Colocar estrelas de fundo noos planetas
+### Passar para portugues;
+### Tranformar learn more baseado em star wars;
 ### Adicionar login com github;
+### Colocar estrelas de fundo noos planetas;
+### Colocar universo em front, back...;
 ### Função dar like;
 ### Função de reunião;
 
