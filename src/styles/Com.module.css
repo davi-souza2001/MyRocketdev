@@ -42,6 +42,17 @@
     justify-content: space-between;
 }
 
-.contentMembers{
-    margin-right: 9vw;
+.contentMembersIntoComum{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
+.contentMembersIntoComum img{
+    border-radius: 9999px;
+}
+
+.contentMembersIntoComum p{
+    margin-left: 15px;
+}
+
