@@ -9,7 +9,7 @@ interface galaxy {
 
 }
 
-export default function galaxy(props: galaxy){
+export default function Galaxy(props: galaxy){
     const [modal, setModal] = useState(true);
     const [front, setFront] = useState(false);
     const [back, setBack] = useState(false);
