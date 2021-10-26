@@ -18,6 +18,7 @@ process.env.
 ### Ver foguete animado em favoritos e animação de emote na playlist do youtube
 ## Falta
 
+### Listar os membros pertencentes a cada comunidade
 ### Corrigir que o usuario so pode postar se tiver login e perfil;
 ### Procurar como percorrer um map ao contrario;
 ### Adicionar foguete na pesquisa de usuário;

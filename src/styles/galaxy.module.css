@@ -28,6 +28,13 @@
     to{transform: rotate(360deg)translateX(250px) rotate(-360deg);}
 }
 
+.geralContentGlobal{
+    height: 93vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+}
+
 .geral{
     margin: 0px;
     padding: 0px;
@@ -212,6 +219,42 @@
     justify-content: space-around;
 }
 
+.geralContentLeft{
+    width: 10vw;
+    height: 93vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    margin-left: 1vw;
+    color: #fff;
+}
+
+.geralContentRight{
+    width: 10vw;
+    height: 93vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    margin-left: 78vw;
+    color: #fff;
+}
+
+.contentTecSingle{
+    height: 8vh;
+    width: 10vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: rgb(71, 71, 75);
+}
+
+.contentTecSingle h2{
+    margin-right: 1.5vw;
+}
 
 
 

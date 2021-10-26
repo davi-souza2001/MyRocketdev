@@ -6,9 +6,9 @@ import styles from "../styles/Main.module.css";
 
 interface CommunityOption {
     image?: any;
-    tec : any;
-    area: any;
-    routeCommunity: any;
+    tec ?: any;
+    area?: any;
+    routeCommunity?: any;
 }
 
 export default function CommunityOption(props: CommunityOption) {
