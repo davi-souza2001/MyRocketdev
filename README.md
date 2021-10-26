@@ -19,6 +19,7 @@ process.env.
 ## Falta
 
 ### Passar para portugues;
+### Adicionar as cores nos planetas
 ### Tranformar learn more baseado em star wars;
 ### Adicionar login com github;
 ### Colocar estrelas de fundo noos planetas;
