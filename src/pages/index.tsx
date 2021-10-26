@@ -143,37 +143,37 @@ export default function Galaxy(props: galaxy){
                 <div className={styles.sun}></div>
 
                 <div className={styles.mercuryOutline}>
-                    <div className={styles.mercury}>
+                    <div className={styles.mercury} style={{backgroundColor: "#339933"}}>
                         <p>Node</p>
                     </div>
                 </div>
 
                 <div className={styles.venusOutline}>
-                    <div className={styles.venus}>
+                    <div className={styles.venus} style={{backgroundColor: "#47A248"}}>
                         <p>Mongo</p>
                     </div>
                 </div>
 
                 <div className={styles.earthOutline}>
-                    <div className={styles.earth}>
+                    <div className={styles.earth} style={{backgroundColor: "#4479A1"}}>
                         <p>Sql/MySql</p>
                     </div>
                 </div>
 
                 <div className={styles.marsOutline}>
-                    <div className={styles.mars}>
+                    <div className={styles.mars} style={{backgroundColor: "#FFCA28"}}>
                         <p>Firebase</p>
                     </div>
                 </div>
 
                 <div className={styles.jupiterOutline}>
-                    <div className={styles.jupiter}>
+                    <div className={styles.jupiter} style={{backgroundColor: "#239120"}}>
                         <p>C#</p>
                     </div>
                 </div>
 
                 <div className={styles.saturnOutline}>
-                    <div className={styles.saturn}>
+                    <div className={styles.saturn} style={{backgroundColor: "#007396"}}>
                         <p>Java</p>
                     </div>
                 </div>
@@ -213,25 +213,25 @@ export default function Galaxy(props: galaxy){
                 <div className={styles.sun}></div>
 
                 <div className={styles.mercuryOutline}>
-                    <div className={styles.mercury}>
+                    <div className={styles.mercury} style={{backgroundColor: "#3880FF"}}>
                         <p>Ionic</p>
                     </div>
                 </div>
 
                 <div className={styles.venusOutline}>
-                    <div className={styles.venus}>
+                    <div className={styles.venus} style={{backgroundColor: "#02569B"}}>
                         <p>Flutter</p>
                     </div>
                 </div>
 
                 <div className={styles.earthOutline}>
-                    <div className={styles.earth}>
+                    <div className={styles.earth} style={{backgroundColor: "#FA7343"}}>
                         <p>Swift</p>
                     </div>
                 </div>
 
                 <div className={styles.marsOutline}>
-                    <div className={styles.mars}>
+                    <div className={styles.mars} style={{backgroundColor: "#61DAFB"}}>
                         <p>React-Native</p>
                     </div>
                 </div>

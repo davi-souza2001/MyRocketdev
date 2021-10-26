@@ -59,12 +59,12 @@ export default function Login(){
                     <Image src={astro} alt="astronauta boas vindas" className={styles.imgAstro}></Image>
                     
                     <div className={styles.mensagelogin}>
-                        <h1>Welcome aboard my friend</h1>
-                        <h3>Your rocket with all astronauts for your trip !</h3>
+                        <h1>Bem vindo a bordo!</h1>
+                        <h3>Aqui garantimos que você decole com a melhor experiência.</h3>
                     </div>
                     <div className={styles.learmore}>
                         <div className={styles.morecontent} onClick={changebox}>
-                            <h4>Learn More</h4>
+                            <h4>Ler mais</h4>
                         </div>
                     </div>
                 </div>
@@ -72,12 +72,12 @@ export default function Login(){
                 <div className={styles.imgwelcome}>
                     <Image src={rocket} alt="astronauta boas vindas"></Image>
                     <div className={styles.mensagemore}>
-                        <h1>Welcome to MyRocket</h1>
-                        <h3>Here on this rocket is where the devs can call others on their journey, and for them to be found too. Did you like it ? So come be part of our rocket, because its all yours too! You can create your profile only in tabs login and password or login with google</h3>
+                        <h1>Bem vindo ao MyRocket!</h1>
+                        <h3>Neste foguete é onde os desenvolvedores podem chamar outros em sua jornada, comentar sobre suas tecnologias preferidas, comentar como anda o mercado ou até tirar dúvidas com outros tripulantes</h3>
                     </div>
                     <div className={styles.learmore}>
                         <div className={styles.morecontent} onClick={changebox}>
-                            <h4>To Back</h4>
+                            <h4>Voltar</h4>
                         </div>
                     </div>
                 </div>

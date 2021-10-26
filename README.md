@@ -18,8 +18,6 @@ process.env.
 ### Ver foguete animado em favoritos e animação de emote na playlist do youtube
 ## Falta
 
-### Passar para portugues;
-### Adicionar as cores nos planetas
 ### Tranformar learn more baseado em star wars;
 ### Adicionar login com github;
 ### Colocar estrelas de fundo noos planetas;

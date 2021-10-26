@@ -72,7 +72,7 @@
     position: absolute;
     left: 43%;
     top: 42%;
-    background-color: #935f2a;
+    background-color: #61DAFB;
     transform: translate(-50%,-50%);
     animation:orbit2 8s linear infinite;
 }
@@ -97,7 +97,7 @@
     position: absolute;
     left: 40%;
     top: 42%;
-    background-color: #c1aa81;
+    background-color: #DD0031;
     transform: translate(-50%,-50%);
     animation:orbit3 10s linear infinite;
 }
@@ -122,7 +122,7 @@
     position: absolute;
     left: 44%;
     top: 43%;
-    background-color: #151686;
+    background-color:  #4FC08D;
     transform: translate(-50%,-50%);
     animation:orbit4 20s linear infinite;
 }
@@ -147,7 +147,7 @@
     position: absolute;
     left: 46.5%;
     top: 46.5%;
-    background-color: #fea535;
+    background-color: #61DAFB;
     transform: translate(-50%,-50%);
     animation:orbit5 30s linear infinite;
 }
@@ -172,7 +172,7 @@
     position: absolute;
     left: 45%;
     top: 45%;
-    background-color: #cac2b9;
+    background-color: #E04E39;
     transform: translate(-50%,-50%);
     animation:orbit6 60s linear infinite;
 }

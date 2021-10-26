@@ -38,6 +38,10 @@
 }
 
 .mensagelogin{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     margin-top: 5vh;
     font-size: 1.6vw;
     animation-name: change;
