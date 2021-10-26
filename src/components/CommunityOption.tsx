@@ -5,7 +5,7 @@ import route from "next/router";
 import styles from "../styles/Main.module.css";
 
 interface CommunityOption {
-    image: any;
+    image?: any;
     tec : any;
     area: any;
     routeCommunity: any;

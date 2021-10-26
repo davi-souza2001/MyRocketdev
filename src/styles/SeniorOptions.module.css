@@ -1,0 +1,17 @@
+.contentGeral{
+    height: 100px;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    color: #fff;
+    font-family: 'poppins', sans-serif;
+    cursor: pointer;
+    transition: 0.2s;
+    background-color: #09083B;
+}
+
+.contentGeral:hover{
+    background-color: #0e0c70;
+}
