@@ -43,7 +43,7 @@ export default function Topbar(props: TopbarProps) {
                     </div>
                 </div>
                 <div className={styles.usertab}>
-                    <div className={styles.user} onClick={user ? logout : loginGoogle }>
+                    <div className={styles.user} onClick={user ? logout : () => route.push("/login") }>
                         {user ? (
                             <>
                                 <h5>{user.name}</h5>
