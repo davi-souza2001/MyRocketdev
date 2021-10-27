@@ -18,6 +18,9 @@ process.env.
 ### Ver foguete animado em favoritos e animação de emote na playlist do youtube
 ## Falta
 
+### Ajeitar alinhamento dos membros das comunidades;
+### Ajeitar transparencia e fechar modal de editar;
+### Deixar no login so as opções de login com google e github;
 ### Tranformar learn more baseado em star wars;
 ### Adicionar login com github;
 ### Colocar estrelas de fundo noos planetas;
