@@ -13,7 +13,7 @@ import styles from "../styles/Login.module.css";
 
 
 export default function Login(){
-    const { loginGoogle, loginWithEmailAndPassword, createUserWithEmailAndPassword} = useAuth();
+    const { loginGoogle, loginGithub, loginWithEmailAndPassword, createUserWithEmailAndPassword} = useAuth();
     const [boxone, setBoxone] = useState(true);
 
     const [email, setEmail] = useState("");
@@ -98,7 +98,7 @@ export default function Login(){
                     <button onClick={loginGoogle}>
                         <Image src={googleIcon} height={19} alt="Logo" width={20}/>
                     </button>
-                    <button className={styles.githubButton}>
+                    <button className={styles.githubButton} onClick={loginGithub}>
                         <Image src={githubIcon} height={35} alt="Logo" width={60}/>
                     </button>
                 </div>

@@ -9,6 +9,7 @@ interface AuthContextProps {
     user?: User;
     loading?: boolean;
     loginGoogle?: () => Promise<void>;
+    loginGithub?: () => Promise<void>;
     loginWithEmailAndPassword?: (email:string , password:string) => Promise<void>;
     createUserWithEmailAndPassword?: (email:string , password:string) => Promise<void>;
     logout?: () => Promise<void>;
@@ -69,6 +70,18 @@ export function AuthProvider(props) {
         }
     };
 
+    async function loginGithub() {
+        try {
+            const resp = await firebase.auth().signInWithPopup(
+                new firebase.auth.GithubAuthProvider()
+            )
+            await configureSection(resp.user);
+            route.push('/createprofile');
+        } finally {
+            setLoading(false);
+        }
+    };
+
     async function createUserWithEmailAndPassword(email, password) {
         try {
             const resp = await firebase.auth().createUserWithEmailAndPassword(email, password);
@@ -111,6 +124,7 @@ export function AuthProvider(props) {
             user,
             loading,
             loginGoogle,
+            loginGithub,
             loginWithEmailAndPassword,
             createUserWithEmailAndPassword,
             logout

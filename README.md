@@ -18,9 +18,7 @@ process.env.
 ### Ver foguete animado em favoritos e animação de emote na playlist do youtube
 ## Falta
 
-### Adicionar login com github;
 ### Colocar modal em logout;
-### Tirar login com email e senha
 ### Colocar estrelas de fundo noos planetas;
 ### Colocar universo em front, back...;
 ### Função dar like;
