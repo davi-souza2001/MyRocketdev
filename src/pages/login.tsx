@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Image from "next/image";
+import route from "next/router";
 import useAuth from "../data/hook/useAuth";
 
 import githubIcon from "../assets/img/GithubIcon.svg";
@@ -73,7 +74,10 @@ export default function Login(){
                     <Image src={rocket} alt="astronauta boas vindas"></Image>
                     <div className={styles.mensagemore}>
                         <h1>Bem vindo ao MyRocket!</h1>
-                        <h3>Neste foguete é onde os desenvolvedores podem chamar outros em sua jornada, comentar sobre suas tecnologias preferidas, comentar como anda o mercado ou até tirar dúvidas com outros tripulantes</h3>
+                        <h3>Neste foguete é onde os desenvolvedores podem chamar outros em sua jornada, comentar sobre suas tecnologias preferidas, 
+                        comentar como anda o mercado ou até tirar dúvidas com outros tripulantes.
+                        <div style={{cursor: 'pointer'}} onClick={() => route.push("/resume")}>Clique aqui para ver uma breve introdução sobre nós !</div>
+                        </h3>
                     </div>
                     <div className={styles.learmore}>
                         <div className={styles.morecontent} onClick={changebox}>
@@ -83,18 +87,12 @@ export default function Login(){
                 </div>
             )}
             <div className={styles.loginwelcome}>
-                <form>
                     <div className={styles.contentMyRocketAndRocket}>
                         <div className={styles.imageIntoMyrocket}>
                             <Image src={astroMyRocket} alt="astro" height={900}/>
                         </div>
                         <h2>MyRocket</h2>
                     </div>
-                    <input type="text" placeholder="Email" className={styles.email} value={email} onChange={(e) => setEmail(e.target.value)}/>
-                    <input type="password" placeholder="Password" className={styles.password} value={password} onChange={(e) => setPassword(e.target.value)}/>
-                    {lookLogin ? <input type="submit" value="Login" className={styles.login} onClick={loginWithEmail}/> : false}
-                    {lookCreate ? <> <input type="submit" value="Cadastrar" className={styles.create} onClick={createUser}/>  </>: <input type="submit" value="Cadastrar" className={styles.create} onClick={toggle}/>}
-                </form>
                 <div className={styles.line}></div>
                 <div className={styles.logingoogle}>
                     <button onClick={loginGoogle}>

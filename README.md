@@ -18,7 +18,6 @@ process.env.
 ### Ver foguete animado em favoritos e animação de emote na playlist do youtube
 ## Falta
 
-### Tranformar learn more baseado em star wars;
 ### Adicionar login com github;
 ### Colocar modal em logout;
 ### Tirar login com email e senha
