@@ -20,6 +20,8 @@ process.env.
 
 ### Tranformar learn more baseado em star wars;
 ### Adicionar login com github;
+### Colocar modal em logout;
+### Tirar login com email e senha
 ### Colocar estrelas de fundo noos planetas;
 ### Colocar universo em front, back...;
 ### Função dar like;
