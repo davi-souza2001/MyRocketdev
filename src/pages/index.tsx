@@ -4,6 +4,7 @@ import { useState } from "react";
 import SeniorOptions from "../components/SeniorOptions";
 
 import Topbar from "../components/Topbar";
+
 import styles from "../styles/galaxy.module.css";
 
 import reactImg from "../assets/img/front/react.svg";
@@ -80,15 +81,15 @@ export default function Galaxy(props: galaxy){
                 <div className={styles.geralContentLeft}>
                     <div className={styles.contentTecSingle} onClick={() => route.push("/com/React")}>
                         <h2>React</h2>
-                        <Image src={reactImg}/>
+                        <Image src={reactImg} alt="logo"/>
                     </div>
                     <div className={styles.contentTecSingle} onClick={() => route.push("/com/Angular")}>
                         <h2>Angular</h2>
-                        <Image src={angularImg}/>
+                        <Image src={angularImg} alt="logo"/>
                     </div>
                     <div className={styles.contentTecSingle} onClick={() => route.push("/com/Vue")}>
                         <h2>Vue</h2>
-                        <Image src={vueImg}/>
+                        <Image src={vueImg} alt="logo"/>
                     </div>
                 </div>
                     <div className={styles.geral}>
@@ -128,11 +129,11 @@ export default function Galaxy(props: galaxy){
                     <div className={styles.geralContentRight}>
                         <div className={styles.contentTecSingle} onClick={() => route.push("/com/Next")}>
                             <h2>Next</h2>
-                            <Image src={nextImg}/>
+                            <Image src={nextImg} alt="logo"/>
                         </div>
                         <div className={styles.contentTecSingle} onClick={() => route.push("/com/Ember")}>
                             <h2>Ember</h2>
-                            <Image src={emberImg}/>
+                            <Image src={emberImg} alt="logo"/>
                         </div>
                 </div>
             </div>
@@ -145,15 +146,15 @@ export default function Galaxy(props: galaxy){
                 <div className={styles.geralContentLeft}>
                     <div className={styles.contentTecSingle} onClick={() => route.push("/com/Node")}>
                         <h2>Node</h2>
-                        <Image src={nodeImg}/>
+                        <Image src={nodeImg} alt="logo"/>
                     </div>
                     <div className={styles.contentTecSingle} onClick={() => route.push("/com/Mongo")}>
                         <h2>Mongo</h2>
-                        <Image src={mongoImg}/>
+                        <Image src={mongoImg} alt="logo"/>
                     </div>
                     <div className={styles.contentTecSingle} onClick={() => route.push("/com/Sql")}>
                         <h2>Sql</h2>
-                        <Image src={sqlImg}/>
+                        <Image src={sqlImg} alt="logo"/>
                     </div>
                 </div>
                 <div className={styles.geral}>
@@ -198,15 +199,15 @@ export default function Galaxy(props: galaxy){
                 <div className={styles.geralContentRight}>
                         <div className={styles.contentTecSingle} onClick={() => route.push("/com/Firebase")}>
                             <h2>Firebase</h2>
-                            <Image src={firebaseImg}/>
+                            <Image src={firebaseImg} alt="logo"/>
                         </div>
                         <div className={styles.contentTecSingle} onClick={() => route.push("/com/CSharp")}>
                             <h2>C#</h2>
-                            <Image src={csharpImg}/>
+                            <Image src={csharpImg} alt="logo"/>
                         </div>
                         <div className={styles.contentTecSingle} onClick={() => route.push("/com/Java")}>
                             <h2>Java</h2>
-                            <Image src={javaImg}/>
+                            <Image src={javaImg} alt="logo"/>
                         </div>
                 </div>
             
@@ -221,11 +222,11 @@ export default function Galaxy(props: galaxy){
                 <div className={styles.geralContentLeft}>
                     <div className={styles.contentTecSingle} onClick={() => route.push("/com/Flutter")}>
                         <h2>Flutter</h2>
-                        <Image src={flutterImg}/>
+                        <Image src={flutterImg} alt="logo"/>
                     </div>
                     <div className={styles.contentTecSingle} onClick={() => route.push("/com/Ionic")}>
                         <h2>Ionic</h2>
-                        <Image src={ionicImg}/>
+                        <Image src={ionicImg} alt="logo"/>
                     </div>
                 </div>
             <div className={styles.geral}>
@@ -258,11 +259,11 @@ export default function Galaxy(props: galaxy){
                 <div className={styles.geralContentRight}>
                         <div className={styles.contentTecSingle} onClick={() => route.push("/com/React-Native")}>
                             <h4>React-Native</h4>
-                            <Image src={reactImg}/>
+                            <Image src={reactImg} alt="logo"/>
                         </div>
                         <div className={styles.contentTecSingle} onClick={() => route.push("/com/Swift")}>
                             <h2>Swift</h2>
-                            <Image src={swiftImg}/>
+                            <Image src={swiftImg} alt="logo"/>
                         </div>
                 </div>
             </div>

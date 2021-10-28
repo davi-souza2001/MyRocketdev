@@ -112,7 +112,7 @@ export default function MainPage(props: MainPage) {
                 <div className={styles.notLogged}>
                     <p>Parece que você ainda não fez <strong>login</strong></p>
                     <p>ou não entrou em alguma <strong>comunidade</strong></p>
-                    <Image src={astroAlone} height={300} width={300} />
+                    <Image src={astroAlone} height={300} width={300} alt="astro" />
                 </div>
                 </>
                 )}

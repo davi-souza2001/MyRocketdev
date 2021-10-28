@@ -45,7 +45,7 @@ export default function AddPost(props: AddPostProps) {
             <div className={styles.content}>
                 <div className={styles.userSettings}>
                     <div className={styles.userImageAndName}>
-                        <Image src={user ? user?.imagemUrl : Icon} width={40} height={35}/>
+                        <Image src={user ? user?.imagemUrl : Icon} width={40} height={35} alt="User image"/>
                         <h4>{props.name}</h4>
                         <div className={styles.icon} onClick={sub}>
                             {IconPlus}

@@ -62,7 +62,7 @@ export default function Com(props: idCommunitie) {
                             if (prof.firstComum == idcom || prof.secondComum == idcom || prof.thirdComum == idcom) {
                                 return(
                                     <div className={styles.contentMembersIntoComum}>
-                                        <Image src={prof.image} width={30} height={30}/>
+                                        <Image alt="user image" src={prof.image} width={30} height={30}/>
                                         <p key={prof.name}>{prof.name}</p> 
                                     </div>
                                 )

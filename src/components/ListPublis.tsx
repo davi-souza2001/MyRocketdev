@@ -3,7 +3,6 @@ import useAuth from '../data/hook/useAuth';
 
 import firebase from "../firebase/config";
 
-
 import PostUser from "./PostUser";
 
 interface ListPublisProps {
