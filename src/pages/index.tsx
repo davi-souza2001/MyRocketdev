@@ -55,7 +55,7 @@ export default function Galaxy(props: galaxy){
         {modal ? (
         <div className={styles.optionsGeral}>
             <div className={styles.stars}/>
-
+        
             <div className={styles.galaxy}>
                 <h1>Front-End</h1>
                 <SeniorOptions click={() => frontModal()}/>
@@ -75,7 +75,7 @@ export default function Galaxy(props: galaxy){
 
         {front ? (
             <div className={styles.geralContentGlobal}>
-                <div className={styles.stars}></div>
+                <div className={styles.stars}/>
 
                 <div className={styles.geralContentLeft}>
                     <div className={styles.contentTecSingle} onClick={() => route.push("/com/React")}>

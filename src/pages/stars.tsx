@@ -53,9 +53,9 @@ export default function Starts() {
             <Topbar/>
         {modal ? (
             <div className={styles.optionsGeral}>
-            <SeniorOptions senior="Front-End" click={() => frontModal()}/>
-            <SeniorOptions senior="Back-End" click={() => backModal()}/>
-            <SeniorOptions senior="Mobile" click={() => mobileModal()}/>
+            <SeniorOptions  click={() => frontModal()}/>
+            <SeniorOptions  click={() => backModal()}/>
+            <SeniorOptions  click={() => mobileModal()}/>
         </div>
         ) : false}
 

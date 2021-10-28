@@ -18,9 +18,7 @@ process.env.
 ### Ver foguete animado em favoritos e animação de emote na playlist do youtube
 ## Falta
 
-### Personalizar barra de rolagem
-### Colocar estrelas de fundo noos planetas;
-### Colocar universo em front, back...;
+### Personalizar barra de rolagem e tirar bug da rolagem na pagina inicial
 ### Função dar like;
 ### Função de reunião;
 
