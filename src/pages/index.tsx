@@ -47,14 +47,14 @@ export default function Galaxy(props: galaxy){
     function mobileModal(){
         setModal(false);
         setMobile(true);
-    }
+    } 
 
     return (
     <>
         <Topbar/>
         {modal ? (
         <div className={styles.optionsGeral}>
-            <div className={styles.stars}></div>
+            <div className={styles.stars}/>
 
             <div className={styles.galaxy}>
                 <h1>Front-End</h1>
