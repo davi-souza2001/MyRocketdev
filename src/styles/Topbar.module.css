@@ -6,8 +6,10 @@
     justify-content: space-between;
     background-color: #181818;
     color: #fff;
-    border-radius: 0 10px 10px 0;
+    border-radius: 10px;
+    border-bottom: 2px solid rgb(62, 26, 179);
     font-family: "poppins", sans-serif;
+    z-index: 1;
 }
 
 .titletab {

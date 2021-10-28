@@ -53,15 +53,30 @@ export default function Galaxy(props: galaxy){
     <>
         <Topbar/>
         {modal ? (
-            <div className={styles.optionsGeral}>
-            <SeniorOptions senior="Front-End" click={() => frontModal()}/>
-            <SeniorOptions senior="Back-End" click={() => backModal()}/>
-            <SeniorOptions senior="Mobile" click={() => mobileModal()}/>
+        <div className={styles.optionsGeral}>
+            <div className={styles.stars}></div>
+
+            <div className={styles.galaxy}>
+                <h1>Front-End</h1>
+                <SeniorOptions click={() => frontModal()}/>
+            </div>
+
+            <div className={styles.galaxy}>
+                <h1>Back-End</h1>
+                <SeniorOptions click={() => backModal()}/>
+            </div>
+
+            <div className={styles.galaxy}>
+                <h1>Mobile</h1>
+                <SeniorOptions click={() => mobileModal()}/>                    
+            </div>
         </div>
         ) : false}
 
         {front ? (
             <div className={styles.geralContentGlobal}>
+                <div className={styles.stars}></div>
+
                 <div className={styles.geralContentLeft}>
                     <div className={styles.contentTecSingle} onClick={() => route.push("/com/React")}>
                         <h2>React</h2>
@@ -125,6 +140,8 @@ export default function Galaxy(props: galaxy){
 
         {back ? (
             <div className={styles.geralContentGlobal}>
+                <div className={styles.stars}></div>
+
                 <div className={styles.geralContentLeft}>
                     <div className={styles.contentTecSingle} onClick={() => route.push("/com/Node")}>
                         <h2>Node</h2>
@@ -199,6 +216,8 @@ export default function Galaxy(props: galaxy){
 
         {mobile ? (
             <div className={styles.geralContentGlobal}>
+                <div className={styles.stars}></div>
+                
                 <div className={styles.geralContentLeft}>
                     <div className={styles.contentTecSingle} onClick={() => route.push("/com/Flutter")}>
                         <h2>Flutter</h2>

@@ -129,7 +129,7 @@ export default function MainProfile() {
                 </ContentMainProfile>    
             :
                 <div className={styles.noLogin}>
-                    <h1>Faça seu login para mostrar seu perfil para outros astronautas !</h1>
+                    <p>Faça seu <strong>login</strong> para mostrar seu perfil para outros astronautas!</p>
                 </div>}
         </div>
     )

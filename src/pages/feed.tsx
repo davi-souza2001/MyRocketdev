@@ -2,11 +2,14 @@ import { useEffect, useState } from "react";
 
 import Topbar from "../components/Topbar";
 import ListPublis from "../components/ListPublis";
+import Image from "next/image";
 
 import useAuth from "../data/hook/useAuth";
 import firebase from "../firebase/config";
 
 import styles from "../styles/feedmain.module.css";
+
+import astroAlone from "../assets/img/astronauta_sozinho.svg";
 
 interface MainPage {
 
@@ -106,8 +109,11 @@ export default function MainPage(props: MainPage) {
                 ) : 
                 (
                 <>
-                    <h1>Parece que você ainda não fez login</h1>
-                    <h1>ou não entrou ainda em alguma comunidade :(</h1>
+                <div className={styles.notLogged}>
+                    <p>Parece que você ainda não fez <strong>login</strong></p>
+                    <p>ou não entrou em alguma <strong>comunidade</strong></p>
+                    <Image src={astroAlone} height={300} width={300} />
+                </div>
                 </>
                 )}
             </div>
