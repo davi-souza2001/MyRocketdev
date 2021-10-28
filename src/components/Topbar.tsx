@@ -1,9 +1,11 @@
+import { useState } from "react";
+
 import useAuth from "../data/hook/useAuth";
 
-import Astro from "../assets/img/austrotwo.jpg";
 import route from "next/router";
 import Image from "next/image";
 
+import Astro from "../assets/img/austrotwo.jpg";
 import astroMyRocket from "../assets/img/astrounauta.svg";
 
 import styles from "../styles/Topbar.module.css";
@@ -14,7 +16,14 @@ interface TopbarProps {
 
 export default function Topbar(props: TopbarProps) {
 
-    const { user, logout, loginGoogle } = useAuth();
+    const { user, logout, loginGoogle } = useAuth();    
+    const [modal, setModal] = useState(false);
+
+    function handleModal(){
+        if(user){
+            setModal(true);
+        }
+    }
 
     return (
         <>
@@ -43,14 +52,15 @@ export default function Topbar(props: TopbarProps) {
                     </div>
                 </div>
                 <div className={styles.usertab}>
-                    <div className={styles.user} onClick={user ? logout : () => route.push("/login") }>
+                    <div className={styles.user} onClick={user ? handleModal : () => route.push("/login") }>
                         {user ? (
                             <>
-                                <h5>{user.name}</h5>
+                                {modal ? <h5 onClick={logout}>Fazer logout ?</h5> : <h5>{user.name}</h5>}
                                 <Image src={user?.imagemUrl || Astro} alt="Foto do usuario" width={40} height={40} className={styles.imageB}></Image>
                             </>
                         ) :
                             (<h5>Fazer login</h5>)}
+                        
                     </div>
                 </div>
             </div>
