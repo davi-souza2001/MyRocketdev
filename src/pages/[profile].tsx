@@ -9,6 +9,10 @@ import Austroone from "../assets/img/austroone.jpg";
 import useProfile from "../data/hook/useProfile";
 
 import AstroLike from "../assets/img/austrolike.jpg";
+import linkedin from "../assets/img/socialimgs/linkedin.svg";
+import github from "../assets/img/socialimgs/github.svg";
+import instagram from "../assets/img/socialimgs/instagram.svg";
+import youtube from "../assets/img/socialimgs/youtube.svg";
 
 import styles from "../styles/ContentMainProfile.module.css";
 
@@ -39,7 +43,7 @@ export default function MainProfile() {
         return repos?.map((repo, index) => {
             return (
                 <div className={styles.descriptionProfile} key={index}>
-                    <h3><a href={repo.html_url} target="_blank" rel="noreferrer">{repo.name}</a></h3>
+                    <p><a href={repo.html_url} target="_blank" rel="noreferrer">{repo.name}</a></p>
                 </div>
             )
         })
@@ -62,43 +66,50 @@ export default function MainProfile() {
             if (prof.userName == profileSearch)
             return (
                 <div className={styles.MainProfile} key={index}>
-                    <div className={styles.imgBackground}>
-                        <Image src={AstroLike} alt="Astronauta dando like" height={200} width={200} />
-                    </div>
-                    <div className={styles.imgProfileUser}>
-                        <Image src={prof.image || Austroone} height={999} width={999} alt="Foto de Perfil"></Image>
-                        <div className={styles.contentUser}>
-                            <h3>{prof.name}</h3>
-                            <p>@{prof.userName}</p>
-                            <p>{prof.dev} em {prof.local}</p>
-                                <div className={styles.description}>
-                                    <h4>{prof.description}</h4>
+                    <div className={styles.perfilHeader}>
+                        <div className={styles.imgBackground}>
+                            <Image src={AstroLike} alt="Astronauta dando like" height={200} width={200} />
+                        </div>
+                        <div className={styles.imgProfileUser}>
+                            <Image src={prof.image || Austroone} height={999} width={999} alt="Foto de Perfil"></Image>
+                            <div className={styles.contentUser}>
+                                <div className={styles.config}>
+                                <h3>{prof.name}</h3>
                                 </div>
+                                <p>@{prof.userName}</p>
+                                <p>{prof.dev} em {prof.local}</p>
+                                    <div className={styles.description}>
+                                        <h4>{prof.description}</h4>
+                                    </div>
+                            </div>
                         </div>
                     </div>
                     <div className={styles.bar}></div>
-                    <div className={styles.optionsBar}>
-                        <div className={styles.contentOption}>
-                            <h4>Projetos</h4>
-                        </div>
-                    </div>
                     <div className={styles.finalGeral}>
-                        <div className={styles.communitiesUser}>
+                        <div className={styles.communitiesArea}>
                             <h3>Comunidades</h3>
-                            <div className={styles.communitiesPerson}>
-                                <p onClick={() => route.push(`/com/${prof.firstComum}`)}>{prof.firstComum}</p>
-                                <p onClick={() => route.push(`/com/${prof.secondComum}`)}>{prof.secondComum}</p>
-                                <p onClick={() => route.push(`/com/${prof.thirdComum}`)}>{prof.thirdComum}</p>
+                            <div className={styles.communitiesUser}>
+                                <div className={styles.communitiesPerson}>
+                                    <p onClick={() => route.push(`/com/${prof.firstComum}`)}>{prof.firstComum}</p>
+                                    <p onClick={() => route.push(`/com/${prof.secondComum}`)}>{prof.secondComum}</p>
+                                    <p onClick={() => route.push(`/com/${prof.thirdComum}`)}>{prof.thirdComum}</p>
+                                </div>
                             </div>
                         </div>
-                        <div className={styles.spacingbar}>
-                            {renderRepos()}
+                        <div className={styles.projectsArea}>
+                            <h3>Projetos</h3>
+                            <div className={styles.spacingbar}>
+                                {renderRepos()}
+                            </div>
                         </div>
-                        <div className={styles.socialMedias}>
-                            {prof.linkedin ? <h3 onClick={() => route.push(`https://www.linkedin.com/in/${prof.linkedin}/`)}>Linkedin: {prof.linkedin}</h3> : false}
-                            {prof.github ? <h3 onClick={() => route.push(`https://github.com/${prof.github}`)}>Github: {prof.github}</h3> : false}
-                            {prof.instagram ? <h3 onClick={() => route.push(`https://www.instagram.com/${prof.instagram}/`)}>Instagram: {prof.instagram}</h3> : false}
-                            {prof.youtube ? <h3 onClick={() => route.push(`https://www.youtube.com/user/${prof.youtube}`)}>Youtube: {prof.youtube}</h3> : false}
+                        <div className={styles.socialMediasArea}>
+                            <h3>Redes Sociais</h3>
+                            <div className={styles.socialMedias}>
+                                {prof.linkedin ? <p onClick={() => route.push(`https://www.linkedin.com/in/${prof.linkedin}/`)} className={styles.socialMedia}><Image src={linkedin} alt="linkedin" height={25} width={25}/> {prof.linkedin}</p> : false}
+                                {prof.github ? <p onClick={() => route.push(`https://github.com/${prof.github}`)} className={styles.socialMedia}><Image src={github} alt="github" height={25} width={25} /> {prof.github}</p> : false}
+                                {prof.instagram ? <p onClick={() => route.push(`https://www.instagram.com/${prof.instagram}/`)} className={styles.socialMedia}><Image src={instagram} alt="instagram" height={25} width={25} /> {prof.instagram}</p> : false}
+                                {prof.youtube ? <p onClick={() => route.push(`https://www.youtube.com/user/${prof.youtube}`)} className={styles.socialMedia}><Image src={youtube} alt="youtube" height={25} width={25} /> {prof.youtube}</p> : false}
+                            </div>
                         </div>
                     </div>
                 </div>

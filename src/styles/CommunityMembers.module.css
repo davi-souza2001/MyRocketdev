@@ -43,3 +43,7 @@
 .members{
     overflow-y: scroll;
 }
+
+.crew{
+    margin-top: 1vh;
+}

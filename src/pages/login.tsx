@@ -61,7 +61,7 @@ export default function Login(){
                     
                     <div className={styles.mensagelogin}>
                         <h1>Bem vindo a bordo!</h1>
-                        <h3>Aqui garantimos que você decole com a melhor experiência.</h3>
+                        <p className={styles.descricao}>Aqui garantimos que você decole com a <strong>melhor experiência</strong>.</p>
                     </div>
                     <div className={styles.learmore}>
                         <div className={styles.morecontent} onClick={changebox}>
@@ -74,10 +74,10 @@ export default function Login(){
                     <Image src={rocket} alt="astronauta boas vindas"></Image>
                     <div className={styles.mensagemore}>
                         <h1>Bem vindo ao MyRocket!</h1>
-                        <h3>Neste foguete é onde os desenvolvedores podem chamar outros em sua jornada, comentar sobre suas tecnologias preferidas, 
+                        <p className={styles.descricao}>Neste foguete é onde os desenvolvedores podem chamar outros em sua jornada, comentar sobre suas tecnologias preferidas, 
                         comentar como anda o mercado ou até tirar dúvidas com outros tripulantes.
-                        <div style={{cursor: 'pointer'}} onClick={() => route.push("/resume")}>Clique aqui para ver uma breve introdução sobre nós !</div>
-                        </h3>
+                        <div style={{cursor: 'pointer'}} onClick={() => route.push("/resume")}><strong>Clique aqui para ver uma breve introdução sobre nós!</strong></div>
+                        </p>
                     </div>
                     <div className={styles.learmore}>
                         <div className={styles.morecontent} onClick={changebox}>
@@ -94,6 +94,7 @@ export default function Login(){
                         <h2>MyRocket</h2>
                     </div>
                 <div className={styles.line}></div>
+                <p className={styles.titleLogin}>Entre com as opções abaixo</p>
                 <div className={styles.logingoogle}>
                     <button onClick={loginGoogle}>
                         <Image src={googleIcon} height={19} alt="Logo" width={20}/>

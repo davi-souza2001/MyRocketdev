@@ -56,8 +56,10 @@ export default function CommunityMembers(props: CommunityMembers){
                         <div className={styles.bar}></div>
                     </div>
                     <div className={styles.contentAdmin}>
-                        <h2>Membros</h2>
-                        {props.children}
+                        <h2>Tripulantes</h2>
+                        <div className={styles.crew}>
+                          {props.children}
+                        </div>
                     </div>
                 </>
             ) : <h4>Em breve</h4>}

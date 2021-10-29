@@ -57,14 +57,21 @@
 }
 
 .mensagemore{
-    width: 60vw;
+    width: 40vw;
     height: 20vh;
     display: flex;
     align-items:center;
     justify-content: center;
     flex-direction: column;
+    text-align: center;
     animation-name: change;
     animation-duration: 1s;
+}
+
+.descricao{
+    margin-top: 20px;
+    font-size: 20px;
+    color: rgb(197, 197, 197);
 }
 
 .morecontent{
@@ -103,6 +110,12 @@
     justify-content: center;
     color: #fff;
     font-weight: bold;
+}
+
+.titleLogin{
+    margin-top: 50px;
+    margin-bottom: -50px;
+    color: #fff;
 }
 
 .loginwelcome{

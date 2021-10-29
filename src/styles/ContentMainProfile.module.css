@@ -23,7 +23,7 @@
 .imgProfileUser img{
     height: 10vh;   
     width: 7vw;
-    border-radius: 999999px;
+    border-radius: 100%;
 }
 
 .contentUser{
@@ -54,6 +54,7 @@
 .bar{
     margin-top: 14vh;
     border: 1px solid #161476;
+    margin-bottom: 12vh;
 }
 
 .finalGeral{
@@ -63,87 +64,146 @@
     justify-content: space-around;
 }
 
+.communitiesArea{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    font-family: 'poppins', sans-serif;
+    margin-top: -30vh;
+}
+
+.communitiesArea h3{
+    margin-bottom: 1vh;
+}
+
 .communitiesUser{
     background-color: #363636;
-    margin-top: -10vh;
-    height: 40vh;
     width: 15vw;
     display: flex;
-    align-items: center;
-    justify-content: flex-start;
     flex-direction: column;
+    text-align: center;
     color: #fff;
     border-radius: 10px;
-    font-family: 'poppins', sans-serif;
-}
-
-.communitiesUser h3{
-    margin-top: 2vh;
-}
-
-.communitiesPerson{
-    margin-top: 8vh;
 }
 
 .communitiesPerson p{
     cursor: pointer;
     transition: 0.2s;
+    margin-bottom: 1vh;
     margin-top: 1vh;
 }
 
 .communitiesPerson p:hover{
-    color: #3936EB;
+    opacity: 0.8;
+}
+
+.projectsArea{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    font-family: 'poppins', sans-serif;
+    margin-top: -5.5vh;
+}
+
+.projectsArea h3{
+    margin-bottom: 50px;
 }
 
 .spacingbar{
-    width: 32vw;
-    height:40vh;
+    display: flex;
+    flex-direction: column;
+    width: 25vw;
+    height: 35vh;
     margin-top: -4vh;
+    text-align: center;
     overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.spacingbar::-webkit-scrollbar-track
+{
+	box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: #3d3d3d;
+}
+
+.spacingbar::-webkit-scrollbar
+{
+	width: 12px;
+	background-color: #F5F5F5;
+    border-radius: 10px;
+}
+
+.spacingbar::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #3936EB;
+}
+
+.socialMediasArea{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;    
+    margin-top: -30vh;
+    font-family: 'poppins', sans-serif;
+}
+
+.socialMediasArea h3{
+    margin-bottom: 1vh;
 }
 
 .socialMedias{
     background-color: #363636;
-    margin-top: -10vh;
     width: 20vw;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
     flex-direction: column;
     color: #fff;
     border-radius: 10px;
-    padding: 10px;
-    font-family: 'poppins', sans-serif;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
 }
 
-.socialMedias h3{
+.socialMedias p{
     transition: 0.2s;
     cursor: pointer;
 }
 
-.socialMedias h3:hover{
-    color: #3936EB;
+.socialMedias p:hover{
+    opacity: 0.8;
+}
+
+.socialMedia{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
 }
 
 .descriptionProfile{
-    width: 30vw;
-    margin: 5px 0;
+    width: 20vw;
+    margin: 5px 50px;
     background-color: #161476;
     padding: 1vh;
-    word-wrap: break-word;
     color: #fff;
     font-family: 'poppins', sans-serif;
     border-radius: 12px;
 }
 
-.descriptionProfile h3 a{
+.descriptionProfile p a{
     color: #fff;
     text-decoration: none;
     transition: 0.2s;
 }
 
-.descriptionProfile h3 a:hover{
-    color: rgb(81, 79, 212);
+.descriptionProfile:hover{
+    cursor: pointer;
+    opacity: 0.8;
 }
 
 .optionsBar{
