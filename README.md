@@ -18,7 +18,6 @@ process.env.
 ### Ver foguete animado em favoritos e animação de emote na playlist do youtube
 ## Falta
 
-### Personalizar barra de rolagem e tirar bug da rolagem na pagina inicial;
 ### Tirar bugs do build;
 ### Função dar like;
 ### Função de reunião;
