@@ -37,4 +37,4 @@ process.env.
 - Como ser membro ?
 - Na aba pesquisa, a pessoa pode filtrar os devs da plataforma por: senioridade, nome da pessoa, por comunidade ou nick
 - O perfil do usuário terá: Nome, foto, descrição, email do usuário, nick, e estado do usuário. Na aba de projetos serão listados os links e o nome do projeto do Github. Na aba sociais vão conter as principais rede sociais do usuário
-- A
+- Asa
