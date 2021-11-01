@@ -24,7 +24,6 @@ import flutterImg from "../assets/img/mobile/flutter.svg";
 import ionicImg from "../assets/img/mobile/ionic.svg";
 import swiftImg from "../assets/img/mobile/swift.svg";
 
-/* import StarfieldAnimation from "react-starfield-animation"; */
 
 interface galaxy {
 
@@ -56,16 +55,8 @@ export default function Galaxy(props: galaxy){
         <Topbar/>
         {modal ? (
         <div className={styles.optionsGeral}>
-            <div className={styles.stars} />
-            
-            {/* <StarfieldAnimation
-                style={{
-                position: 'absolute',
-                width: '100%',
-                height: '100%'
-                }}
-            /> */}
-        
+            {/* <div className={styles.stars} /> */}
+                    
             <div className={styles.galaxy}>
                 <h1>Front-End</h1>
                 <SeniorOptions click={() => frontModal()}/>

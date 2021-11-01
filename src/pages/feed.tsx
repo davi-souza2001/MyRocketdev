@@ -53,27 +53,27 @@ export default function MainPage(props: MainPage) {
         setShowFirst(true);
         setShowSecond(false);
         setShowThird(false);
-        document.getElementById("box1").style.backgroundColor = "#1613B2"
-        document.getElementById("box2").style.backgroundColor = "#3936EB"
-        document.getElementById("box3").style.backgroundColor = "#3936EB"
+        document.getElementById("box1").style.backgroundColor = "#1613B2";
+        document.getElementById("box2").style.backgroundColor = "#3936EB";
+        document.getElementById("box3").style.backgroundColor = "#3936EB";
     }
 
     function showFeedSecond(){
         setShowFirst(false);
         setShowSecond(true);
         setShowThird(false);
-        document.getElementById("box1").style.backgroundColor = "#3936EB"
-        document.getElementById("box2").style.backgroundColor = "#1613B2"
-        document.getElementById("box3").style.backgroundColor = "#3936EB"
+        document.getElementById("box1").style.backgroundColor = "#3936EB";
+        document.getElementById("box2").style.backgroundColor = "#1613B2";
+        document.getElementById("box3").style.backgroundColor = "#3936EB";
     }
 
     function showFeedThird(){
         setShowFirst(false);
         setShowSecond(false);
         setShowThird(true);
-        document.getElementById("box1").style.backgroundColor = "#3936EB"
-        document.getElementById("box2").style.backgroundColor = "#3936EB"
-        document.getElementById("box3").style.backgroundColor = "#1613B2"
+        document.getElementById("box1").style.backgroundColor = "#3936EB";
+        document.getElementById("box2").style.backgroundColor = "#3936EB";
+        document.getElementById("box3").style.backgroundColor = "#1613B2";
     }
 
     return (
