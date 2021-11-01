@@ -15,10 +15,8 @@ NEXT_PUBLIC_APP_ID=`
 process.env. 
 
 ...
-### Ver foguete animado em favoritos e animação de emote na playlist do youtube
 ## Falta
 
-### Tirar bugs do build;
 ### Função dar like;
 ### Função de reunião;
 
