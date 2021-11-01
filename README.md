@@ -15,11 +15,8 @@ NEXT_PUBLIC_APP_ID=`
 process.env. 
 
 ...
-### Ver foguete animado em favoritos e animação de emote na playlist do youtube
 ## Falta
 
-### Personalizar barra de rolagem e tirar bug da rolagem na pagina inicial;
-### Tirar bugs do build;
 ### Função dar like;
 ### Função de reunião;
 
@@ -38,4 +35,4 @@ process.env.
 - Como ser membro ?
 - Na aba pesquisa, a pessoa pode filtrar os devs da plataforma por: senioridade, nome da pessoa, por comunidade ou nick
 - O perfil do usuário terá: Nome, foto, descrição, email do usuário, nick, e estado do usuário. Na aba de projetos serão listados os links e o nome do projeto do Github. Na aba sociais vão conter as principais rede sociais do usuário
-- A
+- Asa
