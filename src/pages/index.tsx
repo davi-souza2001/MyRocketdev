@@ -6,6 +6,7 @@ import SeniorOptions from "../components/SeniorOptions";
 import Topbar from "../components/Topbar";
 
 import styles from "../styles/galaxy.module.css";
+import stars from "../styles/Starsnew.module.scss";
 
 import reactImg from "../assets/img/front/react.svg";
 import angularImg from "../assets/img/front/angularjs.svg";
@@ -57,6 +58,10 @@ export default function Galaxy(props: galaxy){
         <div className={styles.optionsGeral}>
             {/* <div className={styles.stars} /> */}
                     
+            <div className={stars.starsWrapper}>
+                <div className={stars.stars}></div>
+            </div>
+
             <div className={styles.galaxy}>
                 <h1>Front-End</h1>
                 <SeniorOptions click={() => frontModal()}/>
@@ -76,7 +81,10 @@ export default function Galaxy(props: galaxy){
 
         {front ? (
             <div className={styles.geralContentGlobal}>
-                <div className={styles.stars} />
+                {/* <div className={styles.stars} /> */}
+                <div className={stars.starsWrapper}>
+                    <div className={stars.stars}></div>
+                </div>
 
                 <div className={styles.geralContentLeft}>
                     <div className={styles.contentTecSingle} onClick={() => route.push("/com/React")}>
@@ -141,7 +149,11 @@ export default function Galaxy(props: galaxy){
 
         {back ? (
             <div className={styles.geralContentGlobal}>
-                <div className={styles.stars}></div>
+                {/* <div className={styles.stars}></div> */}
+
+                <div className={stars.starsWrapper}>
+                    <div className={stars.stars}></div>
+                </div>
 
                 <div className={styles.geralContentLeft}>
                     <div className={styles.contentTecSingle} onClick={() => route.push("/com/Node")}>
@@ -217,7 +229,11 @@ export default function Galaxy(props: galaxy){
 
         {mobile ? (
             <div className={styles.geralContentGlobal}>
-                <div className={styles.stars}></div>
+                {/* <div className={styles.stars}></div> */}
+
+                <div className={stars.starsWrapper}>
+                    <div className={stars.stars}></div>
+                </div>
                 
                 <div className={styles.geralContentLeft}>
                     <div className={styles.contentTecSingle} onClick={() => route.push("/com/Flutter")}>
