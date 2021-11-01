@@ -44,38 +44,42 @@ export default function Com(props: idCommunitie) {
     return (
         <div className={styles.content}>
             <Topbar />
-            <div className={styles.contentBarTitle}>
-                <div>
-                    <h2>Planeta {idcom}</h2>
-                </div>
-                <div className={styles.contentPosts}>
-                    <h2>{publisList?.length} postagens</h2>
-                </div>
-            </div>
-            <div className={styles.divRow}>
-                <div className={styles.row}></div><Image src={astroMyRocket} height={150} width={150} alt="Astro" /><div className={styles.row}></div>
-            </div>
-            <div className={styles.contentMembersAndAddPost}>
-                <CommunityMembers linkComuList={idcom} showAdmin>
-                    <div className={styles.contentMembers}>
-                        {profileList.map((prof) => {
-                            if (prof.firstComum == idcom || prof.secondComum == idcom || prof.thirdComum == idcom) {
-                                return(
-                                    <div className={styles.contentMembersIntoComum}>
-                                        <Image alt="user image" src={prof.image} width={30} height={30}/>
-                                        <p key={prof.name}>{prof.name}</p> 
-                                    </div>
-                                )
-                            }
-                        })}
+
+            <div className={styles.communityContent}>
+                <div className={styles.contentBarTitle}>
+                    <div>
+                        <h2>Planeta {idcom}</h2>
                     </div>
-                </CommunityMembers>
-                <AddPost linkComu={idcom} name={user ? user?.name : "Faça login para fazer parte da comunidade"} />
-                <CommunityMembers linkComuList={idcom} showAdmin={false} />
+                    <div className={styles.contentPosts}>
+                        <h2>{publisList?.length} postagens</h2>
+                    </div>
+                </div>
+                <div className={styles.divRow}>
+                    <div className={styles.row}></div><Image src={astroMyRocket} height={150} width={150} alt="Astro" /><div className={styles.row}></div>
+                </div>
+                <div className={styles.contentMembersAndAddPost}>
+                    <CommunityMembers linkComuList={idcom} showAdmin>
+                        <div className={styles.contentMembers}>
+                            {profileList.map((prof) => {
+                                if (prof.firstComum == idcom || prof.secondComum == idcom || prof.thirdComum == idcom) {
+                                    return(
+                                        <div className={styles.contentMembersIntoComum}>
+                                            <Image alt="user image" src={prof.image} width={30} height={30}/>
+                                            <p key={prof.name}>{prof.name}</p> 
+                                        </div>
+                                    )
+                                }
+                            })}
+                        </div>
+                    </CommunityMembers>
+                    <AddPost linkComu={idcom} name={user ? user?.name : "Faça login para fazer parte da comunidade"} />
+                    <CommunityMembers linkComuList={idcom} showAdmin={false} />
+                </div>
+                <div className={styles.contentBodyPosts}>
+                    <ListPublis linkComuList={idcom} />
+                </div>
             </div>
-            <div className={styles.contentBodyPosts}>
-                <ListPublis linkComuList={idcom} />
-            </div>
+ 
         </div>
     )
 }

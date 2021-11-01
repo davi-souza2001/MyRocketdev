@@ -24,6 +24,7 @@ import flutterImg from "../assets/img/mobile/flutter.svg";
 import ionicImg from "../assets/img/mobile/ionic.svg";
 import swiftImg from "../assets/img/mobile/swift.svg";
 
+/* import StarfieldAnimation from "react-starfield-animation"; */
 
 interface galaxy {
 
@@ -55,7 +56,15 @@ export default function Galaxy(props: galaxy){
         <Topbar/>
         {modal ? (
         <div className={styles.optionsGeral}>
-            <div className={styles.stars}/>
+            <div className={styles.stars} />
+            
+            {/* <StarfieldAnimation
+                style={{
+                position: 'absolute',
+                width: '100%',
+                height: '100%'
+                }}
+            /> */}
         
             <div className={styles.galaxy}>
                 <h1>Front-End</h1>
@@ -76,7 +85,7 @@ export default function Galaxy(props: galaxy){
 
         {front ? (
             <div className={styles.geralContentGlobal}>
-                <div className={styles.stars}/>
+                <div className={styles.stars} />
 
                 <div className={styles.geralContentLeft}>
                     <div className={styles.contentTecSingle} onClick={() => route.push("/com/React")}>
@@ -92,49 +101,49 @@ export default function Galaxy(props: galaxy){
                         <Image src={vueImg} alt="logo"/>
                     </div>
                 </div>
-                    <div className={styles.geral}>
-                        <div className={styles.sun}></div>
+                <div className={styles.geral}>
+                    <div className={styles.sun}></div>
 
-                        <div className={styles.mercuryOutline}>
-                            <div className={styles.mercury}>
-                                <p>React</p>
-                            </div>
+                    <div className={styles.mercuryOutline}>
+                        <div className={styles.mercury}>
+                            <p>React</p>
                         </div>
-
-                        <div className={styles.venusOutline}>
-                            <div className={styles.venus}>
-                                <p>Angular</p>
-                            </div>
-                        </div>
-
-                        <div className={styles.earthOutline}>
-                            <div className={styles.earth}>
-                                <p>Vue</p>
-                            </div>
-                        </div>
-
-                        <div className={styles.marsOutline}>
-                            <div className={styles.mars}>
-                                <p>Next</p>
-                            </div>
-                        </div>
-
-                        <div className={styles.jupiterOutline}>
-                            <div className={styles.jupiter}>
-                                <p>Ember</p>
-                            </div>
-                        </div>
-                    
                     </div>
-                    <div className={styles.geralContentRight}>
-                        <div className={styles.contentTecSingle} onClick={() => route.push("/com/Next")}>
-                            <h2>Next</h2>
-                            <Image src={nextImg} alt="logo"/>
+
+                    <div className={styles.venusOutline}>
+                        <div className={styles.venus}>
+                            <p>Angular</p>
                         </div>
-                        <div className={styles.contentTecSingle} onClick={() => route.push("/com/Ember")}>
-                            <h2>Ember</h2>
-                            <Image src={emberImg} alt="logo"/>
+                    </div>
+
+                    <div className={styles.earthOutline}>
+                        <div className={styles.earth}>
+                            <p>Vue</p>
                         </div>
+                    </div>
+
+                    <div className={styles.marsOutline}>
+                        <div className={styles.mars}>
+                            <p>Next</p>
+                        </div>
+                    </div>
+
+                    <div className={styles.jupiterOutline}>
+                        <div className={styles.jupiter}>
+                            <p>Ember</p>
+                        </div>
+                    </div>
+                
+                </div>
+                <div className={styles.geralContentRight}>
+                    <div className={styles.contentTecSingle} onClick={() => route.push("/com/Next")}>
+                        <h2>Next</h2>
+                        <Image src={nextImg} alt="logo"/>
+                    </div>
+                    <div className={styles.contentTecSingle} onClick={() => route.push("/com/Ember")}>
+                        <h2>Ember</h2>
+                        <Image src={emberImg} alt="logo"/>
+                    </div>
                 </div>
             </div>
         ): false} 

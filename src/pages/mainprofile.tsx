@@ -81,8 +81,8 @@ export default function MainProfile() {
                             <Image src={prof.image || Austroone} height={999} width={999} alt="Foto de Perfil"></Image>
                             <div className={styles.contentUser}>
                                 <div className={styles.config}>
-                                <h3>{prof.name}</h3>
-                                <p onClick={() => setModal(true)}>Editar</p>
+                                    <h3>{prof.name}</h3>
+                                    <p onClick={() => setModal(true)}>Editar</p>
                                 </div>
                                 <p>@{prof.userName}</p>
                                 <p>{prof.dev} em {prof.local}</p>

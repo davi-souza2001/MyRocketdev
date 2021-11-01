@@ -1,6 +1,9 @@
 .content{
     font-family: 'poppins', sans-serif;
-    overflow: hidden;
+}
+
+.communityContent{
+    overflow: visible;
 }
 
 .contentBarTitle{

@@ -30,9 +30,10 @@ export default function Search(Props: searchProps){
         <div className={styles.searchContent}>
             <Topbar/>
             <div className={styles.inputContent}>
-                    <div className={styles.boxInput}>
-                        <input type="text" className={styles.input} value={profSearch} onChange={(e) => setProfSearch(e.target.value)} placeholder="Ache aqui o astronauta que você procura"/>
-                    </div>
+                <div className={styles.boxInput}>
+                    <input type="text" className={styles.input} value={profSearch} onChange={(e) => setProfSearch(e.target.value)} placeholder="Ache aqui o astronauta que você procura"/>
+                </div>
+
                 <div className={styles.profilesContent}>
                     {renderProfiles()}
                 </div>

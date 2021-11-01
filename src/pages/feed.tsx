@@ -53,19 +53,27 @@ export default function MainPage(props: MainPage) {
         setShowFirst(true);
         setShowSecond(false);
         setShowThird(false);
-       
+        document.getElementById("box1").style.backgroundColor = "#1613B2"
+        document.getElementById("box2").style.backgroundColor = "#3936EB"
+        document.getElementById("box3").style.backgroundColor = "#3936EB"
     }
 
     function showFeedSecond(){
         setShowFirst(false);
         setShowSecond(true);
         setShowThird(false);
+        document.getElementById("box1").style.backgroundColor = "#3936EB"
+        document.getElementById("box2").style.backgroundColor = "#1613B2"
+        document.getElementById("box3").style.backgroundColor = "#3936EB"
     }
 
     function showFeedThird(){
         setShowFirst(false);
         setShowSecond(false);
         setShowThird(true);
+        document.getElementById("box1").style.backgroundColor = "#3936EB"
+        document.getElementById("box2").style.backgroundColor = "#3936EB"
+        document.getElementById("box3").style.backgroundColor = "#1613B2"
     }
 
     return (
@@ -75,16 +83,16 @@ export default function MainPage(props: MainPage) {
                 {first && user ? (
                     <>
                         <div className={styles.contentTitle}>
-                            <h2>Posts recentes da Comunidade</h2>
+                            <span>Posts recentes da Comunidade</span>
                         </div>
                         <div className={styles.contentFeedName}>
-                            <div className={styles.boxNameFeed} onClick={showFeedFirst}>
+                            <div className={styles.boxNameFeed} id="box1" onClick={showFeedFirst}>
                                 {first}
                             </div>
-                            <div className={styles.boxNameFeed} onClick={showFeedSecond}>
+                            <div className={styles.boxNameFeed} id="box2" onClick={showFeedSecond}>
                                 {second}
                             </div>
-                            <div className={styles.boxNameFeed} onClick={showFeedThird}>
+                            <div className={styles.boxNameFeed} id="box3" onClick={showFeedThird}>
                                 {third}
                             </div>
                         </div>
