@@ -17,7 +17,8 @@ process.env.
 ...
 ## Falta
 
-### Colocar titulo da pagina na aba
+### Colocar titulo da pagina na aba;
+### Mudar o form do perfil
 ### Função dar like;
 ### Função de reunião;
 
