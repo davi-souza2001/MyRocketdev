@@ -1,7 +1,10 @@
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import firebase from "../firebase/config";
 import useAuth from "../data/hook/useAuth";
 import useProfile from "../data/hook/useProfile";
+
+import edit from "../assets/img/editar.png";
 
 import styles from "../styles/ModalEditProfile.module.css";
 
@@ -88,92 +91,99 @@ export default function ModalEditProfile(props: ModalEditProfile) {
 
     return (
         <div className={styles.contentGeral}>
-            <div className={styles.contentForms}>
-                <form>
-                    <input type="text" placeholder="Digite seu nome publico" value={name} onChange={(e) => setName(e.target.value)} />
-                    <input type="text" placeholder="Digite seu @ no qual as pessoas vão procurar você" value={userName} onChange={(e) => setUserName(e.target.value)} />
-                    <input type="text" placeholder="Digite seu @ no Linkedin" value={linkedin} onChange={(e) => setLinkedin(e.target.value)} />
-                    <input type="text" placeholder="Digite seu @ no Github" value={github} onChange={(e) => setGithub(e.target.value)} />
-                    <input type="text" placeholder="Digite seu @ no Instagram" value={instagram} onChange={(e) => setInstagram(e.target.value)} />
-                    <input type="text" placeholder="Digite seu @ no Youtube" value={youtube} onChange={(e) => setYoutube(e.target.value)} />
-                    <select  onChange={(e) => setDev(e.target.value)} value={dev}>
-                        <option defaultValue="Senioridade" >--Senioridade--</option>
-                        <option value="Front-End">Front-End</option>
-                        <option value="Back-End">Back-End</option>
-                        <option value="Full-Stack">Full-Stack</option>
-                        <option value="Mobile">Mobile</option>
-                        <option value="Dados">Dados</option>
-                        <option value="IOS">IOS</option>
-                        <option value="Android">Android</option>
-                    </select>
-                    <select required onChange={(e) => setFirstComum(e.target.value)} value={firstComum} className={styles.contentComum}>
-                        <option defaultValue="Senioridade">--Front-End--</option>
-                        <option value="React">ReactJs</option>
-                        <option value="Angular">AngularJs</option>
-                        <option value="Vue">Vuejs</option>
-                        <option value="Next">NextJs</option>
-                        <option value="Ember">Ember</option>
-                        <option defaultValue="Senioridade">--Back-End--</option>
-                        <option value="Node">NodeJs</option>
-                        <option value="Mongo">MongoDb</option>
-                        <option value="Sql">Sql</option>
-                        <option value="Firebase">Firebase</option>
-                        <option value="CSharp">CSharp</option>
-                        <option value="Java">Java</option>
-                        <option defaultValue="Senioridade">--Mobile--</option>
-                        <option value="React-Native">React-Native</option>
-                        <option value="Flutter">Flutter</option>
-                        <option value="Swift">Swift</option>
-                        <option value="Ionic">Ionic</option>
-                    </select>
-                    <select  onChange={(e) => setSecondComum(e.target.value)} value={secondComum} className={styles.contentComum}>
-                        <option defaultValue="Senioridade">--Front-End--</option>
-                        <option value="React">ReactJs</option>
-                        <option value="Angular">AngularJs</option>
-                        <option value="Vue">Vuejs</option>
-                        <option value="Next">NextJs</option>
-                        <option value="Ember">Ember</option>
-                        <option defaultValue="Senioridade">--Back-End--</option>
-                        <option value="Node">NodeJs</option>
-                        <option value="Mongo">MongoDb</option>
-                        <option value="Sql">Sql</option>
-                        <option value="Firebase">Firebase</option>
-                        <option value="CSharp">CSharp</option>
-                        <option value="Java">Java</option>
-                        <option defaultValue="Senioridade">--Mobile--</option>
-                        <option value="React-Native">React-Native</option>
-                        <option value="Flutter">Flutter</option>
-                        <option value="Swift">Swift</option>
-                        <option value="Ionic">Ionic</option>
-                    </select>
-                    <select  onChange={(e) => setThirdComum(e.target.value)} value={thirdComum} className={styles.contentComum}>
-                        <option defaultValue="Senioridade">--Front-End--</option>
-                        <option value="React">ReactJs</option>
-                        <option value="Angular">AngularJs</option>
-                        <option value="Vue">Vuejs</option>
-                        <option value="Next">NextJs</option>
-                        <option value="Ember">Ember</option>
-                        <option defaultValue="Senioridade">--Back-End--</option>
-                        <option value="Node">NodeJs</option>
-                        <option value="Mongo">MongoDb</option>
-                        <option value="Sql">Sql</option>
-                        <option value="Firebase">Firebase</option>
-                        <option value="CSharp">CSharp</option>
-                        <option value="Java">Java</option>
-                        <option defaultValue="Senioridade">--Mobile--</option>
-                        <option value="React-Native">React-Native</option>
-                        <option value="Flutter">Flutter</option>
-                        <option value="Swift">Swift</option>
-                        <option value="Ionic">Ionic</option>
-                    </select>
-                    <input required type="text" placeholder="Adicione uma descrição sobre você" value={description} onChange={(e) => setDescription(e.target.value)} />
-                    <input required type="text" placeholder="De qual estado você é ?" value={local} onChange={(e) => setLocal(e.target.value)} />
-                    <button type="submit" className={styles.buttonSubmit} onClick={editProfile}>Editar</button>
-                    <div className={styles.modalActivity} onClick={props.modalActivity}>
-                        <h3>Cancelar</h3>
+            <div className={styles.bckgdForms} onClick={props.modalActivity}/>
+                <div className={styles.forms}>
+                    <div className={styles.editImg}>
+                        <Image src={edit} height={60} width={75}/>
                     </div>
-                </form>
-            </div>
+                
+                    <form>
+                        <input type="text" placeholder="Digite seu nome publico" value={name} onChange={(e) => setName(e.target.value)} />
+                        <input type="text" placeholder="Digite seu @ no qual as pessoas vão procurar você" value={userName} onChange={(e) => setUserName(e.target.value)} />
+                        <input type="text" placeholder="Digite seu @ no Linkedin" value={linkedin} onChange={(e) => setLinkedin(e.target.value)} />
+                        <input type="text" placeholder="Digite seu @ no Github" value={github} onChange={(e) => setGithub(e.target.value)} />
+                        <input type="text" placeholder="Digite seu @ no Instagram" value={instagram} onChange={(e) => setInstagram(e.target.value)} />
+                        <input type="text" placeholder="Digite seu @ no Youtube" value={youtube} onChange={(e) => setYoutube(e.target.value)} />
+                        <select  onChange={(e) => setDev(e.target.value)} value={dev}>
+                            <option defaultValue="Senioridade" >--Senioridade--</option>
+                            <option value="Front-End">Front-End</option>
+                            <option value="Back-End">Back-End</option>
+                            <option value="Full-Stack">Full-Stack</option>
+                            <option value="Mobile">Mobile</option>
+                            <option value="Dados">Dados</option>
+                            <option value="IOS">IOS</option>
+                            <option value="Android">Android</option>
+                        </select>
+                        <select required onChange={(e) => setFirstComum(e.target.value)} value={firstComum} className={styles.contentComum}>
+                            <option defaultValue="Senioridade">--Front-End--</option>
+                            <option value="React">ReactJs</option>
+                            <option value="Angular">AngularJs</option>
+                            <option value="Vue">Vuejs</option>
+                            <option value="Next">NextJs</option>
+                            <option value="Ember">Ember</option>
+                            <option defaultValue="Senioridade">--Back-End--</option>
+                            <option value="Node">NodeJs</option>
+                            <option value="Mongo">MongoDb</option>
+                            <option value="Sql">Sql</option>
+                            <option value="Firebase">Firebase</option>
+                            <option value="CSharp">CSharp</option>
+                            <option value="Java">Java</option>
+                            <option defaultValue="Senioridade">--Mobile--</option>
+                            <option value="React-Native">React-Native</option>
+                            <option value="Flutter">Flutter</option>
+                            <option value="Swift">Swift</option>
+                            <option value="Ionic">Ionic</option>
+                        </select>
+                        <select  onChange={(e) => setSecondComum(e.target.value)} value={secondComum} className={styles.contentComum}>
+                            <option defaultValue="Senioridade">--Front-End--</option>
+                            <option value="React">ReactJs</option>
+                            <option value="Angular">AngularJs</option>
+                            <option value="Vue">Vuejs</option>
+                            <option value="Next">NextJs</option>
+                            <option value="Ember">Ember</option>
+                            <option defaultValue="Senioridade">--Back-End--</option>
+                            <option value="Node">NodeJs</option>
+                            <option value="Mongo">MongoDb</option>
+                            <option value="Sql">Sql</option>
+                            <option value="Firebase">Firebase</option>
+                            <option value="CSharp">CSharp</option>
+                            <option value="Java">Java</option>
+                            <option defaultValue="Senioridade">--Mobile--</option>
+                            <option value="React-Native">React-Native</option>
+                            <option value="Flutter">Flutter</option>
+                            <option value="Swift">Swift</option>
+                            <option value="Ionic">Ionic</option>
+                        </select>
+                        <select  onChange={(e) => setThirdComum(e.target.value)} value={thirdComum} className={styles.contentComum}>
+                            <option defaultValue="Senioridade">--Front-End--</option>
+                            <option value="React">ReactJs</option>
+                            <option value="Angular">AngularJs</option>
+                            <option value="Vue">Vuejs</option>
+                            <option value="Next">NextJs</option>
+                            <option value="Ember">Ember</option>
+                            <option defaultValue="Senioridade">--Back-End--</option>
+                            <option value="Node">NodeJs</option>
+                            <option value="Mongo">MongoDb</option>
+                            <option value="Sql">Sql</option>
+                            <option value="Firebase">Firebase</option>
+                            <option value="CSharp">CSharp</option>
+                            <option value="Java">Java</option>
+                            <option defaultValue="Senioridade">--Mobile--</option>
+                            <option value="React-Native">React-Native</option>
+                            <option value="Flutter">Flutter</option>
+                            <option value="Swift">Swift</option>
+                            <option value="Ionic">Ionic</option>
+                        </select>
+                        <input required className={styles.description} type="text" placeholder="Adicione uma descrição sobre você" value={description} onChange={(e) => setDescription(e.target.value)} />
+                        <input required type="text" placeholder="De qual estado você é ?" value={local} onChange={(e) => setLocal(e.target.value)} />
+                        <div className={styles.buttons}> 
+                            <button type="submit" className={styles.buttonSubmit} onClick={editProfile}><strong>Editar</strong></button>
+                            <div className={styles.modalActivity} onClick={props.modalActivity}>
+                                <h3>Cancelar</h3>
+                            </div>
+                        </div>
+                    </form>
+                </div>
         </div>
     )
 }

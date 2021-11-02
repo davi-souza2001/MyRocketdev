@@ -11,65 +11,111 @@
 }
 
 .contentGeral{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     position: absolute;
     width: 100vw;
     height: 93vh;
     z-index: 9999;
-    background-color: black;
-    opacity: 70%;
-    color: #fff;
+
 }
 
-.contentForms{
-    height: 93vh;
+.bckgdForms{
+    position: absolute;
     width: 100vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    animation-name: openModal;
-    animation-duration: 0.5s;
+    height: 93vh;
+    z-index: 1;
+    background-color: #000;
+    opacity: 70%;
+    cursor: pointer;
 }
 
-.contentForms form{
+.forms{
+    animation: openModal 0.5s;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    opacity: 100%;
+    width: 16vw;
+    height: 65vh;
+    border: 2px solid #3936EB;
+    border-radius: 20px;
+    background-color: #363636;
+}
+
+.editImg{
+    margin-bottom: 20px;
+}
+
+.forms form{
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    font-size: 120%;
     color: #fff;
 }
 
-.contentForms form input{
+.forms form input{
     height: 30px;
     width: 180px;
     margin-bottom: 8px;
-    background-color: #fff;
+    background-color: rgb(24, 24, 24);
+    color: #fff;
     border-radius: 5px;
     border: none;
     outline: none;
 }
 
-.contentForms form button{
-    height: 30px;
-    width: 100px;
-    background-color: #fff;
+.forms form select{
+    margin-bottom: 8px;
+    background-color: rgb(24, 24, 24);
+    border-radius: 5px;  
+    border: none;
+    padding: 3px;
+    color: #fff; 
+}
+
+.forms form button{
+    height: 35px;
+    width: 90px;
+    font-size: 18px;
+    background-color: #3936EB;
+    color: #fff;
     border-radius: 5px;
     border: none;
     outline: none;
     cursor: pointer;
     transition: 0.2s;
+    margin-right: 4px;
 }
 
-.contentForms form button:hover{
-    background-color: #12107c;
-    color: #fff;
+.forms form button:hover{
+    transform: scale(1.1);
 }
 
 .modalActivity{
-    margin-top: 10px;
     padding: 5px;
-    background-color: #FF393F;
+    background-color: #ff0008;
     border-radius: 5px;
     cursor: pointer;
+    margin-left: 4px;
+    transition: 0.2s;
 }
 
+.modalActivity:hover{
+    transform: scale(1.1);
+}
+
+.buttons{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}

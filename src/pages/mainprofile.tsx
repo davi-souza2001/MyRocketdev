@@ -16,6 +16,8 @@ import github from "../assets/img/socialimgs/github.svg";
 import instagram from "../assets/img/socialimgs/instagram.svg";
 import youtube from "../assets/img/socialimgs/youtube.svg";
 
+import edit from "../assets/img/editar.png";
+
 import styles from "../styles/ContentMainProfile.module.css";
 
 
@@ -78,11 +80,13 @@ export default function MainProfile() {
                             <Image src={AstroLike} alt="Astronauta dando like" height={200} width={200} />
                         </div>
                         <div className={styles.imgProfileUser}>
-                            <Image src={prof.image || Austroone} height={999} width={999} alt="Foto de Perfil"></Image>
+                            <div className={styles.userImg}>
+                                <Image className={styles.image} src={prof.image || Austroone} height={200} width={200} alt="Foto de Perfil"></Image>
+                            </div>
                             <div className={styles.contentUser}>
                                 <div className={styles.config}>
                                     <h3>{prof.name}</h3>
-                                    <p onClick={() => setModal(true)}>Editar</p>
+                                    <p onClick={() => setModal(true)}>Editar <Image className={styles.editImg} src={edit} height={15} width={20}/></p>                                    
                                 </div>
                                 <p>@{prof.userName}</p>
                                 <p>{prof.dev} em {prof.local}</p>
@@ -113,10 +117,12 @@ export default function MainProfile() {
                         <div className={styles.socialMediasArea}>
                             <h3>Redes Sociais</h3>
                             <div className={styles.socialMedias}>
-                                {prof.linkedin ? <p onClick={() => route.push(`https://www.linkedin.com/in/${prof.linkedin}/`)} className={styles.socialMedia}><Image src={linkedin} alt="linkedin" height={25} width={25}/> {prof.linkedin}</p> : false}
-                                {prof.github ? <p onClick={() => route.push(`https://github.com/${prof.github}`)} className={styles.socialMedia}><Image src={github} alt="github" height={25} width={25} /> {prof.github}</p> : false}
-                                {prof.instagram ? <p onClick={() => route.push(`https://www.instagram.com/${prof.instagram}/`)} className={styles.socialMedia}><Image src={instagram} alt="instagram" height={25} width={25} /> {prof.instagram}</p> : false}
-                                {prof.youtube ? <p onClick={() => route.push(`https://www.youtube.com/user/${prof.youtube}`)} className={styles.socialMedia}><Image src={youtube} alt="youtube" height={25} width={25} /> {prof.youtube}</p> : false}
+                                <div className={styles.leftContent}>
+                                    {prof.linkedin ? <p onClick={() => route.push(`https://www.linkedin.com/in/${prof.linkedin}/`)} className={styles.socialMedia}><Image src={linkedin} alt="linkedin" height={25} width={25}/> {prof.linkedin}</p> : false}
+                                    {prof.github ? <p onClick={() => route.push(`https://github.com/${prof.github}`)} className={styles.socialMedia}><Image src={github} alt="github" height={25} width={25} /> {prof.github}</p> : false}
+                                    {prof.instagram ? <p onClick={() => route.push(`https://www.instagram.com/${prof.instagram}/`)} className={styles.socialMedia}><Image src={instagram} alt="instagram" height={25} width={25} /> {prof.instagram}</p> : false}
+                                    {prof.youtube ? <p onClick={() => route.push(`https://www.youtube.com/user/${prof.youtube}`)} className={styles.socialMedia}><Image src={youtube} alt="youtube" height={25} width={25} /> {prof.youtube}</p> : false}
+                                </div>
                             </div>
                         </div>
                     </div>
