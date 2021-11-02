@@ -99,6 +99,20 @@
     animation:orbit2 8s linear infinite;
 }
 
+.mercury2{
+    display: flex;
+    justify-content: center;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    position: absolute;
+    left: 43%;
+    top: 42%;
+    background-color: #61DAFB;
+    transform: translate(-50%,-50%);
+    animation: orbit2 1s linear infinite;
+}
+
 .venusOutline{
     height: 270px;
     width: 270px;

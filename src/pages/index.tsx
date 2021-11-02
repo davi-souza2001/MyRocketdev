@@ -51,6 +51,16 @@ export default function Galaxy(props: galaxy){
         setMobile(true);
     }
 
+    function planetGlow(pId){
+        document.getElementById(pId).style.boxShadow = "0px 0px 20px 10px #fff";
+        document.getElementById(pId).style.transition = "0.2s";
+    }
+
+    function planetUnglow(pId){
+        document.getElementById(pId).style.boxShadow = "0px 0px 0px ";
+        document.getElementById(pId).style.transition = "0.2s";
+    }
+
     return (
     <>
         <Topbar/>
@@ -87,15 +97,15 @@ export default function Galaxy(props: galaxy){
                 </div>
 
                 <div className={styles.geralContentLeft}>
-                    <div className={styles.contentTecSingle} onClick={() => route.push("/com/React")}>
+                    <div className={styles.contentTecSingle} onClick={() => route.push("/com/React")} onMouseOver={() => planetGlow("pReact")} onMouseOut={() => planetUnglow("pReact")}>
                         <h2 className={styles.react}>React</h2>
                         <Image src={reactImg} alt="logo"/>
                     </div>
-                    <div className={styles.contentTecSingle} onClick={() => route.push("/com/Angular")}>
+                    <div className={styles.contentTecSingle} onClick={() => route.push("/com/Angular")} onMouseOver={() => planetGlow("pAngular")} onMouseOut={() => planetUnglow("pAngular")}>
                         <h2 className={styles.angular}>Angular</h2>
                         <Image src={angularImg} alt="logo"/>
                     </div>
-                    <div className={styles.contentTecSingle} onClick={() => route.push("/com/Vue")}>
+                    <div className={styles.contentTecSingle} onClick={() => route.push("/com/Vue")} onMouseOver={() => planetGlow("pVue")} onMouseOut={() => planetUnglow("pVue")}>
                         <h2 className={styles.vue}>Vue</h2>
                         <Image src={vueImg} alt="logo"/>
                     </div>
@@ -104,42 +114,42 @@ export default function Galaxy(props: galaxy){
                     <div className={styles.sun}></div>
 
                     <div className={styles.mercuryOutline}>
-                        <div className={styles.mercury}>
+                        <div id="pReact" className={styles.mercury}>
                             <Image src={reactImg} alt="logo"/>
                         </div>
                     </div>
 
                     <div className={styles.venusOutline}>
-                        <div className={styles.venus}>
+                        <div id="pAngular" className={styles.venus}>
                             <Image src={angularImg} alt="logo"/>
                         </div>
                     </div>
 
                     <div className={styles.earthOutline}>
-                        <div className={styles.earth}>
+                        <div id="pVue" className={styles.earth}>
                             <Image src={vueImg} alt="logo"/>
                         </div>
                     </div>
 
                     <div className={styles.marsOutline}>
-                        <div className={styles.mars}>
+                        <div id="pNext" className={styles.mars}>
                             <Image src={nextImg} width={18} alt="logo"/>
                         </div>
                     </div>
 
                     <div className={styles.jupiterOutline}>
-                        <div className={styles.jupiter}>
+                        <div id="pEmber" className={styles.jupiter}>
                             <Image src={emberImg} width={18} alt="logo"/>
                         </div>
                     </div>
                 
                 </div>
                 <div className={styles.geralContentRight}>
-                    <div className={styles.contentTecSingle} onClick={() => route.push("/com/Next")}>
+                    <div className={styles.contentTecSingle} onClick={() => route.push("/com/Next")} onMouseOver={() => planetGlow("pNext")} onMouseOut={() => planetUnglow("pNext")}>
                         <h2 className={styles.next}>Next</h2>
                         <Image src={nextImg} alt="logo"/>
                     </div>
-                    <div className={styles.contentTecSingle} onClick={() => route.push("/com/Ember")}>
+                    <div className={styles.contentTecSingle} onClick={() => route.push("/com/Ember")} onMouseOver={() => planetGlow("pEmber")} onMouseOut={() => planetUnglow("pEmber")}>
                         <h2 className={styles.ember}>Ember</h2>
                         <Image src={emberImg} alt="logo"/>
                     </div>
@@ -156,15 +166,15 @@ export default function Galaxy(props: galaxy){
                 </div>
 
                 <div className={styles.geralContentLeft}>
-                    <div className={styles.contentTecSingle} onClick={() => route.push("/com/Node")}>
+                    <div className={styles.contentTecSingle} onClick={() => route.push("/com/Node")} onMouseOver={() => planetGlow("pNode")} onMouseOut={() => planetUnglow("pNode")}>
                         <h2 className={styles.node}>Node</h2>
                         <Image src={nodeImg} alt="logo"/>
                     </div>
-                    <div className={styles.contentTecSingle} onClick={() => route.push("/com/Mongo")}>
+                    <div className={styles.contentTecSingle} onClick={() => route.push("/com/Mongo")} onMouseOver={() => planetGlow("pMongo")} onMouseOut={() => planetUnglow("pMongo")}>
                         <h2 className={styles.mongo}>Mongo</h2>
                         <Image src={mongoImg} alt="logo"/>
                     </div>
-                    <div className={styles.contentTecSingle} onClick={() => route.push("/com/Sql")}>
+                    <div className={styles.contentTecSingle} onClick={() => route.push("/com/Sql")} onMouseOver={() => planetGlow("pSql")} onMouseOut={() => planetUnglow("pSql")}>
                         <h2 className={styles.sql}>Sql</h2>
                         <Image src={sqlImg} alt="logo"/>
                     </div>
@@ -173,51 +183,51 @@ export default function Galaxy(props: galaxy){
                 <div className={styles.sun}></div>
 
                 <div className={styles.mercuryOutline}>
-                    <div className={styles.mercury} style={{backgroundColor: "#339933"}}>
+                    <div id="pNode" className={styles.mercury} style={{backgroundColor: "#339933"}}>
                         <Image src={nodeImg} alt="logo"/>
                     </div>
                 </div>
 
                 <div className={styles.venusOutline}>
-                    <div className={styles.venus} style={{backgroundColor: "#47A248"}}>
+                    <div id="pMongo" className={styles.venus} style={{backgroundColor: "#47A248"}}>
                         <Image src={mongoImg} alt="logo"/>
                     </div>
                 </div>
 
                 <div className={styles.earthOutline}>
-                    <div className={styles.earth} style={{backgroundColor: "#4479A1"}}>
+                    <div id="pSql" className={styles.earth} style={{backgroundColor: "#4479A1"}}>
                         <Image src={sqlImg} alt="logo"/>
                     </div>
                 </div>
 
                 <div className={styles.marsOutline}>
-                    <div className={styles.mars} style={{backgroundColor: "#FFCA28"}}>
+                    <div id="pFirebase" className={styles.mars} style={{backgroundColor: "#FFCA28"}}>
                         <Image src={firebaseImg} alt="logo"/>
                     </div>
                 </div>
 
                 <div className={styles.jupiterOutline}>
-                    <div className={styles.jupiter} style={{backgroundColor: "#239120"}}>
+                    <div id="pCsharp" className={styles.jupiter} style={{backgroundColor: "#239120"}}>
                         <Image src={csharpImg} width={18} alt="logo"/>
                     </div>
                 </div>
 
                 <div className={styles.saturnOutline}>
-                    <div className={styles.saturn} style={{backgroundColor: "#007396"}}>
+                    <div id="pJava" className={styles.saturn} style={{backgroundColor: "#007396"}}>
                         <Image src={javaImg} alt="logo"/>
                     </div>
                 </div>
 
                 <div className={styles.geralContentRight}>
-                        <div className={styles.contentTecSingle} onClick={() => route.push("/com/Firebase")}>
+                        <div className={styles.contentTecSingle} onClick={() => route.push("/com/Firebase")} onMouseOver={() => planetGlow("pFirebase")} onMouseOut={() => planetUnglow("pFirebase")}>
                             <h2 className={styles.firebase}>Firebase</h2>
                             <Image src={firebaseImg} alt="logo"/>
                         </div>
-                        <div className={styles.contentTecSingle} onClick={() => route.push("/com/CSharp")}>
+                        <div className={styles.contentTecSingle} onClick={() => route.push("/com/CSharp")} onMouseOver={() => planetGlow("pCsharp")} onMouseOut={() => planetUnglow("pCsharp")}>
                             <h2 className={styles.csharp}>C#</h2>
                             <Image src={csharpImg} alt="logo"/>
                         </div>
-                        <div className={styles.contentTecSingle} onClick={() => route.push("/com/Java")}>
+                        <div className={styles.contentTecSingle} onClick={() => route.push("/com/Java")} onMouseOver={() => planetGlow("pJava")} onMouseOut={() => planetUnglow("pJava")}>
                             <h2 className={styles.java}>Java</h2>
                             <Image src={javaImg} alt="logo"/>
                         </div>
@@ -236,11 +246,11 @@ export default function Galaxy(props: galaxy){
                 </div>
                 
                 <div className={styles.geralContentLeft}>
-                    <div className={styles.contentTecSingle} onClick={() => route.push("/com/Flutter")}>
+                    <div className={styles.contentTecSingle} onClick={() => route.push("/com/Flutter")} onMouseOver={() => planetGlow("pFlutter")} onMouseOut={() => planetUnglow("pFlutter")}>
                         <h2 className={styles.flutter}>Flutter</h2>
                         <Image src={flutterImg} alt="logo"/>
                     </div>
-                    <div className={styles.contentTecSingle} onClick={() => route.push("/com/Ionic")}>
+                    <div className={styles.contentTecSingle} onClick={() => route.push("/com/Ionic")} onMouseOver={() => planetGlow("pIonic")} onMouseOut={() => planetUnglow("pIonic")}>
                         <h2 className={styles.ionic}>Ionic</h2>
                         <Image src={ionicImg} alt="logo"/>
                     </div>
@@ -249,35 +259,35 @@ export default function Galaxy(props: galaxy){
                 <div className={styles.sun}></div>
 
                 <div className={styles.mercuryOutline}>
-                    <div className={styles.mercury} style={{backgroundColor: "#3880FF"}}>
+                    <div id="pIonic" className={styles.mercury} style={{backgroundColor: "#3880FF"}}>
                         <Image src={ionicImg} alt="logo"/>
                     </div>
                 </div>
 
                 <div className={styles.venusOutline}>
-                    <div className={styles.venus} style={{backgroundColor: "#02569B"}}>
+                    <div id="pFlutter" className={styles.venus} style={{backgroundColor: "#02569B"}}>
                         <Image src={flutterImg} alt="logo"/>
                     </div>
                 </div>
 
                 <div className={styles.earthOutline}>
-                    <div className={styles.earth} style={{backgroundColor: "#FA7343"}}>
+                    <div id="pSwift" className={styles.earth} style={{backgroundColor: "#FA7343"}}>
                         <Image src={swiftImg} alt="logo"/>
                     </div>
                 </div>
 
                 <div className={styles.marsOutline}>
-                    <div className={styles.mars} style={{backgroundColor: "#61DAFB"}}>
+                    <div id="pReactN" className={styles.mars} style={{backgroundColor: "#61DAFB"}}>
                         <Image src={reactImg} alt="logo"/>
                     </div>
                 </div>
             
                 <div className={styles.geralContentRight}>
-                        <div className={styles.contentTecSingle} onClick={() => route.push("/com/React-Native")}>
+                        <div className={styles.contentTecSingle} onClick={() => route.push("/com/React-Native")} onMouseOver={() => planetGlow("pReactN")} onMouseOut={() => planetUnglow("pReactN")}>
                             <h3 className={styles.react}>React-Native</h3>
                             <Image src={reactImg} alt="logo"/>
                         </div>
-                        <div className={styles.contentTecSingle} onClick={() => route.push("/com/Swift")}>
+                        <div className={styles.contentTecSingle} onClick={() => route.push("/com/Swift")} onMouseOver={() => planetGlow("pSwift")} onMouseOut={() => planetUnglow("pSwift")}>
                             <h2 className={styles.swift}>Swift</h2>
                             <Image src={swiftImg} alt="logo"/>
                         </div>
