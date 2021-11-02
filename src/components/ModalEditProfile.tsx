@@ -177,7 +177,7 @@ export default function ModalEditProfile(props: ModalEditProfile) {
                         <input required className={styles.description} type="text" placeholder="Adicione uma descrição sobre você" value={description} onChange={(e) => setDescription(e.target.value)} />
                         <input required type="text" placeholder="De qual estado você é ?" value={local} onChange={(e) => setLocal(e.target.value)} />
                         <div className={styles.buttons}> 
-                            <button type="submit" className={styles.buttonSubmit} onClick={editProfile}><strong>Editar</strong></button>
+                            <button type="submit" className={styles.buttonSubmit} onClick={editProfile}><strong onClick={props.closeModal}>Editar</strong></button>
                             <div className={styles.modalActivity} onClick={props.modalActivity}>
                                 <h3>Cancelar</h3>
                             </div>

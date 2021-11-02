@@ -73,7 +73,7 @@ export default function MainProfile() {
             return (
                 <div className={styles.MainProfile} key={index}>
 
-                    {modal ? <ModalEditProfile modalActivity={() => setModal(false)} closeModal={() => console.log("asd")}
+                    {modal ? <ModalEditProfile modalActivity={() => setModal(false)} closeModal={() => setModal(false)}
                     /> : false}
                     <div className={styles.perfilHeader}>
                         <div className={styles.imgBackground}>
