@@ -35,6 +35,7 @@ export default function AddPost(props: AddPostProps) {
                 name
             }
             todoRef.push(list);
+            setPost("");
         } else{
             alert("Opa, parece que você ainda não fez seu login")
         }
