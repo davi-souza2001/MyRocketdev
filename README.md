@@ -18,8 +18,6 @@ process.env.
 ## Falta
 
 ### Colocar titulo da pagina na aba;
-### Limpar form no envio de post;
-### Alinhar fotos da comunidade;
 ### Função dar like;
 ### Função de texto na reunião;
 
