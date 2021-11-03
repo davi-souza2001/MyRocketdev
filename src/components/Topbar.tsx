@@ -36,19 +36,19 @@ export default function Topbar(props: TopbarProps) {
                 </div>
                 <div className={styles.iconstab}>
                     <div  onClick={() => route.push("/")}>
-                        <div><h3>Inicio</h3></div>
+                        <div><p>Inicio</p></div>
                     </div>
                     <div  onClick={() => route.push("/feed")}>
-                        <div><h3>Feed</h3></div>
+                        <div><p>Feed</p></div>
                     </div>
                     <div onClick={() => route.push("/search")}>
-                        <div><h3>Pesquisar</h3></div>
+                        <div><p>Pesquisar</p></div>
                     </div>
                     <div onClick={() => route.push("/meetings")}>
-                        <div><h3>Reuniões</h3></div>
+                        <div><p>Reuniões</p></div>
                     </div>
                     <div onClick={() => route.push("/mainprofile")}>
-                        <div><h3>Perfil</h3></div>
+                        <div><p>Perfil</p></div>
                     </div>
                 </div>
                 <div className={styles.usertab}>

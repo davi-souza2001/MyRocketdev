@@ -73,6 +73,15 @@
     opacity: 0.8;
 }
 
+.iconstab p{
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.iconstab p:hover{
+    opacity: 0.8;
+}
+
 .usertab{
     height: 7vh;
     width: 13vw;
