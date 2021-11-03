@@ -12,7 +12,7 @@ $height: 960;        // Height of the starfield
   overflow: hidden;
   position: absolute;
   z-index: -999;
-  background: #000;
+  background: transparent;
   perspective: 340px;
 }
 .stars {
