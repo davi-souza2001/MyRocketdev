@@ -18,9 +18,10 @@ process.env.
 ## Falta
 
 ### Colocar titulo da pagina na aba;
-### Mudar o form do perfil
+### Limpar form no envio de post;
+### Alinhar fotos da comunidade;
 ### Função dar like;
-### Função de reunião;
+### Função de texto na reunião;
 
 ## Regras de negocio
 
