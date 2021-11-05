@@ -3,7 +3,6 @@
 
 ## Building project... !
 
-env example
 `NEXT_PUBLIC_API_KEY=
 NEXT_PUBLIC_AUTH_DOMAIN=
 NEXT_PUBLIC_DATABASE_URL=
