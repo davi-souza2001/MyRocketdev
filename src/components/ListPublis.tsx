@@ -33,16 +33,15 @@ export default function ListPublis(props: ListPublisProps) {
     return (
         <>
             {publisList?.map(publis => {
-
-                for (let number in publis.likes) {
-                    if (publis.likes[number] == user?.email) {
+                for (let email in publis.likes) {
+                    if (publis.likes[email] == user?.email) {
                         return (<PostUser publi={publis.post}
                             name={publis.name}
                             imageUser={publis.photo}
                             trash={user?.email == publis.email ? true : false}
                             likeIcon={user ? true : false}
                             like={() => console.log("Ja foi")}
-                            likesCount={conterLikes}
+                            likesCount={Object.keys(publis.likes).length}
                             delete={() => firebase.database().ref(props.linkComuList).child(publis.id).remove()}
                             key={publis.id} />)
                     }
