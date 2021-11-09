@@ -11,6 +11,7 @@ interface PostUser {
     name: any;
     imageUser: any;
     trash: any;
+    like: any;
     delete: any;
 }
 
@@ -27,7 +28,7 @@ export default function PostUser(props: PostUser){
                         <h4>{props.name}</h4>
                     </div>
                     <div className={styles.contentIcons}>
-                        <div className={styles.icon}>
+                        <div className={styles.icon} onClick={props.like}>
                             {IconStar}
                         </div>
                         {trash ? (
