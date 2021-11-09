@@ -26,8 +26,7 @@ export default function Com(props: idCommunitie) {
     const { user } = useAuth();
     const { profileList } = useProfile();
 
-
-
+    /* const todoRef = firebase.database().ref(props.linkComu); */
 
     useEffect(() => {
         const todoRef = firebase.database().ref(idcom?.toString());

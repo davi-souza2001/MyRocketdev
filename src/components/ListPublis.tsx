@@ -9,34 +9,49 @@ interface ListPublisProps {
     linkComuList: any
 }
 
-export default function ListPublis(props: ListPublisProps){
+export default function ListPublis(props: ListPublisProps) {
     const { user } = useAuth();
     const [publisList, setPublisListList] = useState([]);
+    const [conterLikes, setCounterlikes] = useState(0);
 
     useEffect(() => {
         const todoRef = firebase.database().ref(props.linkComuList);
         todoRef.on('value', (snapshot) => {
-          const todos = snapshot.val();
-          const todoList = [];
-          for (let id in todos) {
-            todoList.push({ id, ...todos[id] });
-          }
-          setPublisListList(todoList);
+            const todos = snapshot.val();
+            const todoList = [];
+            for (let id in todos) {
+                todoList.push({ id, ...todos[id] });
+            }
+            setPublisListList(todoList);
         })
-      }, []);
+    }, []);
+
+    publisList?.map(publis => {
+        for (let number in publis.likes) {
+            console.log(publis.likes[number].author);
+            if(user?.email == publis.likes[number].author){
+                console.log("IGUAAAAAAAAL")
+            }
+        }
+    });
+
+    function setlike(id: String) {
+        firebase.database().ref(props.linkComuList).child(`${id}/likes`).push({ author: user?.email })
+    }
 
     return (
         <>
             {publisList?.map(publis => {
                 return (
-                    <PostUser publi={publis.post} 
-                    name={publis.name} 
-                    imageUser={publis.photo} 
-                    trash={user?.email == publis.email ? true : false} 
-                    likeIcon={user ? true : false}
-                    like={() => firebase.database().ref(props.linkComuList).child(`${publis.id}/likes`).push(user?.name)}
-                    delete={() => firebase.database().ref(props.linkComuList).child(publis.id).remove()}
-                    key={publis.id}/>
+                    <PostUser publi={publis.post}
+                        name={publis.name}
+                        imageUser={publis.photo}
+                        trash={user?.email == publis.email ? true : false}
+                        likeIcon={user ? true : false}
+                        like={() => setlike(publis.id)}
+                        likesCount={conterLikes}
+                        delete={() => firebase.database().ref(props.linkComuList).child(publis.id).remove()}
+                        key={publis.id} />
                 )
             })}
         </>

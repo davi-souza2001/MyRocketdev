@@ -13,12 +13,13 @@ interface PostUser {
     trash: any;
     likeIcon: any;
     like: any;
+    likesCount: Object;
     delete: any;
 }
 
 export default function PostUser(props: PostUser){
     const [trash, setTrash] = useState(props.trash);
-    const [likeIcon, setLikeIcon] = useState(props.likeIcon)
+    const [likeIcon, setLikeIcon] = useState(props.likeIcon);
 
     return (
         <div className={styles.contentGeral}>
@@ -34,9 +35,8 @@ export default function PostUser(props: PostUser){
                             <div className={styles.icon} onClick={props.like}>
                                 {IconStar}
                             </div>
-                        ): false
-
-                    }
+                        ): false}
+                        {props.likesCount}
                         {trash ? (
                             <div className={styles.icon} onClick={props.delete}>
                                 {IconTrash}
