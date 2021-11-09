@@ -12,6 +12,7 @@ interface ListPublisProps {
 export default function ListPublis(props: ListPublisProps) {
     const { user } = useAuth();
     const [publisList, setPublisListList] = useState([]);
+    const [permissionLike, setPermissionLike] = useState(true);
     const [conterLikes, setCounterlikes] = useState(0);
 
     useEffect(() => {
@@ -26,17 +27,23 @@ export default function ListPublis(props: ListPublisProps) {
         })
     }, []);
 
-    publisList?.map(publis => {
-        for (let number in publis.likes) {
-            console.log(publis.likes[number].author);
-            if(user?.email == publis.likes[number].author){
-                console.log("IGUAAAAAAAAL")
+    useEffect(() => {
+        publisList?.map(publis => {
+            for (let number in publis.likes) {
+                console.log(publis.likes[number].author);
+                if (user?.email == publis.likes[number].author) {
+                    setPermissionLike(false);
+                }
             }
-        }
-    });
+        });
+    }, [publisList]);
 
     function setlike(id: String) {
-        firebase.database().ref(props.linkComuList).child(`${id}/likes`).push({ author: user?.email })
+        if(permissionLike){
+            firebase.database().ref(props.linkComuList).child(`${id}/likes`).push({ author: user?.email })
+        } else{
+            console.log("Não pode")
+        }
     }
 
     return (
