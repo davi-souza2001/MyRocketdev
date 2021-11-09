@@ -11,8 +11,8 @@ interface PostUser {
     name: any;
     imageUser: any;
     trash: any;
-    likeIcon: any;
-    like: any;
+    likeIcon?: any;
+    like?: any;
     likesCount: Object;
     delete: any;
 }
