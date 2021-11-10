@@ -28,14 +28,14 @@ export default function ListPublis(props: ListPublisProps) {
     }, []);
 
     async function setlike(id: string) {
-       await firebase.database().ref(props.linkComuList).child(`${id}/likes`).push(user?.uid);
+       await firebase.database().ref(props.linkComuList).child(`${id}/likes`).push({authorId: user?.email});
     };
 
     return (
         <>
             {publisList?.map(publis => {
                 for (let email in publis.likes) {
-                    if (publis.likes[email] == user?.uid) {
+                    if (publis.likes[email].authorId == user?.email) {
                         return (
                             <PostUser publi={publis.post}
                                 name={publis.name}
