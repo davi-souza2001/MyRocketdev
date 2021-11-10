@@ -27,22 +27,22 @@ export default function ListPublis(props: ListPublisProps) {
         })
     }, []);
 
-    function setlike(id: string) {
-        firebase.database().ref(props.linkComuList).child(`${id}/likes`).push(user?.email);
+    async function setlike(id: string) {
+       await firebase.database().ref(props.linkComuList).child(`${id}/likes`).push(user?.uid);
     };
 
     return (
         <>
             {publisList?.map(publis => {
                 for (let email in publis.likes) {
-                    if (publis.likes[email] == user?.email) {
+                    if (publis.likes[email] == user?.uid) {
                         return (
                             <PostUser publi={publis.post}
                                 name={publis.name}
                                 imageUser={publis.photo}
                                 trash={user?.email == publis.email ? true : false}
                                 likeIcon={user ? true : false}
-                                like={() => console.log("ja foi")}
+                                like={() => firebase.database().ref(`${props.linkComuList}/${publis.id}/likes`).child(user?.uid).remove()}
                                 likesCount={Object.keys(publis.likes).length}
                                 delete={() => firebase.database().ref(props.linkComuList).child(publis.id).remove()}
                                 key={publis.id}
@@ -51,7 +51,7 @@ export default function ListPublis(props: ListPublisProps) {
                             </PostUser>)
                     }
                 }
-
+                
                 return (
                     <PostUser publi={publis.post}
                         name={publis.name}
