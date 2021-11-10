@@ -46,14 +46,22 @@
 }
 
 .contentIcons{
+    height: 6vh;
+    width: 12vw;
     display: flex;
-    margin-right: 3vw;
-    margin-bottom: 1vh;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.contentIcons h5{
+    height: 6vh;
+    margin-top: 3.4vh;
+    margin-left: -3vw;
 }
 
 .icon{
-    height: 1.3vh;
-    width: 1.3vw;
-    margin-left: 2vw;
+    margin-top: 3vh;
+    height: 6vh;
+    width: 1.5vw;
     cursor: pointer;
 }

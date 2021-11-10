@@ -17,6 +17,7 @@ process.env.
 ## Falta
 
 ### Ajeitar que pode postar em branco;
+### Ajeitar box de tripulantes de comunidadee
 ### Ajeitar pesquisa que as vezes aparece sem pesquisar nada;
 ### Rever toda a parte de segurança e cadastro;
 ### Colocar titulo da pagina na aba;

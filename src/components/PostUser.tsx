@@ -37,7 +37,7 @@ export default function PostUser(props: PostUser){
                                 {props.children}
                             </div>
                         ): false}
-                        {props.likesCount}
+                        <h5>{props.likesCount}</h5>
                         {trash ? (
                             <div className={styles.icon} onClick={props.delete}>
                                 {IconTrash}
