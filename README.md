@@ -16,8 +16,10 @@ process.env.
 ...
 ## Falta
 
+### Ajeitar que pode postar em branco;
+### Ajeitar pesquisa que as vezes aparece sem pesquisar nada;
+### Rever toda a parte de segurança e cadastro;
 ### Colocar titulo da pagina na aba;
-### Função dar like;
 ### Função de texto na reunião;
 
 ## Regras de negocio
