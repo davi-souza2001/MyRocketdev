@@ -3,6 +3,7 @@ import useAuth from '../data/hook/useAuth';
 
 import firebase from "../firebase/config";
 
+import { IconStar, IconStarLiked } from "../components/Icons";
 import PostUser from "./PostUser";
 
 interface ListPublisProps {
@@ -35,15 +36,19 @@ export default function ListPublis(props: ListPublisProps) {
             {publisList?.map(publis => {
                 for (let email in publis.likes) {
                     if (publis.likes[email] == user?.email) {
-                        return (<PostUser publi={publis.post}
-                            name={publis.name}
-                            imageUser={publis.photo}
-                            trash={user?.email == publis.email ? true : false}
-                            likeIcon={user ? true : false}
-                            like={() => console.log("Ja foi")}
-                            likesCount={Object.keys(publis.likes).length}
-                            delete={() => firebase.database().ref(props.linkComuList).child(publis.id).remove()}
-                            key={publis.id} />)
+                        return (
+                            <PostUser publi={publis.post}
+                                name={publis.name}
+                                imageUser={publis.photo}
+                                trash={user?.email == publis.email ? true : false}
+                                likeIcon={user ? true : false}
+                                like={() => console.log("ja foi")}
+                                likesCount={Object.keys(publis.likes).length}
+                                delete={() => firebase.database().ref(props.linkComuList).child(publis.id).remove()}
+                                key={publis.id}
+                            >
+                                {IconStarLiked}
+                            </PostUser>)
                     }
                 }
 
@@ -54,9 +59,12 @@ export default function ListPublis(props: ListPublisProps) {
                         trash={user?.email == publis.email ? true : false}
                         likeIcon={user ? true : false}
                         like={() => setlike(publis.id)}
-                        likesCount={conterLikes}
+                        likesCount={publis?.like ? Object.keys(publis?.likes).length : false}
                         delete={() => firebase.database().ref(props.linkComuList).child(publis.id).remove()}
-                        key={publis.id} />
+                        key={publis.id}
+                        >
+                        {IconStar}
+                    </PostUser>
                 )
             })}
         </>

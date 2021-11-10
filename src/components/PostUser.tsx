@@ -14,6 +14,7 @@ interface PostUser {
     likeIcon: any;
     like?: any;
     likesCount: Object;
+    children?: any;
     delete: any;
 }
 
@@ -33,7 +34,7 @@ export default function PostUser(props: PostUser){
                     <div className={styles.contentIcons}>
                         {likeIcon ?(
                             <div className={styles.icon} onClick={props.like}>
-                                {IconStar}
+                                {props.children}
                             </div>
                         ): false}
                         {props.likesCount}
