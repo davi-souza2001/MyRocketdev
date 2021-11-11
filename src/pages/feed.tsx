@@ -10,6 +10,7 @@ import firebase from "../firebase/config";
 import styles from "../styles/feedmain.module.css";
 
 import astroAlone from "../assets/img/astronauta_sozinho.svg";
+import useProfile from "../data/hook/useProfile";
 
 interface MainPage {
 
@@ -18,7 +19,7 @@ interface MainPage {
 export default function MainPage(props: MainPage) {
 
     const { user } = useAuth();
-    const [profilesList, setProfilesList] = useState([]);
+    const { profileList } = useProfile();
     const [first, setFirst] = useState("");
     const [second, setSecond] = useState("");
     const [third, setThird] = useState("");
@@ -27,27 +28,14 @@ export default function MainPage(props: MainPage) {
     const [showthird, setShowThird] = useState(false);
 
     useEffect(() => {
-        const todoRef = firebase.database().ref("Profiles");
-        todoRef.on('value', (snapshot) => {
-            const todos = snapshot.val();
-            const todoList = [];
-            for (let id in todos) {
-                todoList.push({ id, ...todos[id] });
-            }
-            setProfilesList(todoList);
-        })
-
-    }, []);
-
-    useEffect(() => {
-        const getUserCommuns = profilesList.map((prof) => {
+        const getUserCommuns = profileList.map((prof) => {
             if (prof?.email == user?.email) {
                 setFirst(prof.firstComum);
                 setSecond(prof.secondComum);
                 setThird(prof.thirdComum);
             }
         })
-    }, [user, profilesList]);
+    }, [user, profileList]);
 
     function showFeedFirst(){
         setShowFirst(true);
