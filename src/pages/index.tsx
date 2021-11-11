@@ -4,6 +4,7 @@ import { useState } from "react";
 import SeniorOptions from "../components/SeniorOptions";
 
 import Topbar from "../components/Topbar";
+import ForceAutentication from "../data/ForceAutentication";
 
 import styles from "../styles/galaxy.module.css";
 import stars from "../styles/Starsnew.module.scss";
@@ -61,6 +62,7 @@ export default function Galaxy(){
     return (
     <>
         <Topbar/>
+        <ForceAutentication>
         {modal ? (
         <div className={styles.optionsGeral}>
             {/* <div className={styles.stars} /> */}
@@ -291,7 +293,8 @@ export default function Galaxy(){
                 </div>
             </div>
         </div>
-        ): false}   
+        ): false} 
+        </ForceAutentication>  
     </>
     )
 }

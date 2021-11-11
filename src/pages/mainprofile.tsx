@@ -81,7 +81,7 @@ export default function MainProfile() {
                         </div>
                         <div className={styles.imgProfileUser}>
                             <div className={styles.userImg}>
-                                <Image className={styles.image} src={prof.image || Austroone} height={200} width={200} alt="Foto de Perfil"></Image>
+                                <Image className={styles.image} src={prof.image || Austroone} height={150} width={150} alt="Foto de Perfil"></Image>
                             </div>
                             <div className={styles.contentUser}>
                                 <div className={styles.config}>

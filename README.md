@@ -14,7 +14,7 @@ NEXT_PUBLIC_APP_ID=`
 process.env. 
 
 ...
-## Falta
+## Falta force autentication e index modificados
 
 ### Rever toda a parte de segurança e cadastro;
 ### Rever parte de checkbox da criação de usuário;
