@@ -62,14 +62,14 @@ export default function CreateProfile(Props: CreateProfileProps) {
     
     async function navigateToHome(e): Promise<void>{
         e.preventDefault();
-        if(github != "" && userName != "" && name != "" && dev != ""){
+        if(github != "" && userName != "" && name != "" && dev != "" && email != ""){
             try{
                 await setDatas();
             } finally {
                 route.push("/");
             }
         } else{
-            alert("Por favor verifique se os campos: Nick, Nome público, Github e Senioridade foram preenchidos.")
+            alert("Por favor verifique se os campos: Nick, Nome público, Github, Email e/ou Senioridade foram preenchidos.")
         }
    }
 

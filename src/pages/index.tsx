@@ -26,11 +26,8 @@ import ionicImg from "../assets/img/mobile/ionic.svg";
 import swiftImg from "../assets/img/mobile/swift.svg";
 
 
-interface galaxy {
+export default function Galaxy(){
 
-}
-
-export default function Galaxy(props: galaxy){
     const [modal, setModal] = useState(true);
     const [front, setFront] = useState(false);
     const [back, setBack] = useState(false);

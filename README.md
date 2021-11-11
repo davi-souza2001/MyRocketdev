@@ -16,8 +16,9 @@ process.env.
 ...
 ## Falta
 
-### Ajeitar pesquisa que as vezes aparece sem pesquisar nada;
 ### Rever toda a parte de segurança e cadastro;
+### Rever parte de checkbox da criação de usuário;
+### Refazer foto de perfil
 ### Colocar titulo da pagina na aba;
 ### Revisar todo css;
 ### Acabar função de like;
