@@ -62,7 +62,6 @@ export default function Galaxy(){
     return (
     <>
         <Topbar/>
-        <ForceAutentication>
         {modal ? (
         <div className={styles.optionsGeral}>
             {/* <div className={styles.stars} /> */}
@@ -293,8 +292,7 @@ export default function Galaxy(){
                 </div>
             </div>
         </div>
-        ): false} 
-        </ForceAutentication>  
+        ): false}  
     </>
     )
 }
