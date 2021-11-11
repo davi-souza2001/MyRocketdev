@@ -22,7 +22,7 @@ export default function CreateProfile(Props: CreateProfileProps) {
         if(prof.email == emailUser) {
             route.replace("/");
         }
-    })
+    });
     
     const [name, setName] = useState("");
     const [userName, setUserName] = useState("");
@@ -62,14 +62,14 @@ export default function CreateProfile(Props: CreateProfileProps) {
     
     async function navigateToHome(e): Promise<void>{
         e.preventDefault();
-        if(github != ""){
+        if(github != "" && userName != "" && name != "" && dev != ""){
             try{
                 await setDatas();
             } finally {
                 route.push("/");
             }
         } else{
-            alert("Por favor coloque seu nick do github")
+            alert("Por favor verifique se os campos: Nick, Nome público, Github e Senioridade foram preenchidos.")
         }
    }
 
@@ -81,12 +81,12 @@ export default function CreateProfile(Props: CreateProfileProps) {
             <div className={styles.contentForms}>
                 <form>
                     <h2>Cadastro</h2>
-                    <input type="text" placeholder="Digite seu nome publico" onChange={(e) => setName(e.target.value)}/>
-                    <input type="text" placeholder="Digite seu @ no qual as pessoas vão procurar você" onChange={(e) => setUserName(e.target.value)} />
-                    <input type="text" placeholder="Digite seu @ no Linkedin" onChange={(e) => setLinkedin(e.target.value)} />
-                    <input required type="text" placeholder="Digite seu @ no Github" onChange={(e) => setGithub(e.target.value)} />
-                    <input type="text" placeholder="Digite seu @ no Instagram" onChange={(e) => setInstagram(e.target.value)} />
-                    <input type="text" placeholder="Digite seu @ no Youtube" onChange={(e) => setYoutube(e.target.value)} />
+                    <input type="text" placeholder="Digite seu nome público" onChange={(e) => setName(e.target.value)}/>
+                    <input type="text" placeholder="Digite seu nick que você deseja usar" onChange={(e) => setUserName(e.target.value)} />
+                    <input type="text" placeholder="Digite seu @ no Linkedin (sem o @)" onChange={(e) => setLinkedin(e.target.value)} />
+                    <input required type="text" placeholder="Digite seu @ no Github (sem o @)" onChange={(e) => setGithub(e.target.value)} />
+                    <input type="text" placeholder="Digite seu @ no Instagram (sem o @)" onChange={(e) => setInstagram(e.target.value)} />
+                    <input type="text" placeholder="Digite seu @ no Youtube (sem o @)" onChange={(e) => setYoutube(e.target.value)} />
                     <select required onChange={(e) => setDev(e.target.value)} value={dev}>
                         <option defaultValue="Senioridade" >--Senioridade--</option>
                         <option value="Front-End">Front-End</option>

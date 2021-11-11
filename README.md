@@ -18,6 +18,7 @@ process.env.
 
 ### Ajeitar pesquisa que as vezes aparece sem pesquisar nada;
 ### Rever toda a parte de segurança e cadastro;
+### Rever que nao precisar fazer a função de novo de achar perfil em commnunity members;
 ### Colocar titulo da pagina na aba;
 ### Revisar todo css;
 ### Acabar função de like;
