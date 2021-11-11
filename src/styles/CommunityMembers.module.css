@@ -1,7 +1,7 @@
 .contentGeral{
     background-color: #333333;
     width: 20vw;
-    height: 60vh;
+    min-height: 60vh;
     margin-left: 3vw; 
     margin-right: 3vw;
     border-radius: 10px;

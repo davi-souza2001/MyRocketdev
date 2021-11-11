@@ -13,21 +13,8 @@ interface CommunityMembers {
 }
 
 export default function CommunityMembers(props: CommunityMembers){
-    const [publisList, setPublisListList] = useState([]);
     const [adminsList, setadminsListListList] = useState([]);
     const [showadmin, setShowAdmins] = useState(props.showAdmin);
-
-    useEffect(() => {
-        const todoRef = firebase.database().ref(props.linkComuList);
-        todoRef.on('value', (snapshot) => {
-          const todos = snapshot.val();
-          const todoList = [];
-          for (let id in todos) {
-            todoList.push({ id, ...todos[id] });
-          }
-          setPublisListList(todoList);
-        })
-      }, []);
 
     useEffect(() => {
         const todoAdmin = firebase.database().ref("Profiles");
