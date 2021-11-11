@@ -2,6 +2,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 
 import firebase from "../firebase/config";
+import useProfile from "../data/hook/useProfile";
 
 import astroMyRocket from "../assets/img/astrounauta.svg";
 import styles from "../styles/CommunityMembers.module.css";
@@ -13,22 +14,11 @@ interface CommunityMembers {
 }
 
 export default function CommunityMembers(props: CommunityMembers){
-    const [adminsList, setadminsListListList] = useState([]);
+    const { profileList } = useProfile();
+
     const [showadmin, setShowAdmins] = useState(props.showAdmin);
 
-    useEffect(() => {
-        const todoAdmin = firebase.database().ref("Profiles");
-        todoAdmin.on('value', (snapshot) => {
-          const todos = snapshot.val();
-          const todoList = [];
-          for (let id in todos) {
-            todoList.push({ id, ...todos[id] });
-          }
-          setadminsListListList(todoList);
-        })
-      }, []);
-
-      const adminPhoto = adminsList[0]?.image;
+    const adminPhoto = profileList[0]?.image;
 
     return (
         <div className={styles.contentGeral}>
@@ -38,7 +28,7 @@ export default function CommunityMembers(props: CommunityMembers){
                         <h2>Comandante</h2>
                         <div className={styles.contentAdminSection}>
                             <Image alt="admin foto" src={adminPhoto ? adminPhoto : astroMyRocket} width={30} height={30}/>
-                            <p>{adminsList[0]?.name}</p>
+                            <p>{profileList[0]?.name}</p>
                         </div>
                         <div className={styles.bar}></div>
                     </div>
