@@ -21,7 +21,9 @@ export default function AddPost(props: AddPostProps) {
 
     async function sub() {
         await user?.email
-        if(user?.email){
+        if (post == "") {
+            alert("Parece que você ainda não digitou nada !")
+        } else if (user?.email) {
             const todoRef = firebase.database().ref(props.linkComu);
             const email = user.email;
             const name = user.name;
@@ -36,17 +38,17 @@ export default function AddPost(props: AddPostProps) {
             }
             todoRef.push(list);
             setPost("");
-        } else{
+        } else {
             alert("Opa, parece que você ainda não fez seu login")
         }
-      }
+    }
 
     return (
         <div className={styles.contentGeral}>
             <div className={styles.content}>
                 <div className={styles.userSettings}>
                     <div className={styles.userImageAndName}>
-                        <Image src={user ? user?.imagemUrl : Icon} width={40} height={35} alt="User image"/>
+                        <Image src={user ? user?.imagemUrl : Icon} width={40} height={35} alt="User image" />
                         <h4>{props.name}</h4>
                         <div className={styles.icon} onClick={sub}>
                             {IconPlus}
