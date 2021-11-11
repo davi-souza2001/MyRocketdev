@@ -38,6 +38,8 @@ export default function CreateProfile(Props: CreateProfileProps) {
     const [local, setLocal] = useState("");
     const [email, setEmail] = useState(emailUser);
     const image = user?.imagemUrl;
+    const [check, setCheck] = useState(0);
+
 
     async function setDatas(){
         const todoRef = await firebase.database().ref("Profiles");
@@ -62,14 +64,14 @@ export default function CreateProfile(Props: CreateProfileProps) {
     
     async function navigateToHome(e): Promise<void>{
         e.preventDefault();
-        if(github != "" && userName != "" && name != "" && dev != "" && email != ""){
+        if(github != "" && userName != "" && name != "" && dev != "" && email != "" && check == 1){
             try{
                 await setDatas();
             } finally {
                 route.push("/");
             }
         } else{
-            alert("Por favor verifique se os campos: Nick, Nome público, Github, Email e/ou Senioridade foram preenchidos.")
+            alert("Por favor verifique se os campos: Nick, Nome público, Github, Email e/ou Senioridade foram preenchidos. Ou aceite os Termos.")
         }
    }
 
@@ -161,7 +163,7 @@ export default function CreateProfile(Props: CreateProfileProps) {
                     <input required type="text" placeholder="Adicione uma descrição sobre você" onChange={(e) => setDescription(e.target.value)} />
                     <input required type="text" placeholder="De qual estado você é ?" onChange={(e) => setLocal(e.target.value)} />
                     <div className={styles.termsAndConditionsArea}>
-                        <input className={styles.termsAndConditions} type="checkbox"></input>
+                        <input className={styles.termsAndConditions} type="checkbox" value={check} onClick={() => {setCheck(1)}}></input>
                         <label>Você concorda com os <a href="https://github.com/davi-souza2001/MyRocketdev" target="_blank" rel="noreferrer">Termos e Condições</a>?</label>
                     </div>
                     <button type="submit" className={styles.buttonSubmit} onClick={navigateToHome}>Cadastrar</button>
