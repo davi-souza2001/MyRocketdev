@@ -16,7 +16,6 @@ process.env.
 ...
 ## Falta force autentication e index modificados
 
-### Rever toda a parte de segurança e cadastro;
 ### Colocar titulo da pagina na aba;
 ### Revisar todo css;
 ### Acabar função de like;
