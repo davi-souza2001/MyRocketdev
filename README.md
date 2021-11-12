@@ -14,7 +14,7 @@ NEXT_PUBLIC_APP_ID=`
 process.env. 
 
 ...
-## Falta force autentication e index modificados
+## Falta 
 
 ### Ajeitar mensagem aparecendo em tela de perfil pessoal
 ### Revisar todo css;
