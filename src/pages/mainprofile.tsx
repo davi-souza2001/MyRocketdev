@@ -29,6 +29,8 @@ export default function MainProfile() {
 
     const [modal, setModal] = useState(false);
 
+    const [checkEmailProfile, setCheckEmailProfile] = useState(false);
+
     //Start logic get user for api gitHub
 
     useEffect(() => {
@@ -57,13 +59,19 @@ export default function MainProfile() {
 
     //End logic get user for api gitHub
 
-    //Start login to edit profile
+    // Start login if user logged but no have profille
+    
+    useEffect(() => {
+        profileList?.map((prof) => {
+            if(user){
+                if(prof.email != user?.email){
+                    setCheckEmailProfile(true)
+                }
+            }
+        })
+    }, [user, profileList])
 
-
-
-    //End login to edit profile
-
-
+    // End login if user logged but no have profille
 
     //Start variable for render profile right in main profile (left bar)
 
@@ -145,6 +153,12 @@ export default function MainProfile() {
                 <div className={styles.noLogin}>
                     <p>Faça seu <strong>login</strong> para mostrar seu perfil para outros astronautas!</p>
                 </div>}
+
+            {checkEmailProfile ? (
+                <div className={styles.noLogin}>
+                    <p>Faça login novamente para criar um perfil</p>
+                </div>
+            ): false}
         </div>
     )
 }
