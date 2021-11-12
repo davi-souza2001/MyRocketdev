@@ -1,5 +1,7 @@
-import  route  from "next/router";
 import { useState } from "react";
+import  route  from "next/router";
+import Head from "next/head";
+
 import Topbar from "../components/Topbar";
 import Profile from "../components/Profile";
 import useProfile from "../data/hook/useProfile";
@@ -29,6 +31,9 @@ export default function Search(Props: searchProps){
     return (
         <div className={styles.searchContent}>
             <Topbar/>
+            <Head>
+                <title>Pesquisa</title>
+            </Head>
             <div className={styles.inputContent}>
                 <div className={styles.boxInput}>
                     <input type="text" className={styles.input} value={profSearch} onChange={(e) => setProfSearch(e.target.value)} placeholder="Ache aqui o astronauta que você procura"/>

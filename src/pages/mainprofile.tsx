@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import route from "next/router";
 import Image from "next/image";
+import Head from "next/head";
+
 import useProfile from "../data/hook/useProfile";
 import useAuth from "../data/hook/useAuth";
 import client from "../services/client";
@@ -145,6 +147,9 @@ export default function MainProfile() {
     return (
         <div className={styles.contentMainProfile}>
             <Topbar/>
+            <Head>
+                <title>Perfil pessoal</title>
+            </Head>
             {user ? 
                 <ContentMainProfile>
                     {renderProfiles}

@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import route from "next/router";
+import Head from "next/head";
 
 import Topbar from "../components/Topbar";
 import ListPublis from "../components/ListPublis";
-import Image from "next/image";
 
 import useAuth from "../data/hook/useAuth";
 
@@ -75,6 +76,9 @@ export default function MainPage() {
     return (
         <>
             <Topbar />
+            <Head>
+                <title>Feed</title>
+            </Head>
             <div className={styles.contentGeral}>
                 {first && user ? (
                     <>

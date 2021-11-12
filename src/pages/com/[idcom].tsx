@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
+import Head from "next/head";
 import Image from "next/image";
 
 import Topbar from "../../components/Topbar";
@@ -43,6 +44,9 @@ export default function Com(props: idCommunitie) {
     return (
         <div className={styles.content}>
             <Topbar />
+            <Head>
+                <title>Planeta {idcom}</title>
+            </Head>
 
             <div className={styles.communityContent}>
                 <div className={styles.contentBarTitle}>

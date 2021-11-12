@@ -1,10 +1,10 @@
 import route from "next/router";
 import Image from "next/image";
+import Head from "next/head";
 import { useState } from "react";
 import SeniorOptions from "../components/SeniorOptions";
 
 import Topbar from "../components/Topbar";
-import ForceAutentication from "../data/ForceAutentication";
 
 import styles from "../styles/galaxy.module.css";
 import stars from "../styles/Starsnew.module.scss";
@@ -62,6 +62,9 @@ export default function Galaxy(){
     return (
     <>
         <Topbar/>
+        <Head>
+            <title>MyRocket</title>
+        </Head>
         {modal ? (
         <div className={styles.optionsGeral}>
             {/* <div className={styles.stars} /> */}
