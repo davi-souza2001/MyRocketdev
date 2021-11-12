@@ -16,7 +16,7 @@ process.env.
 ...
 ## Falta force autentication e index modificados
 
-### Colocar titulo da pagina na aba;
+### Ajeitar mensagem aparecendo em tela de perfil pessoal
 ### Revisar todo css;
 ### Acabar função de like;
 ### Função de texto na reunião;
