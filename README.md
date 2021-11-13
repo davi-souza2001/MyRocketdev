@@ -16,7 +16,6 @@ process.env.
 ...
 ## Falta 
 
-### Ajeitar mensagem aparecendo em tela de perfil pessoal
 ### Revisar todo css;
 ### Acabar função de like;
 ### Função de texto na reunião;
