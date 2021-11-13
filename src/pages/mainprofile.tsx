@@ -31,7 +31,7 @@ export default function MainProfile() {
 
     const [modal, setModal] = useState(false);
 
-    const [checkEmailProfile, setCheckEmailProfile] = useState(false);
+    const [checkEmailProfile, setCheckEmailProfile] = useState(true);
 
     //Start logic get user for api gitHub
 
@@ -66,8 +66,8 @@ export default function MainProfile() {
     useEffect(() => {
         profileList?.map((prof) => {
             if(user){
-                if(prof.email != user?.email){
-                    setCheckEmailProfile(true)
+                if(prof.email == user?.email){
+                    setCheckEmailProfile(false)
                 }
             }
         })
