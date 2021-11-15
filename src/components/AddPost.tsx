@@ -23,10 +23,11 @@ export default function AddPost(props: AddPostProps) {
     const [post, setPost] = useState("");
 
     useEffect(() => {
-        const alo = profileList.map((e) => {
-            if(e.firstComum == props.linkComu || e.secondComum == props.linkComu  || e.thirdComum == props.linkComu){
-                console.log("ok")
-                setCheckUser(true);
+        const alo = profileList.map((prof: any) => {
+            if(user?.email == prof.email){
+                if(prof.firstComum == props.linkComu || prof.secondComum == props.linkComu  || prof.thirdComum == props.linkComu){
+                    setCheckUser(true);
+                }
             }
         })
     }, [profileList, user, props.linkComu]);

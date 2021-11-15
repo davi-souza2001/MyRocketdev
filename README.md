@@ -16,7 +16,6 @@ process.env.
 ...
 ## Falta 
 
-### Ver função de postar so na comunidade que ta com bug de se não tiver comunidade, postar mesmo assim;
 ### Fazer função de mais likes;
 ### Acabar função de like;
 ### Revisar todo css;
