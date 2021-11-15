@@ -16,8 +16,7 @@ process.env.
 ...
 ## Falta 
 
-### Função de postar so se o perfil for membro;
-### Ver que post passa do limite;
+### Ver função de postar so na comunidade que ta com bug de se não tiver comunidade, postar mesmo assim;
 ### Por botão na tela de star wars;
 ### Ajeitar que se so escolher duas comunidades ele não dar erro em uma das caixas;
 ### Fazer função de mais likes;
