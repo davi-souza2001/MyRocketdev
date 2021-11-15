@@ -80,21 +80,27 @@ export default function MainPage() {
                 <title>Feed</title>
             </Head>
             <div className={styles.contentGeral}>
-                {first && user ? (
+                {first != "" && user ? (
                     <>
                         <div className={styles.contentTitle}>
                             <span>Posts recentes da Comunidade</span>
                         </div>
                         <div className={styles.contentFeedName}>
+                            {first != "" && first != "--Front-End--" && first != "--Back-End--" && first != "--Mobile--" ? (
                             <div className={styles.boxNameFeed} id="box1" onClick={showFeedFirst}>
                                 {first}
                             </div>
-                            <div className={styles.boxNameFeed} id="box2" onClick={showFeedSecond}>
+                            ): false}
+                            {second != "" && second != "--Front-End--" && second != "--Back-End--" && second != "--Mobile--" ? (
+                            <div className={styles.boxNameFeed} id="box1" onClick={showFeedSecond}>
                                 {second}
                             </div>
-                            <div className={styles.boxNameFeed} id="box3" onClick={showFeedThird}>
+                            ): false}
+                            {third != "" && third != "--Front-End--" && third != "--Back-End--" && third != "--Mobile--" ? (
+                            <div className={styles.boxNameFeed} id="box1" onClick={showFeedThird}>
                                 {third}
                             </div>
+                            ): false}
                         </div>
                         <div className={styles.contentFeed}>
                             {showfirst ? (

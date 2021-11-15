@@ -17,7 +17,7 @@ process.env.
 ## Falta 
 
 ### Ver função de postar so na comunidade que ta com bug de se não tiver comunidade, postar mesmo assim;
-### Ajeitar que se so escolher duas comunidades ele não dar erro em uma das caixas;
+### Forçar que precisa escolher pelo menos a primeira comunidade
 ### Fazer função de mais likes;
 ### Acabar função de like;
 ### Revisar todo css;
