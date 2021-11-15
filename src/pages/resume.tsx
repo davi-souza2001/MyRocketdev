@@ -22,7 +22,8 @@ export default function Resume() {
 
                     <p>Então se você quer decolar também preparamos tudo para você, basta fazer o login que vamos te ajudar no resto!</p>
 
-                    <p onClick={() => route.push("/login")}><strong>Clique aqui para embarcar!</strong></p>
+                    {/* <p onClick={() => route.push("/login")}><strong>Clique aqui para embarcar!</strong></p> */}
+                    <button style={{color: "#000", width: "20vw", height: "20vh", fontSize: "30px", backgroundColor: "#feda4a", borderRadius: "5px", fontWeight: "bold", cursor: "pointer"}} onClick={() => route.push("/login")}>Clique aqui para embarcar</button>
                 </div>
             </section>
         </div>
