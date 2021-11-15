@@ -64,7 +64,7 @@ export default function CreateProfile(Props: CreateProfileProps) {
     
     async function navigateToHome(e): Promise<void>{
         e.preventDefault();
-        if(github != "" && userName != "" && name != "" && dev != "" && email != "" && check == 1){
+        if(github != "" && userName != "" && name != "" && dev != "" && email != "" && firstComum != "" && check == 1){
             try{
                 await setDatas();
             } finally {
