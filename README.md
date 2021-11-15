@@ -16,8 +16,13 @@ process.env.
 ...
 ## Falta 
 
-### Revisar todo css;
+### Função de postar so se o perfil for membro;
+### Ver que post passa do limite;
+### Por botão na tela de star wars;
+### Ajeitar que se so escolher duas comunidades ele não dar erro em uma das caixas;
+### Fazer função de mais likes;
 ### Acabar função de like;
+### Revisar todo css;
 ### Função de texto na reunião;
 
 ## Regras de negocio
