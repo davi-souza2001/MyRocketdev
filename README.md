@@ -16,12 +16,12 @@ process.env.
 ...
 ## Falta 
 
-### na área de pesquisar, ao tentar pesquisar a área do usuário, a primeira letra precisa ser maiúscula 
+<!-- ### na área de pesquisar, ao tentar pesquisar a área do usuário, a primeira letra precisa ser maiúscula 
 ### Fazer função de mais likes;
 ### Adicionar caixa para postar somente se o usuário tiver permissão para isso;
 ### Acabar função de like;
 ### Revisar todo css;
-### Função de texto na reunião;
+### Função de texto na reunião; -->
 
 ## Regras de negocio
 
