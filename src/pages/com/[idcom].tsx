@@ -39,7 +39,7 @@ export default function Com(props: idCommunitie) {
             }
             setPublisListList(todoList);
         })
-    }, []);
+    }, [user]);
 
     return (
         <div className={styles.content}>
@@ -63,12 +63,12 @@ export default function Com(props: idCommunitie) {
                 <div className={styles.contentMembersAndAddPost}>
                     <CommunityMembers linkComuList={idcom} showAdmin>
                         <div className={styles.contentMembers}>
-                            {profileList.map((prof) => {
+                            {profileList?.map((prof) => {
                                 if (prof.firstComum == idcom || prof.secondComum == idcom || prof.thirdComum == idcom) {
                                     return(
-                                        <div className={styles.contentMembersIntoComum}>
+                                        <div className={styles.contentMembersIntoComum} key={prof.name}>
                                             <Image alt="user image" src={prof.image} width={30} height={30}/>
-                                            <p key={prof.name}>{prof.name}</p> 
+                                            <p>{prof.name}</p> 
                                         </div>
                                     )
                                 }
