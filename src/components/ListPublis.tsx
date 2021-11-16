@@ -28,7 +28,7 @@ export default function ListPublis(props: ListPublisProps) {
     }, [user]);
 
     async function setlike(id: string) {
-       await firebase.database().ref(props.linkComuList).child(`${id}/likes`).push({authorId: user?.email});
+        await firebase.database().ref(props.linkComuList).child(`${id}/likes`).push({ authorId: user?.email });
     };
 
     return (
@@ -51,21 +51,25 @@ export default function ListPublis(props: ListPublisProps) {
                             </PostUser>)
                     }
                 }
-                
-                return (
-                    <PostUser publi={publis.post}
-                        name={publis.name}
-                        imageUser={publis.photo}
-                        trash={user?.email == publis.email ? true : false}
-                        likeIcon={user ? true : false}
-                        like={() => setlike(publis.id)}
-                        likesCount={publis?.like ? Object.keys(publis?.likes).length : false}
-                        delete={() => firebase.database().ref(props.linkComuList).child(publis.id).remove()}
-                        key={publis.id}
-                        >
-                        {IconStar}
-                    </PostUser>
-                )
+
+                for (let email in publis.likes) {
+                    if (publis.likes[email].authorId) {
+                        return (
+                            <PostUser publi={publis.post}
+                                name={publis.name}
+                                imageUser={publis.photo}
+                                trash={user?.email == publis.email ? true : false}
+                                likeIcon={user ? true : false}
+                                like={() => setlike(publis.id)}
+                                likesCount={Object.keys(publis.likes).length}
+                                delete={() => firebase.database().ref(props.linkComuList).child(publis.id).remove()}
+                                key={publis.id}
+                            >
+                                {IconStar}
+                            </PostUser>
+                        )
+                    }
+                }
             })}
         </>
     )
