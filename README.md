@@ -16,6 +16,8 @@ process.env.
 ...
 ## Falta 
 
+### quem não deu uma curtida, não vê quantas curtidas tem a postagem;
+### na área de pesquisar, ao tentar pesquisar a área do usuário, a primeira letra precisa ser maiúscula 
 ### Fazer função de mais likes;
 ### Adicionar caixa para postar somente se o usuário tiver permissão para isso;
 ### Acabar função de like;

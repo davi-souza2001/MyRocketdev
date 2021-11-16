@@ -25,7 +25,7 @@ export default function ListPublis(props: ListPublisProps) {
             }
             setPublisListList(todoList);
         })
-    }, []);
+    }, [user]);
 
     async function setlike(id: string) {
        await firebase.database().ref(props.linkComuList).child(`${id}/likes`).push({authorId: user?.email});
