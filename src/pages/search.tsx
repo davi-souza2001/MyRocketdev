@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import  route  from "next/router";
 import Head from "next/head";
 
@@ -16,6 +16,24 @@ interface searchProps {
 export default function Search(Props: searchProps){
     const { profileList } = useProfile();
     const [profSearch, setProfSearch] = useState("");
+
+    useEffect(() => {
+        if(profSearch == "full-stack"){
+            setProfSearch("Full-Stack")
+        }else if(profSearch == "front-end"){
+            setProfSearch("Front-End")
+        }else if(profSearch == "back-end"){
+            setProfSearch("Back-End")
+        }else if(profSearch == "mobile"){
+            setProfSearch("Mobile")
+        }else if(profSearch == "dados"){
+            setProfSearch("Dados")
+        }else if(profSearch == "ios"){
+            setProfSearch("IOS")
+        }else if(profSearch == "android"){
+            setProfSearch("Android")
+        }
+    }, [profSearch])
   
     function renderProfiles() {
         return profileList?.map((profile, index) => {

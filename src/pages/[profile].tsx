@@ -94,9 +94,9 @@ export default function MainProfile() {
                             <h3>Comunidades</h3>
                             <div className={styles.communitiesUser}>
                                 <div className={styles.communitiesPerson}>
-                                    <p onClick={() => route.push(`/com/${prof.firstComum}`)}>{prof.firstComum}</p>
-                                    <p onClick={() => route.push(`/com/${prof.secondComum}`)}>{prof.secondComum}</p>
-                                    <p onClick={() => route.push(`/com/${prof.thirdComum}`)}>{prof.thirdComum}</p>
+                                <p onClick={() => route.push(`/com/${prof.firstComum}`)}>{prof.firstComum == "--Front-End--" || prof.firstComum == "--Back-End--" || prof.firstComum == "--Mobile--" ? false : prof.firstComum}</p>
+                                    <p onClick={() => route.push(`/com/${prof.secondComum}`)}>{prof.secondComum == "--Front-End--" || prof.secondComum == "--Back-End--" || prof.secondComum == "--Mobile--" ? false : prof.secondComum}</p> 
+                                    <p onClick={() => route.push(`/com/${prof.thirdComum}`)}>{prof.thirdComum == "--Front-End--" || prof.thirdComum == "--Back-End--" || prof.thirdComum == "--Mobile--" ? false : prof.thirdComum}</p> 
                                 </div>
                             </div>
                         </div>
