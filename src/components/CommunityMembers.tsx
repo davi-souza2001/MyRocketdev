@@ -65,7 +65,7 @@ export default function CommunityMembers(props: CommunityMembers){
                 }
             }
         })
-    }, [publisList]);
+    }, [publisList, postMostLike, postSecondMostLike, postThirdMostLike]);
 
     console.log(postMostLike)
     console.log(postSecondMostLike)
@@ -91,7 +91,13 @@ export default function CommunityMembers(props: CommunityMembers){
                         </div>
                     </div>
                 </>
-            ) : <h4>{postMostLike}</h4>}
+            ) : (
+                <>
+                <h4>{postMostLike}</h4>
+                <h4>{postSecondMostLike}</h4>
+                <h4>{postThirdMostLike}</h4>
+                </>
+            )}
         </div>
     )
 }
