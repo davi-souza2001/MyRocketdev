@@ -90,7 +90,7 @@ export default function CreateProfile(Props: CreateProfileProps) {
                     <input type="text" placeholder="Digite seu @ no Instagram (sem o @)" onChange={(e) => setInstagram(e.target.value)} />
                     <input type="text" placeholder="Digite seu @ no Youtube (sem o @)" onChange={(e) => setYoutube(e.target.value)} />
                     <select required onChange={(e) => setDev(e.target.value)} value={dev}>
-                        <option defaultValue="Senioridade" >--Senioridade--</option>
+                        <option defaultValue="Senioridade" >--Área--</option>
                         <option value="Front-End">Front-End</option>
                         <option value="Back-End">Back-End</option>
                         <option value="Full-Stack">Full-Stack</option>
