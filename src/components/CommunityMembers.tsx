@@ -2,6 +2,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 
 import firebase from "../firebase/config";
+import useAuth from "../data/hook/useAuth";
 import useProfile from "../data/hook/useProfile";
 
 import astroMyRocket from "../assets/img/astrounauta.svg";
@@ -15,11 +16,37 @@ interface CommunityMembers {
 
 export default function CommunityMembers(props: CommunityMembers){
     const { profileList } = useProfile();
+    const { user } = useAuth();
+    const [publisList, setPublisListList] = useState([]);
+    const [mostLike, setMostLike] = useState(0);
+    const [listLikeCount, setListLikeCount] = useState([]);
 
     const [showadmin, setShowAdmins] = useState(props.showAdmin);
 
     const adminPhoto = profileList[0]?.image;
 
+    useEffect(() => {
+        const todoRef = firebase.database().ref(props.linkComuList);
+        todoRef.on('value', (snapshot) => {
+            const todos = snapshot.val();
+            const todoList = [];
+            for (let id in todos) {
+                todoList.push({ id, ...todos[id] });
+            }
+            setPublisListList(todoList);
+        })
+    }, [user]);
+
+    useEffect(() => {
+        const list = publisList?.map((publis) => {
+            if(publis.likes){
+                console.log(Object.keys(publis.likes).length)
+            }
+        })
+
+    }, [publisList]);
+
+    
     return (
         <div className={styles.contentGeral}>
             {showadmin ? (

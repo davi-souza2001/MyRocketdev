@@ -17,8 +17,8 @@ process.env.
 ## Falta 
 
 <!-- ### 
+### Ajeitar pesquisa em maiusculo;
 ### Fazer função de mais likes;
-### Adicionar caixa para postar somente se o usuário tiver permissão para isso;
 ### Acabar função de like;
 ### Revisar todo css;
 ### Função de texto na reunião; -->
