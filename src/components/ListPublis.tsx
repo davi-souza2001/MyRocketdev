@@ -51,25 +51,21 @@ export default function ListPublis(props: ListPublisProps) {
                             </PostUser>)
                     }
                 }
-
-                for (let email in publis.likes) {
-                    if (publis.likes[email].authorId) {
-                        return (
-                            <PostUser publi={publis.post}
-                                name={publis.name}
-                                imageUser={publis.photo}
-                                trash={user?.email == publis.email ? true : false}
-                                likeIcon={user ? true : false}
-                                like={() => setlike(publis.id)}
-                                likesCount={Object.keys(publis.likes).length}
-                                delete={() => firebase.database().ref(props.linkComuList).child(publis.id).remove()}
-                                key={publis.id}
-                            >
-                                {IconStar}
-                            </PostUser>
-                        )
-                    }
-                }
+                
+                return (
+                    <PostUser publi={publis.post}
+                        name={publis.name}
+                        imageUser={publis.photo}
+                        trash={user?.email == publis.email ? true : false}
+                        likeIcon={user ? true : false}
+                        like={() => setlike(publis.id)}
+                        likesCount={publis.likes ? Object.keys(publis.likes).length : false}
+                        delete={() => firebase.database().ref(props.linkComuList).child(publis.id).remove()}
+                        key={publis.id}
+                    >
+                        {IconStar}
+                    </PostUser>
+                )
             })}
         </>
     )
