@@ -19,13 +19,7 @@ export default function CommunityMembers(props: CommunityMembers){
     const { user } = useAuth();
     const [publisList, setPublisListList] = useState([]);
 
-    const [mostLike, setMostLike] = useState(0);
-    const [secondMostLike, setSecondmostLike] = useState(0);
-    const [thirdMostLike, setThirdMostLike] = useState(0);
-
-    const [postMostLike, setPostMostLike] = useState("");
-    const [postSecondMostLike, setPostSecondMostLike] = useState("");
-    const [postThirdMostLike, setPostThirdMostLike] = useState("");
+    
 
     const [showadmin, setShowAdmins] = useState(props.showAdmin);
 
@@ -43,33 +37,7 @@ export default function CommunityMembers(props: CommunityMembers){
         })
     }, [user]);
 
-    useEffect(() => {
-        const list = publisList?.map((publis) => {
-            if(publis.likes){
-                if(Object.keys(publis.likes).length > mostLike){
-                    setMostLike(Object.keys(publis.likes).length)
-                    setPostMostLike(publis.post)
-                }
-                if(Object.keys(publis.likes).length < mostLike ){
-                    if(Object.keys(publis.likes).length > secondMostLike){
-                        setSecondmostLike(Object.keys(publis.likes).length)
-                        setPostSecondMostLike(publis.post)
-                    }
-                }
-
-                if(Object.keys(publis.likes).length < secondMostLike){
-                    if(Object.keys(publis.likes).length > thirdMostLike){
-                        setThirdMostLike(Object.keys(publis.likes).length)
-                        setPostThirdMostLike(publis.post)
-                    }
-                }
-            }
-        })
-    }, [publisList, postMostLike, postSecondMostLike, postThirdMostLike]);
-
-    console.log(postMostLike)
-    console.log(postSecondMostLike)
-    console.log(postThirdMostLike)
+   
     
     
     return (
@@ -93,9 +61,7 @@ export default function CommunityMembers(props: CommunityMembers){
                 </>
             ) : (
                 <>
-                <h4>{postMostLike}</h4>
-                <h4>{postSecondMostLike}</h4>
-                <h4>{postThirdMostLike}</h4>
+                <h4>Em breve</h4>
                 </>
             )}
         </div>

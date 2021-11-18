@@ -24,6 +24,14 @@ export default function Com(props: idCommunitie) {
     const idcom = router.query.idcom;
     const [publisList, setPublisListList] = useState([]);
 
+    const [mostLike, setMostLike] = useState(0);
+    const [secondMostLike, setSecondmostLike] = useState(0);
+    const [thirdMostLike, setThirdMostLike] = useState(0);
+
+    const [postMostLike, setPostMostLike] = useState("");
+    const [postSecondMostLike, setPostSecondMostLike] = useState("");
+    const [postThirdMostLike, setPostThirdMostLike] = useState("");
+
     const { user } = useAuth();
     const { profileList } = useProfile();
 
@@ -40,6 +48,29 @@ export default function Com(props: idCommunitie) {
             setPublisListList(todoList);
         })
     }, [user]);
+
+    useEffect(() => {
+        const list = publisList?.map((publis) => {
+            if(publis.likes){
+                if(Object.keys(publis.likes).length > mostLike){
+                    setMostLike(Object.keys(publis.likes).length)
+                    setPostMostLike(publis.post)
+                }
+                if(Object.keys(publis.likes).length < mostLike ){
+                    if(Object.keys(publis.likes).length > secondMostLike){
+                        setSecondmostLike(Object.keys(publis.likes).length)
+                        setPostSecondMostLike(publis.post)
+                    }
+                }
+                if(Object.keys(publis.likes).length < secondMostLike){
+                    if(Object.keys(publis.likes).length > thirdMostLike){
+                        setThirdMostLike(Object.keys(publis.likes).length)
+                        setPostThirdMostLike(publis.post)
+                    }
+                }
+            }
+        })
+    }, [publisList, postMostLike, postSecondMostLike, postThirdMostLike]);
 
     return (
         <div className={styles.content}>
@@ -76,7 +107,22 @@ export default function Com(props: idCommunitie) {
                         </div>
                     </CommunityMembers>
                     <AddPost linkComu={idcom} name={user ? user?.name : "Faça login para fazer parte da comunidade"} />
-                    <CommunityMembers linkComuList={idcom} showAdmin={false} />
+                    <div className={styles.contentMostsLikes}>
+                        <div className={styles.contentTitleMostLikes}>
+                            <h2>Assuntos mais relevantes</h2>
+                        </div>
+                        <div className={styles.contentBar}></div>
+                        <div className={styles.contentPostsMostsLikes}>
+                            <div className={styles.postsMostsLikes}>
+                                <Image src={user?.imagemUrl} width={40} height={40}/>
+                                <div className={styles.contentInfoPost}>
+                                    <h4>{postMostLike}</h4>
+                                </div>
+                            </div>
+                            <h3>{postSecondMostLike}</h3>
+                            <h3>{postThirdMostLike}</h3>
+                        </div>
+                    </div>
                 </div>
                 <div className={styles.contentBodyPosts}>
                     <ListPublis linkComuList={idcom} />

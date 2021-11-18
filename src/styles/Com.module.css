@@ -67,4 +67,50 @@
     flex-direction: column-reverse;
 }
 
+.contentMostsLikes{
+    background-color: #333333;
+    width: 30vw;
+    min-height: 60vh;
+    border-radius: 10px;
+    font-family: "poppins", sans-serif;
+    color: #fff;
+}
+
+.contentTitleMostLikes{
+    height: 8vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contentBar{
+    height: 5px;
+    background-color: #161476;
+}
+
+.contentPostsMostsLikes{
+    margin-top: 30px;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.postsMostsLikes{
+    background-color:red;
+    width: 18vw;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.postsMostsLikes img{
+    border-radius: 999999px;
+}
+
+.contentInfoPost{
+    margin-left: 1vw;
+}
 
