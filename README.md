@@ -17,6 +17,7 @@ process.env.
 ## Falta 
 
 <!-- ### 
+### Tirar bug de aparecer login novamente sem login
 ### Acabar função de like;
 ### Revisar todo css;
 ### Função de texto na reunião; -->
