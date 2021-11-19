@@ -17,8 +17,6 @@ process.env.
 ## Falta 
 
 <!-- ### 
-### Ajeitar pesquisa em maiusculo;
-### Fazer função de mais likes;
 ### Acabar função de like;
 ### Revisar todo css;
 ### Função de texto na reunião; -->
