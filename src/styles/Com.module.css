@@ -68,7 +68,6 @@
 }
 
 .contentMostsLikes{
-    background-color: #333333;
     width: 30vw;
     min-height: 60vh;
     border-radius: 10px;
@@ -95,15 +94,21 @@
     align-items: center;
     justify-content: space-around;
     flex-direction: column;
+    margin-right: 1vw;
 }
 
 .postsMostsLikes{
-    background-color:red;
+    background-color: #333333;
     width: 18vw;
-    height: 10vh;
+    height: 80px;
     display: flex;
     align-items: center;
     justify-content: start;
+    border-radius: 7px;
+}
+
+.postsMostsLikesImages{
+    margin-left: 1.5vw;
 }
 
 .postsMostsLikes img{
@@ -112,5 +117,11 @@
 
 .contentInfoPost{
     margin-left: 1vw;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.contentInfoPost p{
+    font-size: 90%;
 }
 

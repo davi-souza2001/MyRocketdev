@@ -32,6 +32,10 @@ export default function Com(props: idCommunitie) {
     const [postSecondMostLike, setPostSecondMostLike] = useState("");
     const [postThirdMostLike, setPostThirdMostLike] = useState("");
 
+    const [postMostLikeName, setPostMostLikeName] = useState("");
+    const [postSecondMostLikeName, setPostSecondMostLikeName] = useState("");
+    const [postThirdMostLikeName, setPostThirdMostLikeName] = useState("");
+
     const { user } = useAuth();
     const { profileList } = useProfile();
 
@@ -55,17 +59,20 @@ export default function Com(props: idCommunitie) {
                 if(Object.keys(publis.likes).length > mostLike){
                     setMostLike(Object.keys(publis.likes).length)
                     setPostMostLike(publis.post)
+                    setPostMostLikeName(publis.name)
                 }
                 if(Object.keys(publis.likes).length < mostLike ){
                     if(Object.keys(publis.likes).length > secondMostLike){
                         setSecondmostLike(Object.keys(publis.likes).length)
                         setPostSecondMostLike(publis.post)
+                        setPostSecondMostLikeName(publis.name)
                     }
                 }
                 if(Object.keys(publis.likes).length < secondMostLike){
                     if(Object.keys(publis.likes).length > thirdMostLike){
                         setThirdMostLike(Object.keys(publis.likes).length)
                         setPostThirdMostLike(publis.post)
+                        setPostThirdMostLikeName(publis.name)
                     }
                 }
             }
@@ -113,14 +120,39 @@ export default function Com(props: idCommunitie) {
                         </div>
                         <div className={styles.contentBar}></div>
                         <div className={styles.contentPostsMostsLikes}>
-                            <div className={styles.postsMostsLikes}>
-                                <Image src={user?.imagemUrl || astroMyRocket} width={40} height={40}/>
+                            {postMostLike ? (
+                                <div className={styles.postsMostsLikes}>
+                                <div className={styles.postsMostsLikesImages}>
+                                    <Image src={user?.imagemUrl || astroMyRocket} width={60} height={60}/>
+                                </div>
                                 <div className={styles.contentInfoPost}>
                                     <h4>{postMostLike}</h4>
+                                    <p>{postMostLikeName}</p>
                                 </div>
                             </div>
-                            <h3>{postSecondMostLike}</h3>
-                            <h3>{postThirdMostLike}</h3>
+                            ): false}
+                            {postSecondMostLike ? (
+                                <div className={styles.postsMostsLikes}>
+                                <div className={styles.postsMostsLikesImages}>
+                                    <Image src={user?.imagemUrl || astroMyRocket} width={60} height={60}/>
+                                </div>
+                                <div className={styles.contentInfoPost}>
+                                    <h4>{postSecondMostLike}</h4>
+                                    <p>{postSecondMostLikeName}</p>
+                                </div>
+                            </div>
+                            ) : false}
+                            {postThirdMostLike ? (
+                                <div className={styles.postsMostsLikes}>
+                                <div className={styles.postsMostsLikesImages}>
+                                    <Image src={user?.imagemUrl || astroMyRocket} width={60} height={60}/>
+                                </div>
+                                <div className={styles.contentInfoPost}>
+                                    <h4>{postThirdMostLike}</h4>
+                                    <p>{postThirdMostLikeName}</p>
+                                </div>
+                            </div>
+                            ) : false}
                         </div>
                     </div>
                 </div>
