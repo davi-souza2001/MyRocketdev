@@ -18,6 +18,7 @@ process.env.
 
 <!-- ### 
 ### Ajeitar bug da foto de perfil nos posts com mais likes;
+### Ajeitar numero de likes do post;
 ### Tirar bug de aparecer login novamente sem login
 ### Acabar função de like;
 ### Revisar todo css;
