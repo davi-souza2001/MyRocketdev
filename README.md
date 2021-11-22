@@ -17,10 +17,9 @@ process.env.
 ## Falta 
 
 <!-- ### 
-### Ajeitar bug da foto de perfil nos posts com mais likes;
 ### Ajeitar numero de likes do post;
-### Mudar pra procurar nome com minusculo
-### Tirar bug de aparecer login novamente sem login
+### Mudar pra procurar nome com minusculo;
+### Tirar bug de aparecer login novamente sem login;
 ### Acabar função de like;
 ### Revisar todo css;
 ### Função de texto na reunião; -->

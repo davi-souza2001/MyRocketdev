@@ -36,6 +36,11 @@ export default function Com(props: idCommunitie) {
     const [postSecondMostLikeName, setPostSecondMostLikeName] = useState("");
     const [postThirdMostLikeName, setPostThirdMostLikeName] = useState("");
 
+    const [postMostLikePhoto, setPostMostLikePhoto] = useState("");
+    const [postSecondMostLikePhoto, setPostSecondMostLikePhoto] = useState("");
+    const [postThirdMostLikePhoto, setPostThirdMostLikePhoto] = useState("");
+
+
     const { user } = useAuth();
     const { profileList } = useProfile();
 
@@ -60,12 +65,14 @@ export default function Com(props: idCommunitie) {
                     setMostLike(Object.keys(publis.likes).length)
                     setPostMostLike(publis.post)
                     setPostMostLikeName(publis.name)
+                    setPostMostLikePhoto(publis.photo)
                 }
                 if(Object.keys(publis.likes).length < mostLike ){
                     if(Object.keys(publis.likes).length > secondMostLike){
                         setSecondmostLike(Object.keys(publis.likes).length)
                         setPostSecondMostLike(publis.post)
                         setPostSecondMostLikeName(publis.name)
+                        setPostSecondMostLikePhoto(publis.photo)
                     }
                 }
                 if(Object.keys(publis.likes).length < secondMostLike){
@@ -73,6 +80,7 @@ export default function Com(props: idCommunitie) {
                         setThirdMostLike(Object.keys(publis.likes).length)
                         setPostThirdMostLike(publis.post)
                         setPostThirdMostLikeName(publis.name)
+                        setPostThirdMostLikePhoto(publis.photo)
                     }
                 }
             }
@@ -123,7 +131,7 @@ export default function Com(props: idCommunitie) {
                             {postMostLike ? (
                                 <div className={styles.postsMostsLikes}>
                                 <div className={styles.postsMostsLikesImages}>
-                                    <Image src={user?.imagemUrl || astroMyRocket} width={60} height={60}/>
+                                    <Image src={postMostLikePhoto|| astroMyRocket} width={60} height={60}/>
                                 </div>
                                 <div className={styles.contentInfoPost}>
                                     <h4>{postMostLike}</h4>
@@ -134,7 +142,7 @@ export default function Com(props: idCommunitie) {
                             {postSecondMostLike ? (
                                 <div className={styles.postsMostsLikes}>
                                 <div className={styles.postsMostsLikesImages}>
-                                    <Image src={user?.imagemUrl || astroMyRocket} width={60} height={60}/>
+                                    <Image src={postSecondMostLikePhoto|| astroMyRocket} width={60} height={60}/>
                                 </div>
                                 <div className={styles.contentInfoPost}>
                                     <h4>{postSecondMostLike}</h4>
@@ -145,7 +153,7 @@ export default function Com(props: idCommunitie) {
                             {postThirdMostLike ? (
                                 <div className={styles.postsMostsLikes}>
                                 <div className={styles.postsMostsLikesImages}>
-                                    <Image src={user?.imagemUrl || astroMyRocket} width={60} height={60}/>
+                                    <Image src={postThirdMostLikePhoto || astroMyRocket} width={60} height={60}/>
                                 </div>
                                 <div className={styles.contentInfoPost}>
                                     <h4>{postThirdMostLike}</h4>
