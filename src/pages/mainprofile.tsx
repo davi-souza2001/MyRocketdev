@@ -161,7 +161,7 @@ export default function MainProfile() {
 
             {checkEmailProfile ? (
                 <div className={styles.noLogin}>
-                    <p>Faça login novamente para criar um perfil</p>
+                    <p>Faça login para criar um perfil ou para entrar no seu já existente</p>
                 </div>
             ): false}
         </div>
