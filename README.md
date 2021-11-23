@@ -17,7 +17,6 @@ process.env.
 ## Falta 
 
 <!-- ### 
-### Mudar pra procurar nome com minusculo com mudança de metodo de procurar;
 ### Tirar bug de aparecer login novamente sem login;
 ### Acabar função de like;
 ### Revisar todo css;

@@ -16,33 +16,51 @@ interface searchProps {
 export default function Search(Props: searchProps) {
     const { profileList } = useProfile();
     const [profSearch, setProfSearch] = useState("");
+    const [changeSearch, setChangeSearch] = useState("Área");
 
     useEffect(() => {
-        if (profSearch == "full-stack") {
-            setProfSearch("Full-Stack")
-        } else if (profSearch == "front-end") {
-            setProfSearch("Front-End")
-        } else if (profSearch == "back-end") {
-            setProfSearch("Back-End")
-        } else if (profSearch == "mobile") {
-            setProfSearch("Mobile")
-        } else if (profSearch == "dados") {
-            setProfSearch("Dados")
-        } else if (profSearch == "ios") {
-            setProfSearch("IOS")
-        } else if (profSearch == "android") {
-            setProfSearch("Android")
+        if (changeSearch == "Área") {
+            if (profSearch == "full-stack") {
+                setProfSearch("Full-Stack")
+            } else if (profSearch == "front-end") {
+                setProfSearch("Front-End")
+            } else if (profSearch == "back-end") {
+                setProfSearch("Back-End")
+            } else if (profSearch == "mobile") {
+                setProfSearch("Mobile")
+            } else if (profSearch == "dados") {
+                setProfSearch("Dados")
+            } else if (profSearch == "ios") {
+                setProfSearch("IOS")
+            } else if (profSearch == "android") {
+                setProfSearch("Android")
+            }
+        }
+
+        if (changeSearch == "Nome") {
+            function titleize(text: String) {
+                let words = text.toLowerCase().split(" ");
+                for (let a = 0; a < words.length; a++) {
+                    let w = words[a];
+                    words[a] = w[0]?.toUpperCase() + w.slice(1);
+                }
+                setProfSearch(words.join(" "));
+            }
+            titleize(profSearch)
         }
 
     }, [profSearch])
 
-    function titleize(text: String) {
-        let words = text.toLowerCase().split(" ");
-        for (let a = 0; a < words.length; a++) {
-            let w = words[a];
-            words[a] = w[0]?.toUpperCase() + w.slice(1);
+    function changeSearchHandleSet() {
+        if (changeSearch == "Área") {
+            setChangeSearch("Nome")
         }
-        return words.join(" ");
+        if (changeSearch == "Nome") {
+            setChangeSearch("Nickname")
+        }
+        if (changeSearch == "Nickname") {
+            setChangeSearch("Área")
+        }
     }
 
     function renderProfiles() {
@@ -68,8 +86,8 @@ export default function Search(Props: searchProps) {
                     <div className={styles.boxInput}>
                         <input type="text" className={styles.input} onChange={(e) => setProfSearch(e.target.value)} placeholder="Ache aqui o astronauta que você procura" />
                     </div>
-                    <div className={styles.boxChangeSearchContent}>
-                        <h3>Nome</h3>
+                    <div className={styles.boxChangeSearchContent} onClick={changeSearchHandleSet}>
+                        <h3>{changeSearch}</h3>
                     </div>
                 </div>
 
