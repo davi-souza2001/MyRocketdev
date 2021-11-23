@@ -64,8 +64,13 @@ export default function Search(Props: searchProps) {
                 <title>Pesquisa</title>
             </Head>
             <div className={styles.inputContent}>
-                <div className={styles.boxInput}>
-                    <input type="text" className={styles.input} onChange={(e) => setProfSearch(e.target.value)} placeholder="Ache aqui o astronauta que você procura" />
+                <div className={styles.contentInputContent}>
+                    <div className={styles.boxInput}>
+                        <input type="text" className={styles.input} onChange={(e) => setProfSearch(e.target.value)} placeholder="Ache aqui o astronauta que você procura" />
+                    </div>
+                    <div className={styles.boxChangeSearchContent}>
+                        <h3>Nome</h3>
+                    </div>
                 </div>
 
                 <div className={styles.profilesContent}>

@@ -28,3 +28,26 @@
     grid-template-columns: 1fr 1fr;
     overflow-y: scroll;
 }  
+
+.contentInputContent{
+    height: 14vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.boxChangeSearchContent{
+    width: 8vw;
+    height: 4vh;
+    background-color: blue;
+    margin-right: 30vw;
+    margin-left: -25vw;
+    margin-top: 2vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-family: 'poppins', sans-serif;
+    border-radius: 10px;
+    cursor: pointer;
+}
