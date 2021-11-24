@@ -38,6 +38,10 @@ export default function ModalEditProfile(props: ModalEditProfile) {
 
     const [key, setKey] = useState("");
 
+    // Executa uma função que percorre os perfis dos usuários. Se o email logado for igual ao email do perfil
+    // ele irá setar todos os dados mudaveis do perfil nas variaveis. Essas variaveis vão ser responsaveis
+    // pela por gerenciar os dados que forem trocados
+
     useEffect(() => {
         const renderProfiles = profileList.map(
             function (prof) {
@@ -59,6 +63,7 @@ export default function ModalEditProfile(props: ModalEditProfile) {
             })
     }, [])
 
+    // Envia as novas variaveis, com o dados mudados, para o perfil ja existente da pessoa. Ocorrendo então a edição
     async function setDatas() {
         const todoRef = await firebase.database().ref("Profiles");
         const datas = {
@@ -80,6 +85,7 @@ export default function ModalEditProfile(props: ModalEditProfile) {
         todoRef.child(key).update(datas);
     }
 
+    // Espera a função de mudança de dados executar depois envia os dados para o firebase
     async function editProfile(e){
         e.preventDefault();
         try{

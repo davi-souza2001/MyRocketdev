@@ -1,3 +1,5 @@
+//Importações de Bibliotecas nativas do React, criadas e baixadas
+
 import React, { useEffect, useState } from 'react';
 import Image from "next/image";
 
@@ -10,17 +12,24 @@ import firebase from "../firebase/config";
 
 import styles from "../styles/AddPost.module.css";
 
+// Tipagem das variaveis
+
 interface AddPostProps {
     name: string;
     linkComu: any;
 }
 
 export default function AddPost(props: AddPostProps) {
+    // User pego do service do firebase, se o usuário não tiver feito autenticação ele será nulo
     const { user } = useAuth();
+    // Lista de perfis vinda do firebase para facilitar o acesso a elas
     const { profileList } = useProfile();
     const [checkUser, setCheckUser] = useState(false);
 
     const [post, setPost] = useState("");
+
+    // Função que sabe se o usuário faz parte da comunidade. Ele procura na 1°, 2° e 3° comunidade do usuário,
+    // se ele fizer parte a função retorna true para a variavel setCheckUser e permite o usuário postar
 
     useEffect(() => {
         const alo = profileList.map((prof: any) => {
@@ -31,6 +40,10 @@ export default function AddPost(props: AddPostProps) {
             }
         })
     }, [profileList, user, props.linkComu]);
+
+    // Função para pegar texto do usuário e adicionar ao post. Ele checa se não é nulo e se o usuário tem login,
+    // seguindo isso ele poderá fazer login.
+    // No post ele guarda o que o usuário digitou, o email, nome, foto e o id da postagem.
 
     async function sub() {
         if(user){

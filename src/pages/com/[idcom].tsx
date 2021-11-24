@@ -19,22 +19,35 @@ interface idCommunitie {
 
 }
 
+// Cria rota com pasta, pois o next identifica a pasta como se fosse um "/" na rota, então a rota para essa pagina
+// seria "/com/algo", pois as [] represental o que o usuário pesquisar na rota do navegador
+
 export default function Com(props: idCommunitie) {
+    // Chama a biblioteca de rotas do Next, e declara a variavel idcom como o id que o usuário vai pesquisar,
+    // ou seja se o usuário pesquisar "/com/React" a variavel recebe o valor de React
     const router = useRouter();
     const idcom = router.query.idcom;
     const [publisList, setPublisListList] = useState([]);
+
+    // Declaração das variaveis que vão guardar a contagem de likes do 1°, 2° e 3° posts com mais likes
 
     const [mostLike, setMostLike] = useState(0);
     const [secondMostLike, setSecondmostLike] = useState(0);
     const [thirdMostLike, setThirdMostLike] = useState(0);
 
+    // Declaração das variaveis que vão guardar o conteudo do 1°, 2° e 3° posts com mais likes
+
     const [postMostLike, setPostMostLike] = useState("");
     const [postSecondMostLike, setPostSecondMostLike] = useState("");
     const [postThirdMostLike, setPostThirdMostLike] = useState("");
 
+    // Declaração das variaveis que vão guardar o nome de quem fez o post do 1°, 2° e 3° posts com mais likes
+
     const [postMostLikeName, setPostMostLikeName] = useState("");
     const [postSecondMostLikeName, setPostSecondMostLikeName] = useState("");
     const [postThirdMostLikeName, setPostThirdMostLikeName] = useState("");
+
+    // Declaração das variaveis que vão guardar a foto de quem fez o post do 1°, 2° e 3° posts com mais likes
 
     const [postMostLikePhoto, setPostMostLikePhoto] = useState("");
     const [postSecondMostLikePhoto, setPostSecondMostLikePhoto] = useState("");
@@ -44,7 +57,8 @@ export default function Com(props: idCommunitie) {
     const { user } = useAuth();
     const { profileList } = useProfile();
 
-    /* const todoRef = firebase.database().ref(props.linkComu); */
+    // Função que vai retornar todos os posts feitos naquela comunidade e vai monitorar quando esse conteudo
+    // vai sofrer mudanças, com o useEffect
 
     useEffect(() => {
         const todoRef = firebase.database().ref(idcom?.toString());
@@ -57,6 +71,9 @@ export default function Com(props: idCommunitie) {
             setPublisListList(todoList);
         })
     }, [user]);
+
+    // Função que vai monitorar toda vez que a lista de postagens tiver alterações e vai setar os 3 posts com mais
+    // likes
 
     useEffect(() => {
         const list = publisList?.map((publis) => {

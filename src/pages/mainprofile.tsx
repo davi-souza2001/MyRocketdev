@@ -35,6 +35,7 @@ export default function MainProfile() {
 
     //Start logic get user for api gitHub
 
+    // A unica diferença é que aqui ele checa o email logado e não o nick procurado
     useEffect(() => {
         const getUserGithub = profileList.map((prof) => {
             if(prof?.email == user?.email){

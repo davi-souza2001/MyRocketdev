@@ -17,15 +17,19 @@ export default function MainPage() {
 
     const { user } = useAuth();
     const { profileList } = useProfile();
+    // Variaveis que vão falar as 3 opções de comunidade do usuário
     const [first, setFirst] = useState("");
     const [second, setSecond] = useState("");
     const [third, setThird] = useState("");
+    // Variaveis que bão administrar quais das variaveis estar sendo mostrada na tela
     const [showfirst, setShowFirst] = useState(true);
     const [showsecond, setShowSecond] = useState(false);
     const [showthird, setShowThird] = useState(false);
     
     const [checkEmailProfile, setCheckEmailProfile] = useState(false);
 
+    // Função que procura na lista de perfis o email que é igual ao email logado, quando achar ele retorna
+    // as 3 comunidades salvas naquele perfil
     useEffect(() => {
         const getUserCommuns = profileList.map((prof) => {
             if (prof?.email == user?.email) {
@@ -35,6 +39,8 @@ export default function MainPage() {
             }
         })
     }, [user, profileList]);
+
+    // Função que vai checar se o usuário está logado, ou se estar mas não colocar todas as comunidades ainda
 
     useEffect(() => {
         const checkIfExistsemail = profileList?.map((prof) => {
@@ -46,6 +52,9 @@ export default function MainPage() {
         })
     }, [user, profileList]);
 
+    // Função que faz com que a comunidade selecionada seja ativa e a anterior seja desativada
+    // Assim mudando as cores, para que a ativa tenha uma cor mais viva que as outras,
+    // para o usuário ter um feedback visual
     function showFeedFirst() {
         setShowFirst(true);
         setShowSecond(false);

@@ -19,6 +19,8 @@ interface PostUser {
 }
 
 export default function PostUser(props: PostUser){
+
+    // Seta as variaveis que vão ser usadas para dizer se a função apagar post será ativa, assim como a função de like
     const [trash, setTrash] = useState(props.trash);
     const [likeIcon, setLikeIcon] = useState(props.likeIcon);
 

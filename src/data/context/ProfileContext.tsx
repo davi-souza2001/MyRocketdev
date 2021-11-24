@@ -23,6 +23,9 @@ export function AppProvider(props){
         })
       }, []);
 
+      // cria um provider, que vai retornar um componente. Esse componente é declarado englobando todas as rotas
+      // E declado com ele o value, que vai ser o valor que será compartilhado, ele compartilha todos os perfis,
+      // retornados do firebase
     return(
         <AppContext.Provider value={{profileList}}>
             {props.children}

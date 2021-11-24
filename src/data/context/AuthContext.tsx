@@ -15,7 +15,11 @@ interface AuthContextProps {
     logout?: () => Promise<void>;
 }
 
+// Cria o contexto, para no final da função ser exportado e poder ser compartilhado para todas as rotas
+
 const AuthContext = createContext<AuthContextProps>({});
+
+// Função que chama o token gerado pelo firebase para ocorrer o login
 
 async function userNormal(userFirebase: firebase.User): Promise<User> {
     const token = await userFirebase.getIdToken();
@@ -29,6 +33,8 @@ async function userNormal(userFirebase: firebase.User): Promise<User> {
     }
 }
 
+// Função que seta os cookies na página, com o login e um tempo de expiração de 7 dias
+
 function manageCookie(logger: boolean) {
     if (logger) {
         Cookies.set('Myrocket-admin-auth', logger, {
@@ -39,7 +45,12 @@ function manageCookie(logger: boolean) {
     }
 }
 
+// Função que verifica se ocorreu o login de forma correta, se sim ele seta o cookie e o usuário com os dados do firebase
+
 export function AuthProvider(props) {
+    // Variavel que fala se a página ainda está carregando
+    // Pois como todas as funções aqui exigem tempo de resposta, é preciso aguardar a resposta e retornar para o
+    // usuário esse feedback
     const [loading, setLoading] = useState(true);
     const [user, setUser] = useState<User>(null);
 
@@ -58,6 +69,10 @@ export function AuthProvider(props) {
         }
     }
 
+    //Função de login com o google, ele chama o provider do google, que o firebase fornece atraves do Oauth2
+    // Note que ele chama a função criada acima e por parametro coloca o usuário logado que o firebase
+    // retorna com os dados
+
     async function loginGoogle() {
         try {
             const resp = await firebase.auth().signInWithPopup(
@@ -69,6 +84,8 @@ export function AuthProvider(props) {
             setLoading(false);
         }
     };
+
+    //Função de login com o github, ele chama o provider do google, que o firebase fornece atraves do Oauth2
 
     async function loginGithub() {
         try {
@@ -82,6 +99,7 @@ export function AuthProvider(props) {
         }
     };
 
+    // Função de criar login com email e senha, funcionando exatamente igual
     async function createUserWithEmailAndPassword(email, password) {
         try {
             const resp = await firebase.auth().createUserWithEmailAndPassword(email, password);
@@ -92,6 +110,7 @@ export function AuthProvider(props) {
         }
     };
 
+     // Função de fazer login com email e senha, funcionando exatamente igual
     async function loginWithEmailAndPassword(email, password) {
         try {
             const resp = await firebase.auth().signInWithEmailAndPassword(email, password); 
@@ -102,6 +121,7 @@ export function AuthProvider(props) {
         }
     };
 
+    // Função de fazer logout, chama a função de logout do proprio firebase e seta os cookies como nulo
     async function logout() {
         try {
             setLoading(true);
@@ -112,6 +132,7 @@ export function AuthProvider(props) {
         }
     }
 
+    // Ainda usando a função de cookie da proprios biblioteca de cookie para tirar o cookie do firebase
     useEffect(() => {
         if (Cookies.get('Myrocket-admin-auth')) {
             const cancell = firebase.auth().onIdTokenChanged(configureSection);

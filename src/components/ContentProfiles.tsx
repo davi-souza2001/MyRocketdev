@@ -18,7 +18,7 @@ export default function ContentProfiles() {
             )
         });
     }
-
+// Apenas renderiza os perfis pesquisados
     return (
         <>
             {profileList ?

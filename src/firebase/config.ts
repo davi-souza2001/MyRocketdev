@@ -2,6 +2,9 @@ import firebase from "firebase/app";
 import "firebase/auth";
 import "firebase/database";
 
+//Importa as bilbiotecas do firebase e inicia a função do firebase para todo o projeto, colocando os tokens e ids
+// criados na minha conta pessoal do Google. Só é possivel ter acesso à elas com o mesmo email e logado com ele
+
 
 if (!firebase.apps.length) {
     firebase.initializeApp({

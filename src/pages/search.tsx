@@ -18,6 +18,9 @@ export default function Search(Props: searchProps) {
     const [profSearch, setProfSearch] = useState("");
     const [changeSearch, setChangeSearch] = useState("Área");
 
+    // Função que verifica se o usuário selecionou por pesquisar por nome, área ou nick
+    // dependendo da opção as regras para pesquisa mudam
+
     useEffect(() => {
         if (changeSearch == "Área") {
             if (profSearch == "full-stack") {
@@ -37,6 +40,9 @@ export default function Search(Props: searchProps) {
             }
         }
 
+        // Função que vai separar a string em um array e cada valor desse array vai ser contato por espaço,
+        // ou seja se for digitado "davi souza",  o array ficaria [davi, souza].
+        // Para cada valor desse array ele pega a primeira letra atraves do "slice" e tranformar em Uppercase
         if (changeSearch == "Nome") {
             function titleize(text: String) {
                 let words = text.toLowerCase().split(" ");

@@ -16,41 +16,13 @@ export default function Login(){
     const { loginGoogle, loginGithub, loginWithEmailAndPassword, createUserWithEmailAndPassword} = useAuth();
     const [boxone, setBoxone] = useState(true);
 
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
-    const [lookCreate, setLookCreate] = useState(false);
-    const [lookLogin, setLookLogin] = useState(true);
-
+    // Função que troca a aba dizendo mais sobre a redesocial, ele muda os textos
     function changebox() {
         if (boxone) {
             setBoxone(false);
         } else{
             setBoxone(true);
         }
-    }
-
-    async function createUser(e){
-        e.preventDefault();
-        try{
-            await createUserWithEmailAndPassword(email, password);
-        } catch(e) {
-            alert(e?.message);
-        }
-    }
-
-    async function loginWithEmail(e){
-        e.preventDefault();
-        try{
-            await loginWithEmailAndPassword(email, password);
-        } catch(e) {
-            alert(e);
-        }
-    }
-
-    function toggle(e){
-        e.preventDefault();
-        setLookCreate(true);
-        setLookLogin(false);
     }
 
     return (

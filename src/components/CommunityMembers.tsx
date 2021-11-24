@@ -16,29 +16,12 @@ interface CommunityMembers {
 
 export default function CommunityMembers(props: CommunityMembers){
     const { profileList } = useProfile();
-    const { user } = useAuth();
-    const [publisList, setPublisListList] = useState([]);
 
-    
-
+    //  Variavel para saber se o component vai ou não aparecer com o admin da comunidade listado
     const [showadmin, setShowAdmins] = useState(props.showAdmin);
 
+    // O admin vai estar em primeiro da lista de perfis
     const adminPhoto = profileList[0]?.image;
-
-    useEffect(() => {
-        const todoRef = firebase.database().ref(props.linkComuList);
-        todoRef.on('value', (snapshot) => {
-            const todos = snapshot.val();
-            const todoList = [];
-            for (let id in todos) {
-                todoList.push({ id, ...todos[id] });
-            }
-            setPublisListList(todoList);
-        })
-    }, [user]);
-
-   
-    
     
     return (
         <div className={styles.contentGeral}>

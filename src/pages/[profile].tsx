@@ -26,6 +26,9 @@ export default function MainProfile() {
     const [seflgithub, setSeflgithub] = useState("");
 
     //Start logic get user for api gitHub
+    // Como esse component qualquer usuário pode acessar sem login então ele verifica na lista de perfis
+    // se o nick salvo no perfil for igual ao nick procurado então ele seta o github do perfil para o
+    // component inteiro
 
     useEffect(() => {
         const getUserGithub = profileList.map((prof) => {
@@ -35,12 +38,16 @@ export default function MainProfile() {
         })
     }, [profileList, repos, seflgithub]);
 
+    // Com o github do perfil procurado já salvo, ele consome a api do github, pegando apenas a parte da api
+    // que retorna os repositorios do usuário e seta para todo o componente
+
     useEffect(() => {
         client.get(`/${seflgithub}/repos`).then(({ data }) => {
             setRepos(data);
         }).catch((err) => console.log("Erroou"))
     }, [seflgithub]);
 
+    // Função que vai retornar o repositorio da pessoa procurada na aba projetos
     function renderRepos() {
         return repos?.map((repo, index) => {
             return (
@@ -62,6 +69,8 @@ export default function MainProfile() {
     //End state to open pages
 
     //Start variable for render profile right in search profile (left bar)
+    // Ele percorre a lista de perfil, e quando o nick procurado for igual ao nick de um perfil achado
+    // retorna os dados desse mesmo perfil
 
     const renderProfiles = profileList.map(
         function (prof, index) {
@@ -123,35 +132,6 @@ export default function MainProfile() {
         }
     )
 
-    //End variable for render profile right in search profile (left bar)
-
-    //Start functions to open modal pages
-
-    function activeModalDescription() {
-        if (!description) {
-            setDescription(true);
-            setProjects(false);
-            setSocial(false);
-        }
-    }
-
-    function activeModalProjects() {
-        if (!projects) {
-            setProjects(true);
-            setDescription(false);
-            setSocial(false);
-        }
-    }
-
-    function activeModalSocial() {
-        if (!social) {
-            setSocial(true);
-            setDescription(false);
-            setProjects(false);
-        }
-    }
-
-    //End functions to open modal pages
 
     return (
         <div className={styles.contentMainProfile}>

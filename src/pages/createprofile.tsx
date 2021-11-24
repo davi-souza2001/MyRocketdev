@@ -9,20 +9,21 @@ import astroBallon from "../assets/img/astronauta_balao.svg"
 
 import styles from "../styles/CreateProfile.module.css";
 
-interface CreateProfileProps {
-
-}
-
-export default function CreateProfile(Props: CreateProfileProps) {
+export default function CreateProfile() {
     const { profileList } = useProfile();
     const { user } = useAuth();
     const emailUser = user?.email;
+    
+    // Função que checa se o email logado já se encontra cadastro em algum perfil, se sim ele retorna para
+    // a pagina inicial, pois não se faz necessário criar perfil
 
     const verifyEmailExists = profileList?.map((prof) => {
         if(prof.email == emailUser) {
             route.replace("/");
         }
     });
+
+    // Declaração das variaveis que vão armazenar os dados do usuário criando perfil, como email, nome, github
     
     const [name, setName] = useState("");
     const [userName, setUserName] = useState("");
@@ -41,6 +42,8 @@ export default function CreateProfile(Props: CreateProfileProps) {
     const [check, setCheck] = useState(0);
 
 
+    // Função assicrona que vai esperar o retorno do firebase com a lista de perfis e em seguida vai enviar
+    // os dados coletados para a pagina de perfis
     async function setDatas(){
         const todoRef = await firebase.database().ref("Profiles");
         const datas = {
@@ -62,6 +65,9 @@ export default function CreateProfile(Props: CreateProfileProps) {
         todoRef.push(datas);
     }
     
+    // Função que obriga o usuário à não deixar o github, nome, nick, email...
+    //  em branco pois é um ponto necessário para melhor uso do sistema
+
     async function navigateToHome(e): Promise<void>{
         e.preventDefault();
         if(github != "" && userName != "" && name != "" && dev != "" && email != "" && firstComum != "" && check == 1){

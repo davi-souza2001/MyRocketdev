@@ -16,9 +16,10 @@ interface TopbarProps {
 
 export default function Topbar(props: TopbarProps) {
 
-    const { user, logout, loginGoogle } = useAuth();    
+    const { user, logout } = useAuth();    
     const [modal, setModal] = useState(false);
 
+    // Quando o usuário estiver logado e clicar, vai abrir um modal perguntando se ele quer fazer o logout
     function handleModal(){
         if(user){
             setModal(true);
