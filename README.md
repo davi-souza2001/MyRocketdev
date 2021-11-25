@@ -17,8 +17,6 @@ process.env.
 ## Falta 
 
 <!-- ### 
-### Escrever "escolha a area" na aba de pesquisa
-### Tirar bug de aparecer login novamente sem login;
 ### Acabar função de like;
 ### Revisar todo css;
 ### Função de texto na reunião; -->

@@ -51,3 +51,12 @@
     border-radius: 10px;
     cursor: pointer;
 }
+
+.textContent{
+    width: 100vw;
+    height: 10vh;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
