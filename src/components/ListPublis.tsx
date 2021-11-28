@@ -67,7 +67,7 @@ export default function ListPublis(props: ListPublisProps) {
                         trash={user?.email == publis.email ? true : false}
                         likeIcon={user ? true : false}
                         like={() => setlike(publis.id)}
-                        likesCount={publis.likes ? Object.keys(publis.likes).length : false}
+                        likesCount={user && publis.likes ? Object.keys(publis.likes).length : false}
                         delete={() => firebase.database().ref(props.linkComuList).child(publis.id).remove()}
                         key={publis.id}
                     >
