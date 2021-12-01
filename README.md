@@ -3,20 +3,11 @@
     <h1> <img align="center" src="https://i.imgur.com/MlnoYEA.png" width="60px"/> MyRocket</h1>
   </div>
   
- <div align="center">
    <div align="left">
-      <h3>Grupo MyRocket</h3>
-      <br/>
-      Vinicius Rodrigues Cardoso Silva
-      <br/>
-      Paloma Corrêa Alves
-      <br/>
-      Matheus Barros Crisóstomo
-      <br/>
-      Vinicius Maia Azevedo de Oliveira
-      <br/>
-      Davi Souza da Silva Veras
-   </div>
+     <h3>Grupo MyRocket</h3>
+      <a href="https://github.com/davi-souza2001/MyRocketdev/graphs/contributors">
+      <img src="https://contrib.rocks/image?repo=davi-souza2001/MyRocketdev" />
+      </a>
   </div>
   
   <h2>:rocket: Ferramentas utilizadas para criação:</h2>
