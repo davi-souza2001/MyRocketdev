@@ -21,6 +21,8 @@
     height: 100vh;
     width: 60vw;
     background-color: #181818;
+    background-image: url("../assets/img/blueBorders.svg");
+    background-repeat: no-repeat;
     font-family: 'roboto', sans-serif;
 }
 

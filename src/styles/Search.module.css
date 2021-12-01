@@ -1,6 +1,8 @@
 .searchContent{
     height: 93vh;
     width: 100vw;
+    background-image: url("../assets/img/blueBorders.svg");
+    background-repeat: no-repeat;
 }
 
 .boxInput {
