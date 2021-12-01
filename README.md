@@ -1,7 +1,35 @@
-# My Rocket
-## Social network designed for Devs
+<html>
+  <div>
+    <h1> <img align="center" src="https://i.imgur.com/MlnoYEA.png" width="60px"/> MyRocket</h1>
+  </div>
+  
+ <div align="center">
+   <div align="left">
+      <h3>Grupo MyRocket</h3>
+      <br/>
+      Vinicius Rodrigues Cardoso Silva
+      <br/>
+      Paloma Corrêa Alves
+      <br/>
+      Matheus Barros Crisóstomo
+      <br/>
+      Vinicius Maia Azevedo de Oliveira
+      <br/>
+      Davi Souza da Silva Veras
+   </div>
+  </div>
+  
+  <h2>:rocket: Ferramentas utilizadas para criação:</h2>
+  <div>
+    <img alt="REACT" width="120" src="https://img.shields.io/badge/react-61DAFB?style=for-the-badge&logo=react&logoColor=black"/>
+    <img alt="NEXT" width="105" src="https://img.shields.io/badge/next-000?style=for-the-badge&logo=next.js&logoColor=white"/>
+    <img alt="FIREBASE" width="135" src="https://img.shields.io/badge/firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black"/>
+  </div>
+</html>
 
-## Building project... !
+##
+
+<!--## Building project... !
 
 `NEXT_PUBLIC_API_KEY=
 NEXT_PUBLIC_AUTH_DOMAIN=
@@ -14,6 +42,7 @@ NEXT_PUBLIC_APP_ID=`
 process.env. 
 
 ...
+-->
 
 ## Regras de negocio
 
@@ -27,5 +56,4 @@ process.env.
 - Cada usuário pode dar estrelas na postagem de outro usuário
 - No final da semana, cada comunidade vai listar os top 10 posts mais bem avaliados pelos membros, o assunto destes estaria listado ao lado da comunidade
 - Na aba pesquisa, a pessoa pode filtrar os devs da plataforma por: senioridade, nome da pessoa, por comunidade ou nick
-- O perfil do usuário terá: Nome, foto, descrição, email do usuário, nick, e estado do usuário. Na aba de projetos serão listados os links e o nome do projeto do Github. Na aba sociais vão conter as principais rede sociais do usuário.
-
+- O perfil do usuário terá: Nome, foto, descrição, email do usuário, nick, e estado do usuário. Na aba de projetos serão listados os links e o nome do projeto do Github. Na aba sociais vão conter as principais rede sociais do usuário
