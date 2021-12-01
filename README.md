@@ -4,7 +4,7 @@
   </div>
   
    <div align="left">
-     <h3>Grupo MyRocket</h3>
+     <h3>Equipe MyRocket</h3>
       <a href="https://github.com/davi-souza2001/MyRocketdev/graphs/contributors">
       <img src="https://contrib.rocks/image?repo=davi-souza2001/MyRocketdev" />
       </a>
