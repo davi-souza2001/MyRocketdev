@@ -101,12 +101,12 @@ export default function MainPage() {
                             </div>
                             ): false}
                             {second != "" && second != "--Front-End--" && second != "--Back-End--" && second != "--Mobile--" ? (
-                            <div className={styles.boxNameFeed} id="box1" onClick={showFeedSecond}>
+                            <div className={styles.boxNameFeed} id="box2" onClick={showFeedSecond}>
                                 {second}
                             </div>
                             ): false}
                             {third != "" && third != "--Front-End--" && third != "--Back-End--" && third != "--Mobile--" ? (
-                            <div className={styles.boxNameFeed} id="box1" onClick={showFeedThird}>
+                            <div className={styles.boxNameFeed} id="box3" onClick={showFeedThird}>
                                 {third}
                             </div>
                             ): false}
