@@ -48,7 +48,7 @@ export default function Login(){
                         <h1>Bem vindo ao MyRocket!</h1>
                         <p className={styles.descricao}>Neste foguete é onde os desenvolvedores podem chamar outros em sua jornada, comentar sobre suas tecnologias preferidas, 
                         comentar como anda o mercado ou até tirar dúvidas com outros tripulantes.
-                        <div style={{cursor: 'pointer'}} onClick={() => route.push("/resume")}><strong>Clique aqui para ver uma breve introdução sobre nós!</strong></div>
+                        <div style={{cursor: 'pointer', color: '#5f10d4'}} onClick={() => route.push("/resume")}><strong>Clique aqui para ver uma breve introdução sobre nós!</strong></div>
                         </p>
                     </div>
                     <div className={styles.learmore}>
@@ -74,6 +74,9 @@ export default function Login(){
                     <button className={styles.githubButton} onClick={loginGithub}>
                         <Image src={githubIcon} height={35} alt="Logo" width={60}/>
                     </button>
+                </div>
+                <div className={styles.textDirectHome} onClick={() => route.push("/")}>
+                    <h4>Continuar sem login</h4>
                 </div>
             </div>
         </div>

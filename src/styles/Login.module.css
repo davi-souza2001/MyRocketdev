@@ -289,3 +289,12 @@
     color: #fff;
     background-color: #460BA1;
 }
+
+.textDirectHome{
+    margin-top: 100px;
+    color: #fff;
+}
+
+.textDirectHome h4{
+    cursor: pointer;
+}
